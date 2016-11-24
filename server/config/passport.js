@@ -1,44 +1,45 @@
-/* globals require, module, console*/
+/* globals require, module, process */
 
-let passport = require("passport"),
-    LocalPassport = require("passport-local"),
-    User = require("mongoose").model("User");
+let path = require("path");
+let dbName = "mappyDb";
 
-module.exports = function() {
-    passport.use(new LocalPassport((username, password, done) => {
-        User.findOne({ username }).exec((err, user) => {
-            if (err) {
-                console.log(`Error loading user: ${err}`);
-                return;
-            }
+module.exports = {
+    development: {
+        rootPath: path.normalize(`${__dirname}/../../`),
+        db: `mongodb://localhost:27017/${dbName}`,
+        // port: process.env.PORT || 3000
+        port: 3000
+    }
+};
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(session({ secret: "magic unicorns", resave: true, saveUninitialized: true }));
 
-            if (user && user.authenticate(password)) {
-                return done(null, user);
-            } else {
-                return done(null, false);
-            }
-        });
-    }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(express.static(`${config.rootPath}/public`));
 
-    passport.serializeUser((user, done) => {
-        if (user) {
-            return done(null, user._id);
-            // return done(null, user.id);
-        }
-    });
+app.use((req, res, next) => {
+    if (req.session.error) {
+        let msg = req.session.error;
+        req.session.error = undefined;
+        app.locals.errorMessage = msg;
+    } else {
+        app.locals.errorMessage = undefined;
+    }
 
-    passport.deserializeUser((id, done) => {
-        User.findOne({ _id: id }).exec((err, user) => {
-            if (err) {
-                console.log(`Error loading user: ${err}`);
-                return;
-            }
+    next();
+});
 
-            if (user) {
-                return done(null, user);
-            } else {
-                return done(null, false);
-            }
-        });
+app.use((req, res, next) => {
+    if (req.user) {
+        app.locals.currentUser = req.user;
+    } else {
+        app.locals.currentUser = undefined;
+    }
+
+    next();
+});
+};      });
     });
 };

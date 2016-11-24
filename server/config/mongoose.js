@@ -1,7 +1,7 @@
 /* globals require, module, console*/
 
 let mongoose = require("mongoose"),
-    UserModel = require("../data/models/User");
+    UserModel = require("../models/User");
 
 module.exports = function(config) {
     mongoose.connect(config.db);

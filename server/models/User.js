@@ -1,6 +1,6 @@
 /* globals require, module */
 const mongoose = require("mongoose"),
-    encryption = require("../../utilities/encryption");
+    encryption = require("../utilities/encryption");
 
 let requiredMessage = "{PATH} is required",
     defaultAvatar = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR";

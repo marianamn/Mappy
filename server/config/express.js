@@ -1,16 +1,16 @@
-/* globals require, module*/
+/* globals require, module, process */
 
-let express = require("express"),
-    bodyParser = require("body-parser"),
-    cookieParser = require("cookie-parser"),
-    session = require("express-session"),
-    passport = require("passport");
+let path = require("path");
+let dbName = "mappyDb";
 
-module.exports = (app, config) => {
-    app.set("view engine", "pug");
-    app.set("views", `${config.rootPath}/server/views`);
-    app.use(cookieParser());
-    app.use(bodyParser.json());
+module.exports = {
+    development: {
+        rootPath: path.normalize(`${__dirname}/../../`),
+        db: `mongodb://localhost:27017/${dbName}`,
+        // port: process.env.PORT || 3000
+        port: 3000
+    }
+};  app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(session({ secret: "magic unicorns", resave: true, saveUninitialized: true }));
 

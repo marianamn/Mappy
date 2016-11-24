@@ -1,7 +1,7 @@
 /* globals require, module, process */
 
 let path = require("path");
-let dbName = "testDb";
+let dbName = "mappyDb";
 
 module.exports = {
     development: {
