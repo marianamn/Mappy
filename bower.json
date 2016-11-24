@@ -1,0 +1,21 @@
+{
+  "name": "TestApp",
+  "description": "TestApp",
+  "main": "server.js",
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.1.4",
+    "bootstrap-material-design": "~0.5.7"
+  }
+}

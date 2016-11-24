@@ -1,0 +1,55 @@
+doctype
+html
+    head
+        title Test
+
+        link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type='text/css')
+        link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/lib/bootstrap-material-design/dist/css/bootstrap-material-design.css")
+        link(rel="stylesheet" href="/lib/bootstrap-" + "material-design/dist/css/ripples.min.css")
+        link(rel="stylesheet" href="/css/app.css")
+    body(ng-app="myApp")
+        header.navbar.navbar-default
+              .container
+                  .navbar-header
+                      a.navbar-brand(href="/") TestApp
+                  .navbar-collapse.collapse
+                      ul.nav.navbar-nav
+                          li
+                              a(href="/") Home   
+                                  i.material-icons home
+                          //other routs
+
+                      ul.nav.navbar-nav.navbar-right
+                          if(currentUser)
+                              li
+                                 a(href="/profile") Hello
+                                    span , #{currentUser.username}
+                                    i.material-icons info
+                              li
+                                 a(href="/logout") Logout
+                                     i.material-icons power_settings_new
+                          else
+                              li
+                                 a(href="/register") Register
+                                     i.material-icons person_add
+                              li
+                                 a(href="/login") Login
+                                     i.material-icons mood
+        .container
+
+            if (errorMessage)
+                .alert.alert-dismissible.alert-danger
+                    button.close(type='button', data-dismiss='alert') x
+                    .text-center #{errorMessage}
+                
+                
+        block main-content
+        
+        footer
+            hr
+            p.text-center
+                | &copy; Telerik Academy 2016 - Node.js project
+                
+        include scripts
