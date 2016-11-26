@@ -9,6 +9,15 @@ module.exports = function(data) {
                         result: countries
                     });
                 });
+        },
+        countryDetails(req, res) {
+            let id = req.params.id;
+            data.getCountryById(id)
+                .then(country => {
+                    res.render("countries/detail-country", {
+                        result: country
+                    });
+                });
         }
     };
 };
