@@ -1,16 +1,11 @@
-/* globals require, process, console */
+/* globals require console */
 
-let express = require("express");
+const config = require("./config");
 
-let env = "development";
+let data = require("./data")(config.connectionString);
 
-let app = express();
-let config = require("./server/config/config")[env];
+const app = require("./config/application")({ data });
 
-require("./server/config/express")(app, config);
-require("./server/config/mongoose")(config);
-require("./server/config/passport")();
-require("./server/config/routes")(app);
+require("./routers")({ app, data });
 
-app.listen(config.port);
-console.log(`Server running on port: ${config.port}`);
+app.listen(config.port, () => console.log(`Mappy running at: ${config.port}`));

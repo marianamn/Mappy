@@ -1,21 +1,18 @@
 {
-  "name": "TestApp",
-  "description": "TestApp",
-  "main": "server.js",
+  "name": "mappy",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "League of the Five"
+  ],
   "license": "MIT",
-  "moduleType": [],
   "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "./public/lib",
+    "./public/bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "bootstrap": "~3.3.6",
-    "jquery": "~2.1.4",
-    "bootstrap-material-design": "~0.5.7"
-  }
+  ]
 }
