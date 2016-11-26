@@ -5,10 +5,11 @@ module.exports = function(data) {
         getFindTheCountryQuestion(req, res) {
             data.getAllCountryNames()
                 .then(countryNames => {
-                    let nameIndex = Math.floor(Math.random() * countryNames.length) + 1;
+
+                    let nameIndex = Math.floor(Math.random() * (countryNames.length - 1)) + 1;
                     let currentCountryNameQuestion = countryNames[nameIndex];
 
-                    return res.render("map/guess-the-country-question", { countryName: currentCountryNameQuestion });
+                    return res.render("map/guess-the-country-question", { result: currentCountryNameQuestion });
                 });
         },
         getTestKnowledgeQuestion(req, res) {
@@ -16,8 +17,6 @@ module.exports = function(data) {
         },
         evaluateGuessTheCountryAnswer(req, res) {
             let selectedCountryName = req.params.selectedCountryName;
-
-
 
             // res.redirect("/game/guess-the-country");
 
