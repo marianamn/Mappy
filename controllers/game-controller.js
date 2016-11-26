@@ -7,9 +7,9 @@ module.exports = function(data) {
                 .then(countryNames => {
 
                     let nameIndex = Math.floor(Math.random() * (countryNames.length - 1)) + 1;
-                    let currentCountryNameQuestion = countryNames[nameIndex];
+                    let currentCountryNameQuestion = countryNames[nameIndex].name;
 
-                    return res.render("map/guess-the-country-question", { result: currentCountryNameQuestion });
+                    return res.render("map/guess-the-country-question", { currentCountryNameQuestion });
                 });
         },
         getTestKnowledgeQuestion(req, res) {
