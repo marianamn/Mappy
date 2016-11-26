@@ -1,12 +1,12 @@
 /* globals module Promise */
 
-module.exports = function(models) {
+module.exports = function (models) {
     let { User } = models;
 
     return {
-        findUserByCredentials(username, salt, hashPass) {
+        findUserByCredentials(username) {
             return new Promise((resolve, reject) => {
-                User.findOne({ username, salt, hashPass }, (err, user) => {
+                User.findOne({ username }, (err, user) => {
                     if (err) {
                         return reject(err);
                     }

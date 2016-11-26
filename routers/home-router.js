@@ -2,6 +2,7 @@
 
 const express = require("express");
 let Router = express.Router;
+let isAuthenticated = require("../middlewares/is-user-authenticated");
 
 module.exports = function ({ app, data }) {
     let controller = require("../controllers/home-controller")(data);
@@ -9,7 +10,7 @@ module.exports = function ({ app, data }) {
     let router = new Router();
 
     router
-        .get("/", controller.home);
+        .get("/", isAuthenticated, controller.home);
 
     app.use("/", router);
 
