@@ -10,7 +10,7 @@ module.exports = modelRegistrator.register("Country", {
         required: requiredMessage,
         unique: true
     },
-    flagURL: {
+    flagUrl: {
         type: String,
         required: requiredMessage
     },
