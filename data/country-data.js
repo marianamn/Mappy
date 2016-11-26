@@ -1,10 +1,10 @@
 /* globals module */
 
-module.exports = function (models) {
+module.exports = function(models) {
     let { Country } = models;
 
     return {
-        getAllCountries() {
+        getAllCountryNames() {
             return new Promise((resolve, reject) => {
                 Country.find({}).select("name", (err, countryNames) => {
                     if (err) {
