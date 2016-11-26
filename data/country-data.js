@@ -14,6 +14,17 @@ module.exports = function(models) {
                     return resolve(countryNames);
                 });
             });
+        },
+        allCountries() {
+            return new Promise((resolve, reject) => {
+                Country.find({}, (err, country) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(country);
+                });
+            });
         }
     };
 };
