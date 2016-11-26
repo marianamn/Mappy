@@ -6,7 +6,7 @@ module.exports = function(models) {
     return {
         getAllCountryNames() {
             return new Promise((resolve, reject) => {
-                Country.find({}).select("name", (err, countryNames) => {
+                Country.find({}, "name", (err, countryNames) => {
                     if (err) {
                         return reject(err);
                     }
