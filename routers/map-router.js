@@ -10,7 +10,7 @@ module.exports = function ({ app, data }) {
     let router = new Router();
 
     router
-        .get("/map", isAuthenticated, (req, res)=>{
+        .get("/map", isAuthenticated, (req, res) => {
             res.render("map/map");
         });
 
