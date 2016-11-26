@@ -28,5 +28,9 @@ module.exports = modelRegistrator.register("User", {
     profileImgURL: {
         type: String,
         default: defaultAvatar
+    },
+    score: {
+        type: Number,
+        default: 0
     }
 });
