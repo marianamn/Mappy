@@ -1,7 +1,8 @@
 [
     {
         name: "",
-        countryURL: "",
+        countryImgUrl: "",
+        flagUrl: "",
         capital: "",
         currency: "",
         population: 0,
