@@ -2,8 +2,9 @@ extends ../_layout
 block styles
     link(rel='stylesheet', type='text/css', href='../../static/includes/style.css', media='all')
     link(rel='stylesheet', type='text/css', href='../../static/cssmap-europe/cssmap-europe.css', media='screen')
-    
+
 block content
+    - var requiredCountryName = currentCountryNameQuestion; 
     #question.jumbotron.text-center Where is: #{currentCountryNameQuestion}?
     #demo-page-europe
     article.page-content
@@ -13,7 +14,7 @@ block content
                 #map-europe
                     ul.europe
                         li.eu1
-                            a(href='#albania') ?
+                            a(href='#Albania') ?
                         li.eu2
                             a(href='#andorra') ?
                         li.eu3
@@ -23,11 +24,11 @@ block content
                         li.eu5
                             a(href='#belgium') ?
                         li.eu6
-                            a(href='#bosnia-and-herzegovina') ?
+                            a(href='/game/guess-the-country/' + requiredCountryName + '/bosnia-and-herzegovina') ?
                         li.eu7
-                            a(href='/game/guess-the-country/bulgaria') ?
+                            a(href='/game/guess-the-country/' + requiredCountryName + '/bulgaria') ?
                         li.eu8
-                            a(href='#croatia') ?
+                            a(href='/game/guess-the-country/' + requiredCountryName + '/croatia') ?
                         li.eu9
                             a(href='#cyprus') ?
                         li.eu10

@@ -6,8 +6,7 @@ module.exports = function(data) {
             data.getAllCountryNames()
                 .then(countryNames => {
 
-                    let nameIndex = Math.floor(Math.random() * (countryNames.length - 1)) + 1;
-                    let currentCountryNameQuestion = countryNames[nameIndex].name;
+                    let currentCountryNameQuestion = countryNames[Math.floor(Math.random() * countryNames.length)].name;
 
                     return res.render("map/guess-the-country-question", { currentCountryNameQuestion });
                 });
@@ -16,11 +15,16 @@ module.exports = function(data) {
             return res.render("map/test-your-knowledge-question", {});
         },
         evaluateGuessTheCountryAnswer(req, res) {
-            let selectedCountryName = req.params.selectedCountryName;
-            // console.log(req.body);
-            res.redirect("/game/guess-the-country");
 
-            // return;
+            let selectedCountryName = req.params.selectedCountryName.toLowerCase().replace(/-/g, " ");
+            let requiredCountryName = req.params.requiredCountryName.toLowerCase().replace(/-/g, " ");
+
+            if (selectedCountryName === requiredCountryName) {
+                console.log("Success");
+                // TODO: add points to user
+            }
+
+            res.redirect("/game/guess-the-country");
         }
     };
 };
