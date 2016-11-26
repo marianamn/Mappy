@@ -9,7 +9,38 @@ module.exports = modelRegistrator.register("Country", {
         type: String,
         required: requiredMessage
     },
-    flag: {
+    flagURL: {
+        type: String,
+        required: requiredMessage
+    },
+    countryURL: {
+        type: String,
+        required: requiredMessage
+    },
+    capital: {
+        type: String,
+        required: requiredMessage
+    },
+    currency: {
+        type: String,
+        required: requiredMessage
+    },
+    population: {
+        type: Number
+    },
+    area: {
+        type: Number
+    },
+    populationDensity: {
+        type: Number
+    },
+    latitudea: {
+        type: Number
+    },
+    longitude: {
+        type: Number
+    },
+    countryInformation: {
         type: String,
         required: requiredMessage
     }
