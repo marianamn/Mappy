@@ -17,7 +17,7 @@ module.exports = function(data) {
         },
         evaluateGuessTheCountryAnswer(req, res) {
             let selectedCountryName = req.params.selectedCountryName;
-
+            console.log(req.headers);
             // res.redirect("/game/guess-the-country");
 
             // return;
