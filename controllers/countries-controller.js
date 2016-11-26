@@ -3,9 +3,12 @@
 module.exports = function(data) {
     return {
         allCountries(req, res) {
-            return res.render("countries/allCountries", {
-                user: req.user
-            });
+            data.allCountries()
+                .then(countries => {
+                    res.render("countries/allCountries", {
+                        result: countries
+                    });
+                });
         }
     };
 };

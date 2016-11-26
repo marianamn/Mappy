@@ -1,3 +1,7 @@
 extends ../_layout
 block content
-    p ALL COUNTRIRS
+    ul
+        each country in result
+            li
+                a(href="countries/" + country._id)= country.name
+                img(src= country.flagUrl, style="width:100px;height:100px;")

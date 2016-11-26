@@ -11,8 +11,9 @@ module.exports = function (connectionString) {
     mongoose.connect(connectionString);
 
     let User = require("../models/user-model.js");
+    let Country = require("../models/country-model");
 
-    let models = { User };
+    let models = { User, Country };
 
     let data = {};
 
