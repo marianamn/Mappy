@@ -3,6 +3,7 @@
 const express = require("express");
 
 let Router = express.Router;
+let isAuthenticated = require("../middlewares/is-user-authenticated");
 
 module.exports = function({ app, data }) {
 
@@ -10,8 +11,8 @@ module.exports = function({ app, data }) {
     let router = new Router();
 
     router
-        .get("/find-the-country", controller.getFindTheCountryQuestion)
-        .get("/test-your-knowledge", controller.getTestKnowledgeQuestion);
+        .get("/guess-the-country", isAuthenticated, controller.getFindTheCountryQuestion)
+        .get("/test-your-knowledge", isAuthenticated, controller.getTestKnowledgeQuestion);
 
     app.use("/game", router);
 

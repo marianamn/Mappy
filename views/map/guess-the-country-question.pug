@@ -1,0 +1,129 @@
+extends ../_layout
+block styles
+    link(rel='stylesheet', type='text/css', href='../../static/includes/style.css', media='all')
+    link(rel='stylesheet', type='text/css', href='../../static/cssmap-europe/cssmap-europe.css', media='screen')
+    
+block content
+    #question.jumbotron.text-center Guess the country
+    #demo-page-europe
+    article.page-content
+        section#section-demo
+            hr
+            #display-map.display-demo-map
+                #map-europe
+                    ul.europe
+                        li.eu1
+                            a(href='#albania')
+                        li.eu2
+                            a(href='#andorra')
+                        li.eu3
+                            a(href='#austria')
+                        li.eu4
+                            a(href='#belarus')
+                        li.eu5
+                            a(href='#belgium')
+                        li.eu6
+                            a(href='#bosnia-and-herzegovina')
+                        li.eu7
+                            a(href='#bulgaria')
+                        li.eu8
+                            a(href='#croatia')
+                        li.eu9
+                            a(href='#cyprus')
+                        li.eu10
+                            a(href='#czech-republic')
+                        li.eu11
+                            a(href='#denmark')
+                        li.eu12
+                            a(href='#estonia')
+                        li.eu13
+                            a(href='#france')
+                        li.eu14
+                            a(href='#finland')
+                        li.eu15
+                            a(href='#georgia')
+                        li.eu16
+                            a(href='#germany')
+                        li.eu17
+                            a(href='#greece')
+                        li.eu18
+                            a(href='#hungary')
+                        li.eu19
+                            a(href='#iceland')
+                        li.eu20
+                            a(href='#ireland')
+                        li.eu21
+                            a(href='#san-marino')
+                        li.eu22
+                            a(href='#italy')
+                        li.eu23
+                            a(href='#kosovo')
+                        li.eu24
+                            a(href='#latvia')
+                        li.eu25
+                            a(href='#liechtenstein')
+                        li.eu26
+                            a(href='#lithuania')
+                        li.eu27
+                            a(href='#luxembourg')
+                        li.eu28
+                            a(href='#macedonia')
+                        li.eu29
+                            a(href='#malta')
+                        li.eu30
+                            a(href='#moldova')
+                        li.eu31
+                            a(href='#monaco')
+                        li.eu32
+                            a(href='#montenegro')
+                        li.eu33
+                            a(href='#netherlands')
+                        li.eu34
+                            a(href='#norway')
+                        li.eu35
+                            a(href='#poland')
+                        li.eu36
+                            a(href='#portugal')
+                        li.eu37
+                            a(href='#romania')
+                        li.eu38
+                            a(href='#russian-federation')
+                        li.eu39
+                            a(href='#serbia')
+                        li.eu40
+                            a(href='#slovakia')
+                        li.eu41
+                            a(href='#slovenia')
+                        li.eu42
+                            a(href='#spain')
+                        li.eu43
+                            a(href='#sweden')
+                        li.eu44
+                            a(href='#switzerland')
+                        li.eu45
+                            a(href='#turkey')
+                        li.eu46
+                            a(href='#ukraine')
+                        li.eu47
+                            a(href='#united-kingdom')
+                #demo-form-fields.demo-form-fields
+                #demo-agents.demo-agents-list.wrapper
+                #demo-markers
+            .wrapper.hidden
+                #map-settings.map-settings.fixed-container
+                    form#map-settings-form(name='map-settings-form', action='#', method='post', novalidate='')
+                        fieldset#options-basic
+                            ul
+                                li.inline-label
+                                    label(for='map-set-size') Size (map width)
+                                    .select-field
+                                        select#map-set-size(name='map-set-size')
+                                            option(value='1450', selected='') 1450 px
+    footer.page-footer
+        .wrapper
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(type='text/javascript', src='https://cssmapsplugin.com/5/jquery.cssmap.min.js')
+    script(type='text/javascript', src='../../static/js/script.js')
+    script(type='text/javascript', src='../../static/bower_components/jquery/dist/jquery.js')
+      
+
