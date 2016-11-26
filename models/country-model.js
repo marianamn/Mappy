@@ -14,7 +14,7 @@ module.exports = modelRegistrator.register("Country", {
         type: String,
         required: requiredMessage
     },
-    countryURL: {
+    countryImgUrl: {
         type: String,
         required: requiredMessage
     },
