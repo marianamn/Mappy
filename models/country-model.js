@@ -7,41 +7,48 @@ let requiredMessage = "{PATH} is required";
 module.exports = modelRegistrator.register("Country", {
     name: {
         type: String,
-        required: requiredMessage
+        required: requiredMessage,
+        unique: true
     },
     flagURL: {
         type: String,
         required: requiredMessage
     },
-    countryURL: {
+    countryImgUrl: {
         type: String,
         required: requiredMessage
     },
     capital: {
         type: String,
-        required: requiredMessage
+        required: requiredMessage,
+        unique: true
     },
     currency: {
         type: String,
-        required: requiredMessage
+        required: requiredMessage,
+        unique: true
     },
     population: {
-        type: Number
+        type: Number,
+        min: 0
     },
     area: {
-        type: Number
+        type: Number,
+        min: 0
     },
     populationDensity: {
-        type: Number
+        type: Number,
+        min: 0
     },
-    latitudea: {
-        type: Number
+    latitude: {
+        type: String
     },
     longitude: {
-        type: Number
+        type: String
     },
     countryInformation: {
         type: String,
-        required: requiredMessage
+        required: requiredMessage,
+        max: 1000
     }
 });

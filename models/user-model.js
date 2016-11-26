@@ -25,7 +25,7 @@ module.exports = modelRegistrator.register("User", {
         type: String,
         required: requiredMessage
     },
-    profileImageURL: {
+    profileImgURL: {
         type: String,
         default: defaultAvatar
     }
