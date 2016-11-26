@@ -1,12 +1,12 @@
 /* globals module */
 
-module.exports = function(models) {
+module.exports = function (models) {
     let { Country } = models;
 
     return {
-        getAllCountryNames() {
+        getAllCountriesByName() {
             return new Promise((resolve, reject) => {
-                Country.find({}, "name", (err, countryNames) => {
+                Country.find({}).select("name", (err, countryNames) => {
                     if (err) {
                         return reject(err);
                     }
@@ -18,6 +18,17 @@ module.exports = function(models) {
         allCountries() {
             return new Promise((resolve, reject) => {
                 Country.find({}, (err, country) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(country);
+                });
+            });
+        },
+        getCountryById(id) {
+            return new Promise((resolve, reject) => {
+                Country.findById(id, (err, country) => {
                     if (err) {
                         return reject(err);
                     }

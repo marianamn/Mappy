@@ -15,7 +15,8 @@ module.exports = function ({ app, data }) {
         .get("/", homeController.home)
         .get("/rankings", rankingController.ranking)
         .get("/terms", termsOfUseController.getTerms)
-        .get("/countries", countriesController.allCountries);
+        .get("/countries", countriesController.allCountries)
+        .get("/countries/:id", countriesController.countryDetails);
 
     app.use("/", router);
 
