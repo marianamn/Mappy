@@ -60,3 +60,8 @@ body {
     margin-bottom: 10px;
     text-decoration: none;
 }
+
+#profile-image{
+    width: 150px;
+    height: 150px;
+}
