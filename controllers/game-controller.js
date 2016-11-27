@@ -22,7 +22,7 @@ module.exports = function(data) {
                 .then(country => {
                     let selectedCountryName = country.name.toLowerCase().replace(/-/g, " ");
                     let requiredCountryName = req.params.requiredCountryName.toLowerCase().replace(/-/g, " ");
-                   
+
                     if (selectedCountryName === requiredCountryName) {
                         return data.increaseUserScore(
                             req.user.id,

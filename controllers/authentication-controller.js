@@ -31,13 +31,13 @@ module.exports = function(data) {
             let hashPass = data.encryption.generateHashedPassword(salt, password);
 
             data.createUser(
-                username,
-                firstName,
-                lastName,
-                email,
-                profileImageURL,
-                salt,
-                hashPass)
+                    username,
+                    firstName,
+                    lastName,
+                    email,
+                    profileImageURL,
+                    salt,
+                    hashPass)
                 .then(user => {
                     return res.redirect("/auth/login");
                 });

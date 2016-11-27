@@ -2,7 +2,7 @@
 
 const dataUtils = require("./utils/data-utils");
 
-module.exports = function (models) {
+module.exports = function(models) {
     let { User } = models;
 
     return {
@@ -57,7 +57,7 @@ module.exports = function (models) {
                     if (err) {
                         return reject(err);
                     }
-                    
+
                     return resolve(user);
                 });
             }).then(user => {
@@ -74,6 +74,17 @@ module.exports = function (models) {
                     }
 
                     return resolve(user);
+                });
+            });
+        },
+        getAllUsers() {
+            return new Promise((resolve, reject) => {
+                User.find({}, (err, users) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(users);
                 });
             });
         }

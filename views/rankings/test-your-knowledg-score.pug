@@ -1,7 +1,7 @@
 extends ../_layout
 block content
     .col-md-6.col-md-offset-3
-        h3.text-center Total Games Ranking
+        h3.text-center Test Your Knowledge Ranking
 
         ul
             table.table.table-striped.table-hover
@@ -9,15 +9,13 @@ block content
                     tr
                     th #
                     th User name
-                    th.text-center Total games score
+                    th.text-center Test your knowledge score
                 tbody
                 each user in result
                     tr.active
                     td=li=result.indexOf(user) + 1
                     td=li=user.username
-                    td.text-center=li=user.guessTheCountryScore + user.testYourKnowledgeScore
-    
+                    td.text-center=li=user.testYourKnowledgeScore
+
         p.text-center
-            a.btn.btn-primary(href="/rankings/guess-the-country-score") See Guess The Country Score
-        p.text-center
-            a.btn.btn-primary(href="/rankings/test-your-knowledg-score") See Test Your Knowledge Score
+            a.btn.btn-primary(href="/rankings") Back to ranking
