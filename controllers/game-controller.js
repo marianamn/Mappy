@@ -1,6 +1,9 @@
-/* globals module console */
+/* globals module */
 
-module.exports = function(data) {
+const GUESS_THE_COUNTRY_INCREASING_VALUE = 1,
+    GUESS_THE_COUNTRY_SCORE_TYPE = "guessTheCountryScore";
+
+module.exports = function (data) {
     return {
         getFindTheCountryQuestion(req, res) {
             data.getAllCountryNames()
@@ -15,16 +18,25 @@ module.exports = function(data) {
             return res.render("map/test-your-knowledge-question", {});
         },
         evaluateGuessTheCountryAnswer(req, res) {
-
             let selectedCountryName = req.params.selectedCountryName.toLowerCase().replace(/-/g, " ");
             let requiredCountryName = req.params.requiredCountryName.toLowerCase().replace(/-/g, " ");
-
+            
+            // TODO: clean the logic about  redirects (if user's answer is not correct is it necessary to redirect
+            // or let the user guessing country)
             if (selectedCountryName === requiredCountryName) {
-                console.log("Success");
-                // TODO: add points to user
+                data.increaseUserScore(
+                    req.user.id,
+                    GUESS_THE_COUNTRY_SCORE_TYPE,
+                    GUESS_THE_COUNTRY_INCREASING_VALUE)
+                    .then(() => {
+                        res.redirect("/game/guess-the-country");
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    });
+            } else {
+                res.redirect("/game/guess-the-country");
             }
-
-            res.redirect("/game/guess-the-country");
         }
     };
 };

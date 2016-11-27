@@ -51,6 +51,21 @@ module.exports = function (models) {
                 return dataUtils.update(user);
             });
         },
+        increaseUserScore(userId, scoreType, increasingValue) {
+            return new Promise((resolve, reject) => {
+                User.findById(userId, (err, user) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(user);
+                });
+            }).then(user => {
+                user[scoreType] += increasingValue;
+
+                return dataUtils.update(user);
+            });
+        },
         findUserById(id) {
             return new Promise((resolve, reject) => {
                 User.findById(id, (err, user) => {
