@@ -50,7 +50,17 @@ module.exports = function (models) {
 
                 return dataUtils.update(user);
             });
+        },
+        findById(id) {
+            return new Promise((resolve, reject) => {
+                User.findById(id, (err, user) => {
+                    if (err) {
+                        return reject(err);
+                    }
 
+                    return resolve(user);
+                });
+            });
         }
     };
 };
