@@ -15,14 +15,14 @@ module.exports = function(data) {
                 });
         },
         getTestKnowledgeQuestion(req, res) {
-            return res.render("map/test-your-knowledge-question", {});
+            return res.render("map/test-your-knowledge-map", {});
         },
         evaluateGuessTheCountryAnswer(req, res) {
             data.getCountryByEuValue(req.params.selectedCountryName)
                 .then(country => {
                     let selectedCountryName = country.name.toLowerCase().replace(/-/g, " ");
                     let requiredCountryName = req.params.requiredCountryName.toLowerCase().replace(/-/g, " ");
-                   
+
                     if (selectedCountryName === requiredCountryName) {
                         return data.increaseUserScore(
                             req.user.id,
