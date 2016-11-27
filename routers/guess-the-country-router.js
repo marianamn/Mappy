@@ -7,12 +7,11 @@ let isAuthenticated = require("../middlewares/is-user-authenticated");
 
 module.exports = function({ app, data }) {
 
-    let controller = require("../controllers/game-controller")(data);
+    let controller = require("../controllers/guess-the-country-controller")(data);
     let router = new Router();
 
     router
         .get("/guess-the-country", isAuthenticated, controller.getFindTheCountryQuestion)
-        .get("/test-your-knowledge", isAuthenticated, controller.getTestKnowledgeQuestion)
         .get("/guess-the-country/:requiredCountryName/:selectedCountryName", isAuthenticated, controller.evaluateGuessTheCountryAnswer);
 
     app.use("/game", router);
