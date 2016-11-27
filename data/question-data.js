@@ -6,12 +6,12 @@ module.exports = function (models) {
     return {
         getAllQuestionsByCountryName(country) {
             return new Promise((resolve, reject) => {
-                Question.find({ country }, (err, question) => {
+                Question.find({ country }, (err, questions) => {
                     if (err) {
                         return reject(err);
                     }
                     
-                    return resolve(question);
+                    return resolve(questions);
                 });
             });
         },

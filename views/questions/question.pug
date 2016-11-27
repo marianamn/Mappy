@@ -7,7 +7,7 @@ block content
 
     div
         h3.question(id= question._id)= question.question
-        ul
+        ul#answers-list
             each answer in question.answers
-                li
+                li.answers-item
                     button.btn.btn-info= answer.answer
