@@ -1,7 +1,9 @@
 extends ../_layout
 block content
-    ul
+    .row.text-center
         each country in result
-            li
-                a(href="countries/" + country._id)= country.name
-                img(src= country.flagUrl, style="width:100px;height:100px;")
+            .col-sm-2
+                a(href="countries/" + country._id class="flags" class="text-center")
+                    p.country-names=country.name
+                    |  
+                    img(src= country.flagUrl, class="flag-img")

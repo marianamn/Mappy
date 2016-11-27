@@ -13,12 +13,7 @@ module.exports = function ({ app, data }) {
 
     router
         .get("/test-your-knowledge", isAuthenticated, controller.getTestKnowledgeQuestion)
-        .get("/test-your-knowledge/test", isAdmin, function(req, res) {
-            res.send("hello from admin");
-        })
-        .get("/test-your-knowledge/:countryName", isAuthenticated, controller.redirectToQuestion)
-        .get("/test-your-knowledge/:countryName/:id", isAuthenticated, controller.getQuestion);
-        
+        .get("/test-your-knowledge/:countryName", isAuthenticated, controller.getQuestion);
 
     app.use("/game", router);
 

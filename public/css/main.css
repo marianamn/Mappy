@@ -1,0 +1,66 @@
+body {
+    width: 100%;
+    position: absolute;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #3a3737;
+    font-size: 16px;
+}
+
+.country-names {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #154d5e;
+}
+
+.flags {
+    text-decoration: none;
+}
+
+.flag-img {
+    width: 130px;
+    height: 80px;
+    border: 1px solid gray;
+}
+
+.country-img {
+    width: 80%;
+    height: 500px;
+    padding-bottom: 50px;
+}
+
+.country-name {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #154d5e;
+    font-weight: bold;
+}
+
+.table-country-details {
+    color: #3a3737;
+    padding-bottom: 50px;
+}
+
+.country-info {
+    padding-top: 50px;
+    text-align: justify;
+}
+
+.home-img {
+    width: 200px;
+    height: 200px;
+}
+
+.home-info {
+    padding-bottom: 50px;
+}
+
+.home-link-title {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #154d5e;
+}
