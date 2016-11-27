@@ -36,5 +36,6 @@ module.exports = modelRegistrator.register("User", {
     testYourKnowledgeScore: {
         type: Number,
         default: 0
-    }
+    },
+    isAdmin: Boolean
 });

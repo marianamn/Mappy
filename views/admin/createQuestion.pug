@@ -1,0 +1,34 @@
+extends ../_layout
+block content
+
+    form
+        .form-group
+            label.control-label.requiredField(for='title') Question title
+            span.asteriskField *
+            input.form-control(name='title', type='text')
+        .form-group
+            label.control-label.requiredField(for='country') Set country
+            span.asteriskField *
+            input.form-control(name='country', type='text')
+        .form-group
+            label.control-label Question answers
+        .form-group
+            label.control-label(for='firstAnswer') Answer 1
+            input#subject.form-control(name='firstAnswer', type='text')
+            input.checkbox(type="checkbox")   
+        .form-group
+            label.control-label(for='secondAnswer') Answer 2
+            input#subject.form-control(name='secondAnswer', type='text')
+            input.checkbox(type="checkbox")   
+        .form-group
+            label.control-label(for='thirdAnswer') Answer 3
+            input#subject.form-control(name='thirdAnswer', type='text')
+            input.checkbox(type="checkbox")   
+        .form-group
+            label.control-label(for='forthAnswer') Answer 4
+            input#subject.form-control(name='forthAnswer', type='text')
+            input.checkbox(type="checkbox")   
+        .form-group
+            button.btn.btn-primary(name='submit', type='submit') Create question
+        div
+            p * check which is the correct question

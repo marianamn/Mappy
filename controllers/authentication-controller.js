@@ -51,6 +51,16 @@ module.exports = function(data) {
         },
         getLoginForm(req, res) {
             return res.render("authentication/login");
+        },
+        getProfile(req, res) {
+            return res.render("authentication/profile", {
+                user: req.user
+            });
+        },
+        unauthorized(req, res) {
+            return res.render("authentication/unauthorized", {
+                user: req.user
+            });
         }
     };
 };

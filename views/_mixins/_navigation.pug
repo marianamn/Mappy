@@ -24,12 +24,16 @@ mixin site-navigation
                                 span.caret
                             ul.dropdown-menu
                                 li
-                                    a(href="#") 
+                                    a(href="auth/profile") 
                                         | View profile
                                 li
                                     form(action="auth/logout" method="post")
                                         button
                                             | Sign out
+                            if user.isAdmin
+                                li.admin
+                                    a(href="admin/panel")
+                                        | Admin panel
                     else
                         li.dropdown
                             a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
@@ -42,8 +46,3 @@ mixin site-navigation
                                 li
                                     a(href="/auth/login")
                                         | Sign in
-                    li
-                        form.form-inline(action="/search" method="get")
-                            input.form-control(type="text" name="pattern")
-                            button.btn.btn-danger
-                                span.glyphicon.glyphicon-search

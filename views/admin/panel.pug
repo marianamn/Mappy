@@ -1,0 +1,12 @@
+extends ../_layout
+block content
+    h3= "Administration"
+    form.form-inline(action="/search" method="get")
+        label.col-md-2.control-label(for="username") Find user
+        .col-md-10
+            input.searchUsers.form-control(type="text" name="pattern")
+            button.btn.btn-danger
+                span.glyphicon.glyphicon-search
+
+    div
+        a.btn.btn-success(href="/admin/panel/createQuestion") Create new question  

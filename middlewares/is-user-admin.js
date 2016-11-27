@@ -1,8 +1,8 @@
 /* globals module */
 
 module.exports = function (req, res, next) {
-    if (!req.isAuthenticated()) {
-        return res.redirect("/auth/login");
+    if (!req.user.isAdmin) {
+        return res.redirect("/auth/unauthorized");
     }
 
     return next();

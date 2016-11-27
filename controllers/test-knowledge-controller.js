@@ -3,7 +3,9 @@
 module.exports = function (data) {
     return {
         getTestKnowledgeQuestion(req, res) {
-            return res.render("map/test-your-knowledge-map");
+            return res.render("map/test-your-knowledge-map", {
+                user: req.user
+            });
         },
         redirectToQuestion(req, res) {
             let countryName = req.params.countryName;
@@ -20,7 +22,7 @@ module.exports = function (data) {
 
             data.getQuestionById(questionId)
                 .then(question => {
-                    res.render("questions/question", { question });
+                    res.render("questions/question", { user: req.user, question });
                 });
         }
     };

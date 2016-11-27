@@ -19,7 +19,9 @@ module.exports = function ({ app, data }) {
         (req, res) =>
             res.redirect("/")
         )
-        .post("/logout", controller.logout);
+        .post("/logout", controller.logout)
+        .get("/unauthorized", controller.unauthorized)
+        .get("/profile", controller.getProfile);
 
     app.use("/auth", router);
 
