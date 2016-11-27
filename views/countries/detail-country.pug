@@ -1,3 +1,26 @@
 extends ../_layout
 block content
-    p #{result}
+    div.text-center
+        p.country-name #{result.name}
+        img(src= result.countryImgUrl, class="country-img")
+        
+        div.table-country-details
+            .col-md-6.col-md-offset-3
+                table.table.table-striped.table-hover
+                    thead
+                        tr
+                        th.text-center Capital
+                        th.text-center Currency
+                        th.text-center Population
+                        th.text-center Area
+                        th.text-center Population Density
+                    tbody
+                        tr
+                        td.text-center=result.capital
+                        td.text-center=result.currency
+                        td.text-center=result.population
+                        td.text-center=result.area
+                        td.text-center=result.populationDensity
+    
+    div.country-info
+        div=result.countryInformation
