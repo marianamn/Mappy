@@ -12,8 +12,9 @@ module.exports = function (connectionString) {
 
     let User = require("../models/user-model.js");
     let Country = require("../models/country-model");
+    let Question = require("../models/question-model");
 
-    let models = { User, Country };
+    let models = { User, Country, Question };
 
     let data = {};
 

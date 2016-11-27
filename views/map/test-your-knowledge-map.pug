@@ -1,0 +1,130 @@
+extends ../_layout
+block styles
+    link(rel='stylesheet', type='text/css', href='/static/includes/style.css', media='all')
+    link(rel='stylesheet', type='text/css', href='/static/cssmap-europe/cssmap-europe.css', media='screen')
+    
+block content
+    #demo-page-europe
+    article.page-content
+        section#section-demo
+            hr
+            #display-map.display-demo-map
+                #map-europe
+                    ul.europe
+                        li.eu1
+                            a(href="/game/test-your-knowledge/Albania") Albania
+                        li.eu2
+                            a(href="/game/test-your-knowledge/Andorra") Andorra
+                        li.eu3
+                            a(href="/game/test-your-knowledge/Austria") Austria
+                        li.eu4
+                            a(href="/game/test-your-knowledge/Belarus") Belarus
+                        li.eu5
+                            a(href="/game/test-your-knowledge/Belgium") Belgium
+                        li.eu6
+                            a(href="/game/test-your-knowledge/Bosnia and Herzegovina") Bosnia and Herzegovina
+                        li.eu7
+                            a(href="/game/test-your-knowledge/Bulgaria") Bulgaria
+                        li.eu8
+                            a(href="/game/test-your-knowledge/Croatia") Croatia
+                        li.eu9
+                            a(href="/game/test-your-knowledge/Cyprus") Cyprus
+                        li.eu10
+                            a(href="/game/test-your-knowledge/Czech Republic") Czech Republic
+                        li.eu11
+                            a(href="/game/test-your-knowledge/Denmark") Denmark
+                        li.eu12
+                            a(href="/game/test-your-knowledge/Estonia") Estonia
+                        li.eu13
+                            a(href="/game/test-your-knowledge/France") France
+                        li.eu14
+                            a(href="/game/test-your-knowledge/Finland") Finland
+                        li.eu15
+                            a(href="/game/test-your-knowledge/Georgia") Georgia
+                        li.eu16
+                            a(href="/game/test-your-knowledge/Germany") Germany
+                        li.eu17
+                            a(href="/game/test-your-knowledge/Greece") Greece
+                        li.eu18
+                            a(href="/game/test-your-knowledge/Hungary") Hungary
+                        li.eu19
+                            a(href="/game/test-your-knowledge/Iceland") Iceland
+                        li.eu20
+                            a(href="/game/test-your-knowledge/Ireland") Ireland
+                        li.eu21
+                            a(href="/game/test-your-knowledge/San Marino") San Marino
+                        li.eu22
+                            a(href="/game/test-your-knowledge/Italy") Italy
+                        li.eu23
+                            a(href="/game/test-your-knowledge/Kosovo") Kosovo
+                        li.eu24
+                            a(href="/game/test-your-knowledge/Latvia") Latvia
+                        li.eu25
+                            a(href="/game/test-your-knowledge/Liechtenstein") Liechtenstein
+                        li.eu26
+                            a(href="/game/test-your-knowledge/Lithuania") Lithuania
+                        li.eu27
+                            a(href="/game/test-your-knowledge/Luxembourg") Luxembourg
+                        li.eu28
+                            a(href="/game/test-your-knowledge/Macedonia")
+                                | Macedonia 
+                                abbr(title='The Former Yugoslav Republic of Macedonia') (F.Y.R.O.M.)
+                        li.eu29
+                            a(href="/game/test-your-knowledge/Malta") Malta
+                        li.eu30
+                            a(href="/game/test-your-knowledge/Moldova") Moldova
+                        li.eu31
+                            a(href="/game/test-your-knowledge/Monaco") Monaco
+                        li.eu32
+                            a(href="/game/test-your-knowledge/Montenegro") Montenegro
+                        li.eu33
+                            a(href="/game/test-your-knowledge/Netherlands") Netherlands
+                        li.eu34
+                            a(href="/game/test-your-knowledge/Norway") Norway
+                        li.eu35
+                            a(href="/game/test-your-knowledge/Poland") Poland
+                        li.eu36
+                            a(href="/game/test-your-knowledge/Portugal") Portugal
+                        li.eu37
+                            a(href="/game/test-your-knowledge/Romania") Romania
+                        li.eu38
+                           a(href="/game/test-your-knowledge/Russian Federation") Russian Federation
+                        li.eu39
+                            a(href="/game/test-your-knowledge/Serbia") Serbia
+                        li.eu40
+                            a(href="/game/test-your-knowledge/Slovakia") Slovakia
+                        li.eu41
+                            a(href="/game/test-your-knowledge/Slovenia") Slovenia
+                        li.eu42
+                            a(href="/game/test-your-knowledge/Spain") Spain
+                        li.eu43
+                            a(href="/game/test-your-knowledge/Sweden") Sweden
+                        li.eu44
+                            a(href="/game/test-your-knowledge/Switzerland") Switzerland
+                        li.eu45
+                            a(href="/game/test-your-knowledge/Turkey") Turkey
+                        li.eu46
+                            a(href="/game/test-your-knowledge/Ukraine") Ukraine
+                        li.eu47
+                            a(href="/game/test-your-knowledge/United Kingdom") United Kingdom
+                #demo-form-fields.demo-form-fields
+                #demo-agents.demo-agents-list.wrapper
+                #demo-markers
+            .wrapper.hidden
+                #map-settings.map-settings.fixed-container
+                    form#map-settings-form(name='map-settings-form', action='#', method='post', novalidate='')
+                        fieldset#options-basic
+                            ul
+                                li.inline-label
+                                    label(for='map-set-size') Size (map width)
+                                    .select-field
+                                        select#map-set-size(name='map-set-size')
+                                            option(value='1450', selected='') 1450 px
+    footer.page-footer
+        .wrapper
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(type='text/javascript', src='https://cssmapsplugin.com/5/jquery.cssmap.min.js')
+    script(type='text/javascript', src='/static/js/script.js')
+    script(type='text/javascript', src='/static/bower_components/jquery/dist/jquery.js')
+      
+
