@@ -24,15 +24,15 @@ mixin site-navigation
                                 span.caret
                             ul.dropdown-menu
                                 li
-                                    a(href="auth/profile") 
+                                    a(href="/auth/profile") 
                                         | View profile
                                 li
-                                    form(action="auth/logout" method="post")
+                                    form(action="/auth/logout" method="post")
                                         button
                                             | Sign out
                             if user.isAdmin
                                 li.admin
-                                    a(href="admin/panel")
+                                    a(href="/admin/panel")
                                         | Admin panel
                     else
                         li.dropdown
