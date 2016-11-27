@@ -50,5 +50,8 @@ module.exports = modelRegistrator.register("Country", {
         type: String,
         required: requiredMessage,
         max: 1000
+    },
+    euValue: {
+        type: Number
     }
 });

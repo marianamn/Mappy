@@ -57,7 +57,7 @@ module.exports = function (models) {
                     if (err) {
                         return reject(err);
                     }
-
+                    
                     return resolve(user);
                 });
             }).then(user => {
