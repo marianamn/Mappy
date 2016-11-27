@@ -29,7 +29,11 @@ module.exports = modelRegistrator.register("User", {
         type: String,
         default: defaultAvatar
     },
-    score: {
+    guessTheCountryScore: {
+        type: Number,
+        default: 0
+    },
+    testYourKnowledgeScore: {
         type: Number,
         default: 0
     }
