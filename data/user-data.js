@@ -51,7 +51,7 @@ module.exports = function (models) {
                 return dataUtils.update(user);
             });
         },
-        findById(id) {
+        findUserById(id) {
             return new Promise((resolve, reject) => {
                 User.findById(id, (err, user) => {
                     if (err) {
