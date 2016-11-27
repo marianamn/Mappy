@@ -28,7 +28,7 @@ mixin site-navigation
                                         | View profile
                                 li
                                     form(action="/auth/logout" method="post")
-                                        button
+                                        button(class="btn btn-primary")
                                             | Sign out
                             if user.isAdmin
                                 li.admin
