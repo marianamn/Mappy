@@ -1,0 +1,24 @@
+body {
+    width: 100%;
+    position: absolute;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.country-names {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #154d5e;
+}
+
+.flags {
+    text-decoration: none;
+}
+
+.flag-img {
+    width: 130px;
+    height: 80px;
+    border: 1px solid gray;
+}
