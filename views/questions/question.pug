@@ -1,4 +1,9 @@
 extends ../_layout
 block content
 
-    p= question
+    div
+        h3.question(id= question._id)= question.question
+        ul
+            each answer in question.answers
+                li
+                    button.btn.btn-info= answer.answer
