@@ -3,8 +3,6 @@ body {
     position: absolute;
     padding-left: 50px;
     padding-right: 50px;
-    color: #3a3737;
-    font-size: 16px;
 }
 
 .country-names {
@@ -12,7 +10,8 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     text-decoration: none;
-    color: #154d5e;
+    color: #2C3E50;
+    font-weight: bold;
 }
 
 .flags {
@@ -34,12 +33,10 @@ body {
 .country-name {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #154d5e;
     font-weight: bold;
 }
 
 .table-country-details {
-    color: #3a3737;
     padding-bottom: 50px;
 }
 
@@ -62,5 +59,50 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     text-decoration: none;
-    color: #154d5e;
+}
+
+#profile-image {
+    width: 150px;
+    height: 150px;
+}
+
+.fade-in-out {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 30px;
+    text-align: center;
+    opacity: 1;
+    animation: fade 3s linear;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

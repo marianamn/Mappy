@@ -1,7 +1,7 @@
 extends ../_layout
 block content
     .row.text-center
-        each country in result
+        each country in countries
             .col-sm-2
                 a(href="countries/" + country._id class="flags" class="text-center")
                     p.country-names=country.name

@@ -3,7 +3,9 @@
 module.exports = function(data) {
     return {
         getTerms(req, res) {
-            return res.render("terms-of-use/termsOfUse");
+            let user = req.user;
+
+            return res.render("terms-of-use/termsOfUse", { user });
         }
     };
 };

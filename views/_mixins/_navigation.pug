@@ -6,10 +6,11 @@ mixin site-navigation
                     span.sr-only Toggle navigation
                     span.icon-bar
                     span.icon-bar
-                    span.icon-bar
-                a.navbar-brand(href="/") Mappy
+                    span.icon-bar         
             #navbar-collapse.collapse.navbar-collapse
                 ul.nav.navbar-nav
+                    li
+                        a.navbar-brand(href="/") Mappy
                     li
                         a(href="/rankings") Rankings
                     li
@@ -24,15 +25,15 @@ mixin site-navigation
                                 span.caret
                             ul.dropdown-menu
                                 li
-                                    a(href="auth/profile") 
+                                    a(href="/auth/profile") 
                                         | View profile
                                 li
-                                    form(action="auth/logout" method="post")
-                                        button
+                                    form(action="/auth/logout" method="post")
+                                        button(class="btn btn-primary")
                                             | Sign out
                             if user.isAdmin
                                 li.admin
-                                    a(href="admin/panel")
+                                    a(href="/admin/panel")
                                         | Admin panel
                     else
                         li.dropdown
