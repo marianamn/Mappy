@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "bootstrap-theme-bootswatch-flatly": "^1.0.2"
+    "bootstrap-theme-bootswatch-flatly": "^1.0.2",
+    "toastr": "^2.1.3"
   }
 }

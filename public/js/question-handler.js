@@ -1,4 +1,4 @@
-/* globals $ */
+/* globals $ toastr*/
 
 $("body").on("click", ".btn", (ev) => {
     let $target = $(ev.target);
@@ -23,6 +23,12 @@ $("body").on("click", ".btn", (ev) => {
         });
     }).then(response => {
         console.log(response);
+        if (response.isCorrect) {
+            toastr.success("Correct");
+        } else {
+            toastr.error("Wrong answer");
+        }
+
         $(".question").eq(0)
             .html(response.newQuestion.question);
 
