@@ -6,12 +6,14 @@ let Router = express.Router;
 module.exports = function({ app, data }) {
     let adminController = require("../controllers/admin-controller")(data);
     let questionController = require("../controllers/test-knowledge-controller")(data);
+    let authController = require("../controllers/authentication-controller")(data);
 
     let router = new Router();
 
     router
         .post("/createQuestion", adminController.createQuestion)
-        .post("/evaluate", questionController.evaluateQuestion);
+        .post("/evaluate", questionController.evaluateQuestion)
+        .put("/profile", authController.updateProfile);
 
     app.use("/api", router);
 

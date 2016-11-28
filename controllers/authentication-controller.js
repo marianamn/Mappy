@@ -2,7 +2,7 @@
 
 const usernamePattern = /^[a-zA-Z0-9_.]{6,20}$/;
 
-module.exports = function(data) {
+module.exports = function (data) {
     return {
         register(req, res) {
             let {
@@ -31,14 +31,14 @@ module.exports = function(data) {
             let hashPass = data.encryption.generateHashedPassword(salt, password);
 
             data.createUser(
-                    username,
-                    firstName,
-                    lastName,
-                    email,
-                    profileImageURL,
-                    salt,
-                    hashPass)
-                .then(user => {
+                username,
+                firstName,
+                lastName,
+                email,
+                profileImageURL,
+                salt,
+                hashPass)
+                .then(() => {
                     return res.redirect("/auth/login");
                 });
         },
@@ -56,6 +56,15 @@ module.exports = function(data) {
             return res.render("authentication/profile", {
                 user: req.user
             });
+        },
+        updateProfile(req, res) {
+            if (req.body.password) {
+                data.updateUserAndPassword(req.body)
+                    .then(res.json({ "message": "Your password is updated " }));
+            } else {
+                data.updateUser(req.body)
+                    .then(res.json({ "message": "Profile updated successfully." }));
+            }
         },
         unauthorized(req, res) {
             return res.render("authentication/unauthorized", {
