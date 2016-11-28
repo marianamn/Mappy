@@ -2,8 +2,7 @@
 
 const modelRegistrator = require("./utils/model-registrator");
 
-let requiredMessage = "{PATH} is required",
-    defaultAvatar = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR";
+let requiredMessage = "{PATH} is required";
 
 module.exports = modelRegistrator.register("User", {
     username: {
@@ -26,8 +25,7 @@ module.exports = modelRegistrator.register("User", {
         required: requiredMessage
     },
     profileImgURL: {
-        type: String,
-        default: defaultAvatar
+        type: String
     },
     guessTheCountryScore: {
         type: Number,
