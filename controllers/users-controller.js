@@ -14,10 +14,15 @@ module.exports = function(data) {
                         ownProfile = true;
                     }
 
+                    let guessTheCountryStars = Math.floor(foundUser.guessTheCountryScore / 100);
+                    let testYourKnowledgeStars = Math.floor(foundUser.testYourKnowledgeScore / 100);
+
                     res.render("users/profile", {
                         ownProfile,
                         foundUser,
-                        user
+                        user,
+                        guessTheCountryStars,
+                        testYourKnowledgeStars
                     });
                 });
         },

@@ -21,14 +21,24 @@ block content
                     img(src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" id='profile-image')
 
             h3 Username: #{foundUser.username}
-            div Guess the country stars
+            div Guess the country stars  &nbsp
+                - var n = 0;
                 span.rating
-                    span.glyphicon.glyphicon-star
-                    span.glyphicon.glyphicon-star
-                    span.glyphicon.glyphicon-star
-                    span.glyphicon.glyphicon-star-empty
-                    span.glyphicon.glyphicon-star-empty
-            div Test your knowledge stars
+                    while n < guessTheCountryStars
+                        span.glyphicon.glyphicon-star
+                        - n++;
+                    while n < 5
+                        span.glyphicon.glyphicon-star-empty
+                        - n++;
+            div Test your knowledge stars  &nbsp
+                - var m = 0;
+                span.rating
+                    while m < testYourKnowledgeStars
+                        span.glyphicon.glyphicon-star
+                        - m++;
+                    while m < 5
+                        span.glyphicon.glyphicon-star-empty
+                        - m++;
         if ownProfile
             form(method="post", action="", class='form-horizontal')
         else
