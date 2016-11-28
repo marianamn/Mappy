@@ -17,7 +17,10 @@ block content
                     td=li=result.indexOf(user) + 1
                     td
                         if loggedUser
-                            a(href='/users/' + user.username) #{user.username}
+                            if loggedUser.username == user.username
+                                a.red-text(href='/users/' + user.username) #{user.username}
+                            else
+                                a(href='/users/' + user.username) #{user.username}
                         else
                             =li=user.username
                     td.text-center=li=user.testYourKnowledgeScore
