@@ -4,7 +4,7 @@
 $("body").on("click", "#save-changes", () => {
     let profileImage = $("#profileImg").val();
     if (!profileImage) {
-        profileImage = $("#defaultProfileImg").val()
+        profileImage = $("#defaultProfileImg").val();
     }
 
     let profileObj;
@@ -27,6 +27,8 @@ $("body").on("click", "#save-changes", () => {
             profileImageUrl: profileImage
         };
     }
+
+    console.log(profileObj);
 
     requester.putJSON("/api/profile", profileObj)
         .then((success) => {

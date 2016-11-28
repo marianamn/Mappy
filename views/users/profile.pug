@@ -29,12 +29,12 @@ block content
             .form-group(hidden)
                 h4.col-lg-3.control-label Username:           
                 .col-lg-7
-                    input.form-control(value = foundUser.username type='text' name='username' readonly)
+                    input.form-control(id="username", id-data=foundUser._id value = foundUser.username type='text' name='username' readonly)
         if ownProfile
             .form-group
                 h4.col-lg-3.control-label Email:           
                 .col-lg-7
-                    input.form-control(value = foundUser.email type='text' name='email')
+                    input.form-control(id="email" value = foundUser.email type='text' name='email')
         else
             div 
                 span Email :
@@ -43,7 +43,7 @@ block content
             .form-group
                 h4.col-lg-3.control-label First Name:           
                 .col-lg-7
-                    input.form-control(value=foundUser.firstName type='text' name='firstName')
+                    input.form-control(id="firstName" value=foundUser.firstName type='text' name='firstName')
         else
             div 
                 span First name :
@@ -52,7 +52,7 @@ block content
             .form-group
                 h4.col-lg-3.control-label Last Name:           
                 .col-lg-7
-                    input.form-control(value=foundUser.lastName type='text' name='lastName')
+                    input.form-control(id="lastName" value=foundUser.lastName type='text' name='lastName')
         else
             div 
                 span Last name :
@@ -61,19 +61,19 @@ block content
             .form-group
                 h4.col-lg-3.control-label Password:           
                 .col-lg-7
-                    input.form-control( type='password' name='password')
+                    input.form-control(id="password" type='password' name='password')
             .form-group
                 h4.col-lg-3.control-label Confirm Password:           
                 .col-lg-7
-                    input.form-control( type='password' name='confirmPassword')
+                    input.form-control(id="confirmPassword" type='password' name='confirmPassword')
 
             .form-group
                 h4.col-lg-3.control-label Profile Image URL:
                 .col-lg-7
                     if(user.profileImageUrl)
-                        input.form-control(value=foundUser.profileImageUrl type='text' name='profileImageUrl')
+                        input.form-control(id="profileImg" value=foundUser.profileImageUrl type='text' name='profileImageUrl')
                     else
-                        input.form-control(value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
+                        input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
 
 
             .form-group
