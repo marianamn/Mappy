@@ -25,8 +25,7 @@ module.exports = modelRegistrator.register("Country", {
     },
     currency: {
         type: String,
-        required: requiredMessage,
-        unique: true
+        required: requiredMessage
     },
     population: {
         type: Number,
