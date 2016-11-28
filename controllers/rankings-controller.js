@@ -6,7 +6,7 @@ module.exports = function(data) {
             data.getAllUsers()
                 .then(users => {
                     let sortedUsers = users.sort((a, b) => {
-                        return b.guessTheCountryScore + b.testYourKnowledgeScore - a.guessTheCountryScore + a.testYourKnowledgeScore;
+                        return (parseFloat(b.guessTheCountryScore) + parseFloat(b.testYourKnowledgeScore)) - (parseFloat(a.guessTheCountryScore) + parseFloat(a.testYourKnowledgeScore));
                     });
                     let user = req.user;
                     res.render("rankings/ranking", {
@@ -19,7 +19,7 @@ module.exports = function(data) {
             data.getAllUsers()
                 .then(users => {
                     let sortedUsers = users.sort((a, b) => {
-                        return b.guessTheCountryScore - a.guessTheCountryScore;
+                        return parseFloat(b.guessTheCountryScore) - parseFloat(a.guessTheCountryScore);
                     });
                     let user = req.user;
                     res.render("rankings/guess-the-country-score", {
@@ -32,7 +32,7 @@ module.exports = function(data) {
             data.getAllUsers()
                 .then(users => {
                     let sortedUsers = users.sort((a, b) => {
-                        return b.testYourKnowledgeScore - a.guessTheCountryScore;
+                        return parseFloat(b.testYourKnowledgeScore) - parseFloat(a.testYourKnowledgeScore);
                     });
                     let user = req.user;
                     res.render("rankings/test-your-knowledg-score", {
