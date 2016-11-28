@@ -28,8 +28,6 @@ $("body").on("click", "#save-changes", () => {
         };
     }
 
-    console.log(profileObj);
-
     requester.putJSON("/api/profile", profileObj)
         .then((success) => {
             toastr.success(success.message);
