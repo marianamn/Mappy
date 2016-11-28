@@ -3,7 +3,7 @@
 const express = require("express");
 let Router = express.Router;
 
-module.exports = function ({ app, data }) {
+module.exports = function({ app, data }) {
     let adminController = require("../controllers/admin-controller")(data);
     let questionController = require("../controllers/test-knowledge-controller")(data);
     let usersController = require("../controllers/users-controller")(data);
