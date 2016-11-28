@@ -1,5 +1,6 @@
 extends ../_layout
 block content
+    - var loggedUser = user;
     .col-md-6.col-md-offset-3
         h3.text-center Guess The Country Games Ranking
 
@@ -14,7 +15,11 @@ block content
                 each user in result
                     tr.active
                     td=li=result.indexOf(user) + 1
-                    td=li=user.username
+                    td
+                        if loggedUser
+                            a(href='/users/' + user.username) #{user.username}
+                        else
+                            =li=user.username
                     td.text-center=li=user.guessTheCountryScore
             
         p.text-center

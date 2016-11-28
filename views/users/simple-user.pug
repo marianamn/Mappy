@@ -1,0 +1,25 @@
+extends ../_layout
+block content
+    .container
+        h2
+          | Personal Info
+
+        .jumbotron
+            if(user.profileImageURL)
+                p
+                    img(src="#{user.profileImageURL}" id='profile-image')
+            else
+                p
+                    img(src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" id='profile-image')
+
+            h3 Username: #{user.username}
+
+        div 
+            span Email :
+            span  #{user.email}
+        div 
+            span First name :
+            span  #{user.firstName}
+        div 
+            span Last name :
+            span  #{user.lastName}
