@@ -110,3 +110,7 @@ body {
 .red-text {
     color: red;
 }
+
+.answers-item {
+    list-style: none;
+}

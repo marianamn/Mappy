@@ -8,7 +8,7 @@ block headScripts
     script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
 
 block content
-    div
+    .jumbotron
         if question
             h3.question(id= question._id)= question.question
             ul#answers-list
