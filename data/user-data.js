@@ -2,7 +2,7 @@
 
 const dataUtils = require("./utils/data-utils");
 
-module.exports = function (models) {
+module.exports = function(models) {
     let { User } = models;
 
     return {
@@ -83,7 +83,7 @@ module.exports = function (models) {
                     if (err) {
                         return reject(err);
                     }
-                    console.log(user);
+
                     return resolve(user);
                 });
             });

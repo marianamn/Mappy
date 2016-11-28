@@ -1,17 +1,24 @@
 /* globals module */
 
-module.exports = function (data) {
+module.exports = function(data) {
     return {
         getUserByUsername(req, res) {
             let username = req.params.username;
 
             data.findUserByUsername(username)
-                .then(user => {
-                    let loggedUser = req.user;
+                .then(foundUser => {
+                    let user = req.user;
+                    let ownProfile = false;
 
-                    res.render("users/simple-user", {
-                        user,
-                        loggedUser
+                    if (foundUser.username === user.username || user.isAdmin === true) {
+                        console.log("same");
+                        ownProfile = true;
+                    }
+
+                    res.render("users/profile", {
+                        ownProfile,
+                        foundUser,
+                        user
                     });
                 });
         },
