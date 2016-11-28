@@ -1,5 +1,7 @@
 extends ../_layout
+
 block content
+    - var loggedUser = user;
     .col-md-6.col-md-offset-3
         h3.text-center Total Games Ranking
 
@@ -13,8 +15,12 @@ block content
                 tbody
                 each user in result
                     tr.active
-                    td=li=result.indexOf(user) + 1
-                    td=li=user.username
+                    td=li=result.indexOf(user) + 1  
+                    td
+                        if loggedUser
+                            a(href='/users/' + user.username) #{user.username}
+                        else
+                            =li=user.username
                     td.text-center=li=user.guessTheCountryScore + user.testYourKnowledgeScore
     
         p.text-center

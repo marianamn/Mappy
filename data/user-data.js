@@ -97,6 +97,17 @@ module.exports = function (models) {
                 });
             });
         },
+        findUserByUsername(username) {
+            return new Promise((resolve, reject) => {
+                User.findOne({ username }, (err, user) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(user);
+                });
+            });
+        },
         getAllUsers() {
             return new Promise((resolve, reject) => {
                 User.find({}, (err, users) => {
@@ -105,6 +116,17 @@ module.exports = function (models) {
                     }
 
                     return resolve(users);
+                });
+            });
+        },
+        getAllUsernames() {
+            return new Promise((resolve, reject) => {
+                User.find({}, "username", (err, usernames) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(usernames);
                 });
             });
         }

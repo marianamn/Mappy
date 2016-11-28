@@ -1,12 +1,17 @@
 extends ../_layout
+
+block styles
+    link(rel='stylesheet', type='text/css', href='http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css')
 block content
     h3= "Administration"
     form.form-inline(action="/search" method="get")
         label.col-md-2.control-label(for="username") Find user
         .col-md-10
-            input.searchUsers.form-control(type="text" name="pattern")
+            input#search-input.searchUsers.form-control(type="text" name="pattern")
             button.btn.btn-danger
                 span.glyphicon.glyphicon-search
 
     div
-        a.btn.btn-success(href="/admin/panel/createQuestion") Create new question  
+        a.btn.btn-success(href="/admin/panel/createQuestion") Create new question
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js')  
+    script(type='text/javascript', src='/static/js/admin-panel.js')  
