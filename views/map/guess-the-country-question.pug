@@ -2,10 +2,22 @@ extends ../_layout
 block styles
     link(rel='stylesheet', type='text/css', href='../../static/includes/style.css', media='all')
     link(rel='stylesheet', type='text/css', href='../../static/cssmap-europe/cssmap-europe.css', media='screen')
+    link(rel='stylesheet', type='text/css', href='../../static/css/main.css', media='screen')
 
 block content
-    - var requiredCountryName = currentCountryNameQuestion; 
-    #question.jumbotron.text-center Where is: #{currentCountryNameQuestion}?
+    - var requiredCountryName = requiredCountryNameQuestion; 
+    - var allCountries = euValues;
+    - var correct = isCorrect;
+    - var incorrect = isIncorrect;
+
+    if correct
+        .answer-wrap
+            .fade-in-out.correct Correct
+    if incorrect
+        .answer-wrap
+            .fade-in-out.incorrect Incorrect
+    
+    #question.jumbotron.text-center Where is: #{requiredCountryName}?
     #demo-page-europe
     article.page-content
         section#section-demo
@@ -13,100 +25,9 @@ block content
             #display-map.display-demo-map
                 #map-europe
                     ul.europe
-                        li.eu1
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/1') ?
-                        li.eu2
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/2') ?
-                        li.eu3
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/3') ?
-                        li.eu4
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/4') ?
-                        li.eu5
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/5') ?
-                        li.eu6
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/6') ?
-                        li.eu7
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/7') ?
-                        li.eu8
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/8') ?
-                        li.eu9
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/9') ?
-                        li.eu10
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/10') ?
-                        li.eu11
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/11') ?
-                        li.eu12
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/12') ?
-                        li.eu13
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/13') ?
-                        li.eu14
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/14') ?
-                        li.eu15
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/15') ?
-                        li.eu16
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/16') ?
-                        li.eu17
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/17') ?
-                        li.eu18
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/18') ?
-                        li.eu19
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/19') ?
-                        li.eu20
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/20') ?
-                        li.eu21
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/21') ?
-                        li.eu22
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/22') ?
-                        li.eu23
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/23') ?
-                        li.eu24
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/24') ?
-                        li.eu25
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/25') ?
-                        li.eu26
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/26') ?
-                        li.eu27
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/27') ?
-                        li.eu28
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/28') ?
-                        li.eu29
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/29') ?
-                        li.eu30
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/30') ?
-                        li.eu31
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/31') ?
-                        li.eu32
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/32') ?
-                        li.eu33
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/33') ?
-                        li.eu34
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/34') ?
-                        li.eu35
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/35') ?
-                        li.eu36
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/36') ?
-                        li.eu37
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/37') ?
-                        li.eu38
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/38') ?
-                        li.eu39
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/39') ?
-                        li.eu40
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/40') ?
-                        li.eu41
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/41') ?
-                        li.eu42
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/42') ?
-                        li.eu43
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/43') ?
-                        li.eu44
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/44') ?
-                        li.eu45
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/45') ?
-                        li.eu46
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/46') ?
-                        li.eu47
-                            a(href='/game/guess-the-country/' + requiredCountryName + '/47') ?
+                        each val in allCountries
+                            li(class='eu' + val)
+                                a(href='/game/guess-the-country/' + requiredCountryName + '/' + val) ?
                 #demo-form-fields.demo-form-fields
                 #demo-agents.demo-agents-list.wrapper
                 #demo-markers
@@ -122,9 +43,7 @@ block content
                                             option(value='1450', selected='') 1450 px
     footer.page-footer
         .wrapper
-    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
-    script(type='text/javascript', src='https://cssmapsplugin.com/5/jquery.cssmap.min.js')
+    //- script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(type='text/javascript', src='../../static/js/jquery.cssmap.min.js') 
     script(type='text/javascript', src='../../static/js/script.js')
     script(type='text/javascript', src='../../static/bower_components/jquery/dist/jquery.js')
-      
-

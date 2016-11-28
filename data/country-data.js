@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function (models) {
+module.exports = function(models) {
     let { Country } = models;
 
     return {
@@ -43,8 +43,19 @@ module.exports = function (models) {
                     if (err) {
                         return reject(err);
                     }
-                    
+
                     return resolve(country);
+                });
+            });
+        },
+        getGuessTheCountryQuestionData() {
+            return new Promise((resolve, reject) => {
+                Country.find({}, "name euValue", (err, countryData) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(countryData);
                 });
             });
         }

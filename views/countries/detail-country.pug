@@ -1,8 +1,8 @@
 extends ../_layout
 block content
     .text-center
-        p.country-name #{result.name}
-        img(src= result.countryImgUrl, class="country-img")
+        p.country-name #{country.name}
+        img(src= country.countryImgUrl, class="country-img")
         
         .table-country-details
             .col-md-6.col-md-offset-3
@@ -16,14 +16,14 @@ block content
                         th.text-center Population Density
                     tbody
                         tr.active
-                        td.text-center=result.capital
-                        td.text-center=result.currency
-                        td.text-center=result.population
-                        td.text-center=result.area
-                        td.text-center=result.populationDensity
+                        td.text-center=country.capital
+                        td.text-center=country.currency
+                        td.text-center=country.population
+                        td.text-center=country.area
+                        td.text-center=country.populationDensity
     
     .country-info
-        div=result.countryInformation
+        div=country.countryInformation
     
     p.text-center
             a.btn.btn-primary(href="/countries") Back to countries

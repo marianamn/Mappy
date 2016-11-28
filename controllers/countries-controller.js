@@ -5,8 +5,11 @@ module.exports = function(data) {
         allCountries(req, res) {
             data.allCountries()
                 .then(countries => {
+                    let user = req.user;
+
                     res.render("countries/allCountries", {
-                        result: countries
+                        countries,
+                        user
                     });
                 });
         },
@@ -14,8 +17,11 @@ module.exports = function(data) {
             let id = req.params.id;
             data.getCountryById(id)
                 .then(country => {
+                    let user = req.user;
+
                     res.render("countries/detail-country", {
-                        result: country
+                        country,
+                        user
                     });
                 });
         }
