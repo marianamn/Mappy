@@ -48,7 +48,7 @@ module.exports = function(models) {
                 });
             });
         },
-        getGuessTheCountryQuestionData() {
+        getGameData() {
             return new Promise((resolve, reject) => {
                 Country.find({}, "name euValue", (err, countryData) => {
                     if (err) {

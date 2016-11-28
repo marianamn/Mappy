@@ -8,7 +8,7 @@ module.exports = function(data) {
         getFindTheCountryQuestion(req, res) {
 
             // TODO: add caching to make less queries to DB
-            data.getGuessTheCountryQuestionData()
+            data.getGameData()
                 .then(countriesData => {
 
                     let requiredCountryNameQuestion = countriesData[Math.floor(Math.random() * countriesData.length)].name;
