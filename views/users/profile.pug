@@ -1,0 +1,74 @@
+extends ../_layout
+block content
+    .container
+        h2
+          | Personal Info
+
+        .jumbotron
+            if(user.profileImageURL)
+                p
+                    img(src="#{foundUser.profileImageURL}" id='profile-image')
+            else
+                p
+                    img(src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" id='profile-image')
+
+            h3 Username: #{foundUser.username}
+        if ownProfile
+            form(method="post", action="", class='form-horizontal')
+        else
+            div
+        if ownProfile
+            .form-group(hidden)
+                h4.col-lg-3.control-label Username:           
+                .col-lg-7
+                    input.form-control(value = foundUser.username type='text' name='username' readonly)
+        if ownProfile
+            .form-group
+                h4.col-lg-3.control-label Email:           
+                .col-lg-7
+                    input.form-control(value = foundUser.email type='text' name='email')
+        else
+            div 
+                span Email :
+                span  #{foundUser.email}
+        if ownProfile
+            .form-group
+                h4.col-lg-3.control-label First Name:           
+                .col-lg-7
+                    input.form-control(value=foundUser.firstName type='text' name='firstName')
+        else
+            div 
+                span First name :
+                span  #{foundUser.firstName}
+        if ownProfile
+            .form-group
+                h4.col-lg-3.control-label Last Name:           
+                .col-lg-7
+                    input.form-control(value=foundUser.lastName type='text' name='lastName')
+        else
+            div 
+                span Last name :
+                span  #{foundUser.lastName}
+        if ownProfile
+            .form-group
+                h4.col-lg-3.control-label Password:           
+                .col-lg-7
+                    input.form-control( type='password' name='password')
+            .form-group
+                h4.col-lg-3.control-label Confirm Password:           
+                .col-lg-7
+                    input.form-control( type='password' name='confirmPassword')
+
+            .form-group
+                h4.col-lg-3.control-label Profile Image URL:
+                .col-lg-7
+                    if(user.profileImageUrl)
+                        input.form-control(value=foundUser.profileImageUrl type='text' name='profileImageUrl')
+                    else
+                        input.form-control(value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
+
+
+            .form-group
+                .col-md-7
+                    button.btn.btn-success(type="submit") Save Changes
+                    a.btn.btn-primary(href="/auth/profile") Cancel
