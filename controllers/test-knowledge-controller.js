@@ -37,6 +37,7 @@ module.exports = function (data) {
             data.getQuestionById(id)
                 .then(question => {
                     let correctAnswer = question.answers.find(ans => ans.isCorrect).answer;
+                    
                     if (correctAnswer === requestAnswer) {
                         resBody.isCorrect = true;
                     }
@@ -54,6 +55,8 @@ module.exports = function (data) {
                     let newQuestion = {};
                     newQuestion.question = question.question;
                     newQuestion.answers = answers;
+                    newQuestion.id = question._id;
+
                     resBody.newQuestion = newQuestion;
 
                     if (resBody.isCorrect) {
