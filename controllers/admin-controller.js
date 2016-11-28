@@ -7,10 +7,14 @@ module.exports = function (data) {
                 user: req.user
             });
         },
-        createQuestion(req, res) {
+        getCreateQuestion(req, res) {
             res.render("admin/createQuestion", {
                 user: req.user
             });
+        },
+        createQuestion(req, res) {
+            data.createQuestion(req.body.question, req.body.answers, req.body.country)
+                .then(res.status(201).json({ "message": "Successfully created message." }));
         }
     };
 };

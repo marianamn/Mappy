@@ -1,34 +1,40 @@
 extends ../_layout
-block content
+block styles
+    link(rel="stylesheet", href="/static/bower_components/toastr/toastr.css")
 
-    form
+block headScripts
+    script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
+    script(type='text/javascript', src='/static/js/test.js')
+
+block content
+    div
         .form-group
             label.control-label.requiredField(for='title') Question title
             span.asteriskField *
-            input.form-control(name='title', type='text')
+            input.form-control(id="question-title", name='title', type='text')
         .form-group
             label.control-label.requiredField(for='country') Set country
             span.asteriskField *
-            input.form-control(name='country', type='text')
+            input.form-control(id="question-country", name='country', type='text')
         .form-group
             label.control-label Question answers
         .form-group
             label.control-label(for='firstAnswer') Answer 1
-            input#subject.form-control(name='firstAnswer', type='text')
-            input.checkbox(type="checkbox")   
+            input.form-control(id="firstA", name='firstAnswer', type='text')
+            input(id="radio1", type="radio", name="radio-group")   
         .form-group
             label.control-label(for='secondAnswer') Answer 2
-            input#subject.form-control(name='secondAnswer', type='text')
-            input.checkbox(type="checkbox")   
+            input.form-control(id="secondA", name='secondAnswer', type='text')
+            input(id="radio2", type="radio", name="radio-group")   
         .form-group
             label.control-label(for='thirdAnswer') Answer 3
-            input#subject.form-control(name='thirdAnswer', type='text')
-            input.checkbox(type="checkbox")   
+            input.form-control(id="thirdA", name='thirdAnswer', type='text')
+            input(id="radio3", type="radio", name="radio-group")   
         .form-group
             label.control-label(for='forthAnswer') Answer 4
-            input#subject.form-control(name='forthAnswer', type='text')
-            input.checkbox(type="checkbox")   
+            input.form-control(id="forthA", name='forthAnswer', type='text')
+            input(id="radio4", type="radio", name="radio-group")   
         .form-group
-            button.btn.btn-primary(name='submit', type='submit') Create question
+            button.btn.btn-primary(id="createQuestion") Create question
         div
             p * check which is the correct question

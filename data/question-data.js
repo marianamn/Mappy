@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function(models) {
+module.exports = function (models) {
     let { Question } = models;
 
     return {
@@ -23,6 +23,23 @@ module.exports = function(models) {
                     }
 
                     return resolve(question);
+                });
+            });
+        },
+        createQuestion(question, answers, country) {
+            let newQuestion = new Question({
+                question,
+                answers,
+                country
+            });
+
+            return new Promise((resolve, reject) => {
+                newQuestion.save((err) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(newQuestion);
                 });
             });
         }

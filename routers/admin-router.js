@@ -10,7 +10,7 @@ module.exports = function ({ app, data }) {
 
     router
         .get("/panel", controller.getPanel)
-        .get("/panel/createQuestion", controller.createQuestion);
+        .get("/panel/createQuestion", controller.getCreateQuestion);
 
     app.use("/admin", router);
 
