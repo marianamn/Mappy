@@ -8,12 +8,16 @@ block headScripts
     script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
 
 block content
-    .jumbotron
+    .jumbotron.text-center.col-lg-10
         if question
             h3.question(id= question._id)= question.question
-            ul#answers-list
-                each answer in question.answers
-                    li.answers-item
-                        button.btn.btn-info= answer.answer
+            hr
+            
+            .row
+                ul#answers-list.text-center
+                    each answer in question.answers
+                        .col-lg-2.col-lg-offset-1
+                            li.answers-item
+                                button.btn.btn-success= answer.answer
         else 
             h3 No questions for this country ..
