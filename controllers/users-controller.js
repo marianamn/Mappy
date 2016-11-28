@@ -11,7 +11,6 @@ module.exports = function(data) {
                     let ownProfile = false;
 
                     if (foundUser.username === user.username || user.isAdmin === true) {
-                        console.log("same");
                         ownProfile = true;
                     }
 
