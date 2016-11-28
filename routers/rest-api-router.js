@@ -4,16 +4,16 @@ const express = require("express");
 let Router = express.Router;
 
 module.exports = function({ app, data }) {
-    let questionController = require("../controllers/question-controller")(data);
     let adminController = require("../controllers/admin-controller")(data);
+    let questionController = require("../controllers/test-knowledge-controller")(data);
 
     let router = new Router();
 
     router
-        .post("/api/evaluate", questionController.evaluateQuestion)
-        .post("/api/createQuestion", adminController.createQuestion);
+        .post("/createQuestion", adminController.createQuestion)
+        .post("/evaluate", questionController.evaluateQuestion);
 
-    app.use("/", router);
+    app.use("/api", router);
 
     return router;
 };

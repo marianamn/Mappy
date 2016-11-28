@@ -14,15 +14,14 @@ $("body").on("click", ".btn", (ev) => {
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify(body),
-            success: function (response) {
+            success: function(response) {
                 resolve(response);
             },
-            error: function () {
+            error: function() {
 
             }
         });
     }).then(response => {
-        console.log(response);
         if (response.isCorrect) {
             toastr.success("Correct");
         } else {
@@ -30,7 +29,8 @@ $("body").on("click", ".btn", (ev) => {
         }
 
         $(".question").eq(0)
-            .html(response.newQuestion.question);
+            .html(response.newQuestion.question)
+            .attr("id", response.newQuestion.id);
 
         let answers = response.newQuestion.answers;
         shuffle(answers);

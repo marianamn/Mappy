@@ -4,16 +4,17 @@ module.exports = function (models) {
     let { Question } = models;
 
     return {
-        getAllQuestionsByCountryName(country) {
-            return new Promise((resolve, reject) => {
-                Question.find({ country }, (err, questions) => {
-                    if (err) {
-                        return reject(err);
-                    }
+        getQuestionsIdsByCountry(country) {
+            return new
+                Promise((resolve, reject) => {
+                    Question.find({ country }, "_id", (err, questionIds) => {
+                        if (err) {
+                            return reject(err);
+                        }
 
-                    return resolve(questions);
+                        return resolve(questionIds);
+                    });
                 });
-            });
         },
         getQuestionById(id) {
             return new Promise((resolve, reject) => {
