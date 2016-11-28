@@ -1,0 +1,63 @@
+extends ../_layout
+
+block styles
+    link(rel="stylesheet", href="/static/bower_components/toastr/toastr.css")
+
+block headScripts
+    script(type='text/javascript', src='/static/js/profile-update.js')
+    script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
+
+block content
+    .container
+        h2
+          | Personal Info
+
+        .jumbotron
+            if(user.profileImageURL)
+                p
+                    img(src="#{currentUser.profileImageURL}" id='profile-image')
+            else
+                p
+                    img(src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" id='profile-image')
+
+            h3 Username: #{user.username}
+
+        div
+        .form-group(hidden)
+            h4.col-lg-3.control-label Username:           
+            .col-lg-7
+                input.form-control(id="username", id-data= user._id, value = user.username type='text' name='username' readonly)
+        .form-group
+            h4.col-lg-3.control-label Email:           
+            .col-lg-7
+                input.form-control(id="email", value = user.email type='text' name='email')
+        .form-group
+            h4.col-lg-3.control-label First Name:           
+            .col-lg-7
+                input.form-control(id="firstName", value=user.firstName type='text' name='firstName')
+        .form-group
+            h4.col-lg-3.control-label Last Name:           
+            .col-lg-7
+                input.form-control(id="lastName", value=user.lastName type='text' name='lastName')
+        .form-group
+            h4.col-lg-3.control-label Password:           
+            .col-lg-7
+                input.form-control(id="password" type='password' name='password')
+        .form-group
+            h4.col-lg-3.control-label Confirm Password:           
+            .col-lg-7
+                input.form-control(id="confirmPassword" type='password' name='confirmPassword')
+
+        .form-group
+            h4.col-lg-3.control-label Profile Image URL:
+            .col-lg-7
+                if(user.profileImageUrl)
+                    input.form-control(id="profileImg", value=user.profileImageUrl type='text' name='profileImageUrl')
+                else
+                    input.form-control(id="defaultProfileImg", value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
+
+
+        .form-group
+            .col-md-7
+                button.btn.btn-success(id="saveChanges", type="submit") Save Changes
+                a.btn.btn-primary(href="/auth/profile") Cancel
