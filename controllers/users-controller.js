@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function(data) {
+module.exports = function (data) {
     return {
         getUserByUsername(req, res) {
             let username = req.params.username;
@@ -13,6 +13,13 @@ module.exports = function(data) {
                         user,
                         loggedUser
                     });
+                });
+        },
+        returnAllUsernames(req, res) {
+            return data.getAllUsernames()
+                .then(usernames => {
+                    let responseUsernames = usernames.map(u => u.username);
+                    res.json(responseUsernames);
                 });
         }
     };

@@ -2,7 +2,7 @@
 
 const dataUtils = require("./utils/data-utils");
 
-module.exports = function(models) {
+module.exports = function (models) {
     let { User } = models;
 
     return {
@@ -96,6 +96,17 @@ module.exports = function(models) {
                     }
 
                     return resolve(users);
+                });
+            });
+        },
+        getAllUsernames() {
+            return new Promise((resolve, reject) => {
+                User.find({}, "username", (err, usernames) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(usernames);
                 });
             });
         }
