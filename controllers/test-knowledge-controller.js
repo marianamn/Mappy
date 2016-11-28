@@ -17,7 +17,8 @@ module.exports = function(data) {
             data.getAllQuestionsByCountryName(countryName)
                 .then(questions => {
                     let question = questions[Math.floor(Math.random() * questions.length)];
-                    res.render("questions/question", { question });
+                    let user = req.user;
+                    res.render("questions/question", { user, question });
                 });
         }
     };
