@@ -1,7 +1,7 @@
 /* globals $ requester toastr */
 "use strict";
 
-$("body").on("click", "#saveChanges", () => {
+$("body").on("click", "#save-changes", () => {
     let profileImage = $("#profileImg").val();
     if (!profileImage) {
         profileImage = $("#defaultProfileImg").val()
@@ -39,4 +39,3 @@ $("body").on("click", "#saveChanges", () => {
             toastr.error("Something went wrong");
         });
 });
-
