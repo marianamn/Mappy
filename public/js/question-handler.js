@@ -14,10 +14,10 @@ $("body").on("click", ".btn", (ev) => {
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify(body),
-            success: function(response) {
+            success: function (response) {
                 resolve(response);
             },
-            error: function() {
+            error: function () {
 
             }
         });
@@ -34,11 +34,14 @@ $("body").on("click", ".btn", (ev) => {
 
         let answers = response.newQuestion.answers;
         shuffle(answers);
-        let $currentLi = $(".answers-item").eq(0);
-
+        
+        let $list = $(".answers-item");
+        let $currentLi = $list.eq(0);
+        let count = 1;
         answers.forEach(answer => {
             $currentLi.find(".btn").html(answer);
-            $currentLi = $currentLi.next();
+            $currentLi = $list.eq(count);
+            count += 1;
         });
 
     })

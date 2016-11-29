@@ -1,6 +1,13 @@
 /* globals module */
 
-module.exports = function (data) {
+function shuffle(array) {
+    for (let i = array.length; i; i -= 1) {
+        let j = Math.floor(Math.random() * i);
+        [array[i - 1], array[j]] = [array[j], array[i - 1]];
+    }
+}
+
+module.exports = function(data) {
     return {
         getTestKnowledgeQuestion(req, res) {
             data.getGameData()
@@ -23,6 +30,7 @@ module.exports = function (data) {
                 })
                 .then(question => {
                     let user = req.user;
+                    shuffle(question.answers);
                     res.render("questions/question", { user, question });
                 });
         },
@@ -37,7 +45,7 @@ module.exports = function (data) {
             data.getQuestionById(id)
                 .then(question => {
                     let correctAnswer = question.answers.find(ans => ans.isCorrect).answer;
-                    
+
                     if (correctAnswer === requestAnswer) {
                         resBody.isCorrect = true;
                     }
