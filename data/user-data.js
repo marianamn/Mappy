@@ -129,6 +129,27 @@ module.exports = function (models) {
                     return resolve(usernames);
                 });
             });
+        },
+        addComment(usernameToAdd, commentContent, author) {
+            let comment = {
+                content: commentContent,
+                author
+            };
+
+            return new
+                Promise((resolve, reject) => {
+                    User.findOne({ username: usernameToAdd }, (err, user) => {
+                        if (err) {
+                            return reject(err);
+                        }
+
+                        return resolve(user);
+                    });
+                })
+                .then((user) => {
+                    user.comments.push(comment);
+                    return dataUtils.save(user);
+                });
         }
     };
 };

@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function(data) {
+module.exports = function (data) {
     return {
         getUserByUsername(req, res) {
             let username = req.params.username;
@@ -31,6 +31,23 @@ module.exports = function(data) {
                 .then(usernames => {
                     let responseUsernames = usernames.map(u => u.username);
                     res.json(responseUsernames);
+                });
+        },
+        addComment(req, res) {
+            let usernameToAddComment = req.params.username;
+            let commentToAdd = req.body.commentToAdd;
+            let author = req.user.username;
+            data.addComment(usernameToAddComment, commentToAdd, author)
+                .then((user) => {
+                    res.json({
+                        comments: user.comments,
+                        message: "Comment added successfuly"
+                    });
+                }, (err) => {
+                    res.json({
+                        message: "Comment is not added",
+                        error: err
+                    });
                 });
         }
     };

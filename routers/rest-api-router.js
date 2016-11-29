@@ -15,6 +15,7 @@ module.exports = function({ app, data }) {
         .post("/createQuestion", adminController.createQuestion)
         .post("/evaluate", questionController.evaluateQuestion)
         .put("/profile", authController.updateProfile)
+        .post("/users/:username/comments", usersController.addComment)
         .get("/users", usersController.returnAllUsernames);
 
     app.use("/api", router);

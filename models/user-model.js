@@ -35,5 +35,15 @@ module.exports = modelRegistrator.register("User", {
         type: Number,
         default: 0
     },
-    isAdmin: Boolean
+    isAdmin: Boolean,
+    comments: [{
+        content: {
+            type: String,
+            required: requiredMessage
+        },
+        author: {
+            type: String,
+            required: requiredMessage
+        }
+    }]
 });

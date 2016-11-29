@@ -25,7 +25,7 @@ module.exports = {
     },
     create(Model, ...props) {
         props = props[0];
-        
+
         let model = new Model(...props);
 
         return new Promise((resolve, reject) => {
