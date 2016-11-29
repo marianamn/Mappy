@@ -12,6 +12,7 @@ module.exports = function({ app, data }) {
     let router = new Router();
 
     router
+        .post("/register", authController.register)
         .post("/createQuestion", adminController.createQuestion)
         .post("/evaluate", questionController.evaluateQuestion)
         .put("/profile", authController.updateProfile)
