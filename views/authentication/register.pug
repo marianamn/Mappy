@@ -1,10 +1,18 @@
 extends ../_layout
 
+block styles
+	link(rel="stylesheet", href="/static/bower_components/toastr/toastr.css")
+
+block headScripts
+	script(type='text/javascript', src='/static/js/utils/validator.js')
+	script(type='text/javascript', src='/static/js/register.js')
+	script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
+
 block content
 	.container
 		.col-md-6.col-md-offset-3
 			.well
-				form(method="post", action="", class='form-horizontal')
+				div(class='form-horizontal')
 					fieldset
 						legend Register
 						.form-group
@@ -38,4 +46,4 @@ block content
 						.form-group
 							col-md-10.col-md-offset-2
 								button(type="reset" class="btn btn-primary") Cancel
-								button(type="submit" class="btn btn-success") Register
+								button(id="btn-register", class="btn btn-success") Register

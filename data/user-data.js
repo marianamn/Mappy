@@ -11,7 +11,7 @@ module.exports = function (models) {
             firstName,
             lastName,
             email,
-            profileImageURL,
+            profileImgURL,
             salt,
             hashPass) {
             let user = new User({
@@ -20,7 +20,7 @@ module.exports = function (models) {
                 firstName,
                 lastName,
                 email,
-                profileImageURL,
+                profileImgURL,
                 salt,
                 hashPass
             });
@@ -47,7 +47,7 @@ module.exports = function (models) {
                 user.email = userData.email || user.email;
                 user.firstName = userData.firstName || user.firstName;
                 user.lastName = userData.lastName || user.lastName;
-                user.profileImageURL = userData.profileImageURL || user.profileImageURL;
+                user.profileImgURL = userData.profileImgURL || user.profileImgURL;
 
                 return dataUtils.update(user);
             });
@@ -65,7 +65,7 @@ module.exports = function (models) {
                 user.email = userData.email || user.email;
                 user.firstName = userData.firstName || user.firstName;
                 user.lastName = userData.lastName || user.lastName;
-                user.profileImageURL = userData.profileImageURL || user.profileImageURL;
+                user.profileImageURL = userData.profileImgURL || user.profileImgURL;
                 user.hashPass = encrypt.generateHashedPassword(user.salt, userData.password);
 
                 return dataUtils.update(user);

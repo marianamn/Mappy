@@ -1,4 +1,4 @@
-/* globals $ requester toastr */
+/* globals $ requester toastr validator */
 "use strict";
 
 function escapeHtmlTags(str) {
@@ -7,6 +7,8 @@ function escapeHtmlTags(str) {
         .replace(/&lt;/g, "<")
         .replace(/&gt;/g, ">");
 }
+
+const userImgURLPattern = /:\/\//;
 
 $("body").on("click", "#save-changes", () => {
     let profileImage = $("#profileImg").val();
@@ -23,7 +25,7 @@ $("body").on("click", "#save-changes", () => {
             email: $("#email").val(),
             firstName: $("#firstName").val(),
             lastName: $("#lastName").val(),
-            profileImageUrl: profileImage
+            profileImgURL: profileImage
         };
     } else {
         profileObj = {
@@ -31,8 +33,23 @@ $("body").on("click", "#save-changes", () => {
             email: $("#email").val(),
             firstName: $("#firstName").val(),
             lastName: $("#lastName").val(),
-            profileImageUrl: profileImage
+            profileImgURL: profileImage
         };
+    }
+
+    if (!validator.validateStringLength(profileObj.firstName, 3, 50)) {
+        toastr.error("Error: First name must be between 3 and 50 symbols");
+        return;
+    }
+
+    if (!validator.validateStringLength(profileObj.lastName, 3, 50)) {
+        toastr.error("Error: Last name must be between 3 and 50 symbols");
+        return;
+    }
+
+    if (!userImgURLPattern.test(profileObj.profileImgURL)) {
+        toastr.error("Error: Invalid image url");
+        return;
     }
 
     requester.putJSON("/api/profile", profileObj)
@@ -42,8 +59,7 @@ $("body").on("click", "#save-changes", () => {
             $("#confirmPassword").val("");
         })
         .catch((err) => {
-            console.log(err);
-            toastr.error("Something went wrong");
+            toastr.error(err.message);
         });
 });
 

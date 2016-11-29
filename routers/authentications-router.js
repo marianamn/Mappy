@@ -13,7 +13,6 @@ module.exports = function({ app, data }) {
     router
         .get("/register", controller.getRegisterForm)
         .get("/login", controller.getLoginForm)
-        .post("/register", controller.register)
         .post("/login",
             passport.authenticate("local", { failureRedirect: "/auth/login" }),
             (req, res) => {
