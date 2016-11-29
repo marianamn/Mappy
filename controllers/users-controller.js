@@ -58,6 +58,26 @@ module.exports = function (data) {
                         message: "Comment is not added"
                     });
                 });
+        },
+        updateUserRole(req, res) {
+            let username = req.params.username;
+            let isAdmin = req.body.isAdmin;
+
+
+            data.modifyUserRole(username, isAdmin)
+                .then(user => {
+                    let role = "normal user";
+                    if (user.isAdmin) {
+                        role = "admin";
+                    }
+
+                    res.json({
+                        message: `${user.username} is now ${role}`
+                    });
+                })
+                .catch(error => {
+                    res.json({ error });
+                });
         }
     };
 };

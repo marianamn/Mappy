@@ -3,14 +3,17 @@
 const express = require("express");
 let Router = express.Router;
 
+let isAdmin = require("../middlewares/is-user-admin");
+let isAuthenticated = require("../middlewares/is-user-authenticated");
+
 module.exports = function ({ app, data }) {
     let controller = require("../controllers/admin-controller")(data);
 
     let router = new Router();
 
     router
-        .get("/panel", controller.getPanel)
-        .get("/panel/createQuestion", controller.getCreateQuestion);
+        .get("/panel", isAuthenticated, isAdmin, controller.getPanel)
+        .get("/panel/createQuestion", isAuthenticated, isAdmin, controller.getCreateQuestion);
 
     app.use("/admin", router);
 

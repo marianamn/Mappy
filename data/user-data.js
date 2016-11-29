@@ -150,6 +150,22 @@ module.exports = function (models) {
                     user.comments.push(comment);
                     return dataUtils.save(user);
                 });
+        },
+        modifyUserRole(username, isAdmin) {
+            return new
+                Promise((resolve, reject) => {
+                    User.findOne({ username }, (err, user) => {
+                        if (err) {
+                            return reject(err);
+                        }
+
+                        return resolve(user);
+                    });
+                })
+                .then(user => {
+                    user.isAdmin = isAdmin;
+                    return dataUtils.save(user);
+                });
         }
     };
 };

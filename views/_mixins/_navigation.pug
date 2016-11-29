@@ -17,6 +17,16 @@ mixin site-navigation
                         a(href="/countries") Countries
                     li
                         a(href="/terms") Terms of use
+                    li
+                        form.form-inline(action="/search" method="get")
+                            label.col-md-2.control-label(for="username") Find user
+                            .col-md-10
+                                input#search-input.searchUsers.form-control(type="text" name="username")
+                                button.btn.btn-danger
+                                    span.glyphicon.glyphicon-search                        
+
+
+
                 ul.nav.navbar-nav.pull-right
                     if user
                         li.dropdown
