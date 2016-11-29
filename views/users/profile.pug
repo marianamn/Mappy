@@ -13,9 +13,9 @@ block content
           | Personal Info
 
         .jumbotron
-            if(user.profileImageURL)
+            if(user.profileImgURL)
                 p
-                    img(src="#{foundUser.profileImageURL}" id='profile-image')
+                    img(src= user.profileImgURL, id='profile-image')
             else
                 p
                     img(src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" id='profile-image')
@@ -88,8 +88,8 @@ block content
             .form-group
                 h4.col-lg-3.control-label Profile Image URL:
                 .col-lg-7
-                    if(user.profileImageUrl)
-                        input.form-control(id="profileImg" value=foundUser.profileImageUrl type='text' name='profileImageUrl')
+                    if(user.profileImgURL)
+                        input.form-control(id="profileImg", value= user.profileImgURL, type='text', name='profileImageUrl')
                     else
                         input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
 
