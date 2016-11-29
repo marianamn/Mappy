@@ -36,7 +36,16 @@ module.exports = function (data) {
         addComment(req, res) {
             let usernameToAddComment = req.params.username;
             let commentToAdd = req.body.commentToAdd;
-            let author = req.user.username;
+            let user = req.user;
+            if (!user) {
+                return res.json({
+                    error: "UserNotAuthenticated",
+                    message: "Authenticate your username first"
+                });
+            }
+
+            let author = user.username;
+
             data.addComment(usernameToAddComment, commentToAdd, author)
                 .then((user) => {
                     res.json({
@@ -45,8 +54,8 @@ module.exports = function (data) {
                     });
                 }, (err) => {
                     res.json({
-                        message: "Comment is not added",
-                        error: err
+                        error: err,
+                        message: "Comment is not added"
                     });
                 });
         }
