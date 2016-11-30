@@ -40,7 +40,7 @@ module.exports = function({ app, data }) {
                     } else {
                         let splitedName = profile.displayName.split(" ");
 
-                        data.createFacebookUser(profile.displayName, splitedName[0], splitedName[1], profile.profileUrl, profile.id)
+                        data.createFacebookUser(profile.displayName, splitedName[0], splitedName[1], profile.photos[0].value, profile.id)
                             .then((createdUser) => {
                                 return done(null, createdUser);
                             });
