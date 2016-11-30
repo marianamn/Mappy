@@ -7,7 +7,6 @@ let requiredMessage = "{PATH} is required";
 module.exports = modelRegistrator.register("User", {
     username: {
         type: String,
-        required: requiredMessage,
         unique: true
     },
     salt: String,
@@ -17,12 +16,10 @@ module.exports = modelRegistrator.register("User", {
         required: requiredMessage
     },
     lastName: {
-        type: String,
-        required: requiredMessage
+        type: String
     },
     email: {
-        type: String,
-        required: requiredMessage
+        type: String
     },
     profileImgURL: {
         type: String
@@ -45,5 +42,6 @@ module.exports = modelRegistrator.register("User", {
             type: String,
             required: requiredMessage
         }
-    }]
+    }],
+    facebookId: String
 });

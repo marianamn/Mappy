@@ -10,7 +10,6 @@ module.exports = function(data) {
             // TODO: add caching to make less queries to DB
             data.getGameData()
                 .then(countriesData => {
-
                     let requiredCountryNameQuestion = countriesData[Math.floor(Math.random() * countriesData.length)].name;
                     let euValues = [];
 

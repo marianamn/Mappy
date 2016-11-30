@@ -2,6 +2,7 @@
 "use strict";
 
 // todo validate email and password length
+// bug when user visits others user profile your profile image is shown
 const userImgURLPattern = /:\/\//;
 
 $("body").on("click", "#btn-register", () => {

@@ -34,6 +34,26 @@ module.exports = function (models) {
                 });
             });
         },
+        createFacebookUser(username, firstName, lastName, profileImgURL, facebookId) {
+            let user = new User({
+                User,
+                username,
+                firstName,
+                lastName,
+                profileImgURL,
+                facebookId
+            });
+
+            return new Promise((resolve, reject) => {
+                user.save(err => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(user);
+                });
+            });
+        },
         updateUser(userData) {
             return new Promise((resolve, reject) => {
                 User.findOne({ _id: userData.id }, (err, user) => {
@@ -100,6 +120,17 @@ module.exports = function (models) {
         findUserByUsername(username) {
             return new Promise((resolve, reject) => {
                 User.findOne({ username }, (err, user) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(user);
+                });
+            });
+        },
+        findUserByFacebookId(facebookId) {
+            return new Promise((resolve, reject) => {
+                User.findOne({ facebookId }, (err, user) => {
                     if (err) {
                         return reject(err);
                     }

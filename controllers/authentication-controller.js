@@ -42,7 +42,7 @@ module.exports = function(data) {
             return res.render("authentication/login");
         },
         getProfile(req, res) {
-            return res.render("authentication/profile", {
+            return res.render("users/test-profile", {
                 user: req.user
             });
         },

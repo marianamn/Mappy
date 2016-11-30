@@ -1,9 +1,10 @@
 /* globals module require */
 
 const passport = require("passport"),
-    LocalStrategy = require("passport-local").Strategy;
+    LocalStrategy = require("passport-local").Strategy,
+    FacebookStrategy = require("passport-facebook").Strategy;
 
-module.exports = function ({ app, data }) {
+module.exports = function({ app, data }) {
     app.use(passport.initialize());
     app.use(passport.session());
 
@@ -25,10 +26,36 @@ module.exports = function ({ app, data }) {
     });
 
     passport.use(strategy);
+    passport.use(new FacebookStrategy({
+        clientID: 343664235995338,
+        clientSecret: "a5f0d8451859698f618e29c3de62cb71",
+        callbackURL: "http://localhost:3001/auth/facebook/callback",
+        profileFields: ["id", "displayName", "photos", "email", "gender", "profileUrl"]
+    },
+        (accessToken, refreshToken, profile, done) => {
+            data.findUserByFacebookId(profile.id)
+                .then((user) => {
+                    if (user) {
+                        return done(null, user);
+                    } else {
+                        let splitedName = profile.displayName.split(" ");
+
+                        data.createFacebookUser(profile.displayName, splitedName[0], splitedName[1], profile.profileUrl, profile.id)
+                            .then((createdUser) => {
+                                return done(null, createdUser);
+                            });
+                    }
+                })
+                .catch(err => {
+                    return done(err, false);
+                });
+        }
+    ));
 
     passport.serializeUser((user, done) => {
+        let id = user.id || user._id;
         if (user) {
-            done(null, user._id);
+            done(null, id);
         }
     });
 
