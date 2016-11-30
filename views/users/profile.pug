@@ -11,10 +11,8 @@ block headScripts
 block content
     - var authorized = ownProfile || isAdmin; 
     .container
-        h2
-          | Personal Info
+        h2 Personal Info
 
-        .jumbotron
             if(foundUser.profileImgURL)
                 p
                     img(src= foundUser.profileImgURL, id='profile-image')
@@ -41,68 +39,72 @@ block content
                     while m < 5
                         span.glyphicon.glyphicon-star-empty
                         - m++;
-        if authorized
-            form(method="post", action="", class='form-horizontal')
-        else
-            div
-        if authorized
-            .form-group(hidden)
-                h4.col-lg-3.control-label Username:           
-                .col-lg-7
-                    input.form-control(id="username", id-data=foundUser._id value = foundUser.username type='text' name='username' readonly)
-        if authorized
-            .form-group
-                h4.col-lg-3.control-label Email:           
-                .col-lg-7
-                    input.form-control(id="email" value = foundUser.email type='text' name='email')
-        else
-            div 
-                span Email :
-                span  #{foundUser.email}
-        if authorized
-            .form-group
-                h4.col-lg-3.control-label First Name:           
-                .col-lg-7
-                    input.form-control(id="firstName" value=foundUser.firstName type='text' name='firstName')
-        else
-            div 
-                span First name :
-                span  #{foundUser.firstName}
-        if authorized
-            .form-group
-                h4.col-lg-3.control-label Last Name:           
-                .col-lg-7
-                    input.form-control(id="lastName" value=foundUser.lastName type='text' name='lastName')
-        else
-            div 
-                span Last name :
-                span  #{foundUser.lastName}
-        - var notFbUser = authorized && !foundUser.facebookId;
-        if notFbUser 
-            .form-group
-                h4.col-lg-3.control-label Password:           
-                .col-lg-7
-                    input.form-control(id="password" type='password' name='password')
-            .form-group
-                h4.col-lg-3.control-label Confirm Password:           
-                .col-lg-7
-                    input.form-control(id="confirmPassword" type='password' name='confirmPassword')
+        
+            .col-md-8.col-md-offset-1
+                .well
+                if authorized
+                    form(method="post", action="", class='form-horizontal')
+                else
+                    div
+                if authorized
+                    .form-group(hidden)
+                        label.col-md-2.control-label Username:           
+                        .col-md-10
+                            input.form-control(id="username", id-data=foundUser._id value = foundUser.username type='text' name='username' readonly)
+                if authorized
+                    .form-group
+                        label.col-md-2.control-label Email:           
+                        .col-md-10
+                            input.form-control(id="email" value = foundUser.email type='text' name='email')
+                else
+                    div 
+                        span Email :
+                        span  #{foundUser.email}
+                if authorized
+                    .form-group
+                        label.col-md-2.control-label  First Name:           
+                        .col-md-10
+                            input.form-control(id="firstName" value=foundUser.firstName type='text' name='firstName')
+                else
+                    div 
+                        span First name :
+                        span  #{foundUser.firstName}
+                if authorized
+                    .form-group
+                        label.col-md-2.control-label Last Name:           
+                        .col-md-10
+                            input.form-control(id="lastName" value=foundUser.lastName type='text' name='lastName')
+                else
+                    div 
+                        span Last name :
+                        span  #{foundUser.lastName}
+                - var notFbUser = authorized && !foundUser.facebookId;
+                if notFbUser 
+                    .form-group
+                        label.col-md-2.control-label Password:           
+                        .col-md-10
+                            input.form-control(id="password" type='password' name='password')
+                    .form-group
+                        label.col-md-2.control-label Confirm Password:           
+                        .col-md-10
+                            input.form-control(id="confirmPassword" type='password' name='confirmPassword')
 
-            .form-group
-                h4.col-lg-3.control-label Profile Image URL:
-                .col-lg-7
-                    if(foundUser.profileImgURL)
-                        input.form-control(id="profileImg", value= foundUser.profileImgURL, type='text', name='profileImageUrl')
-                    else
-                        input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
+                    .form-group
+                        label.col-md-2.control-label Profile Image URL:
+                        .col-md-10
+                            if(foundUser.profileImgURL)
+                                input.form-control(id="profileImg", value= foundUser.profileImgURL, type='text', name='profileImageUrl')
+                            else
+                                input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
 
 
-        .form-group
-            .col-md-7
-                button.btn.btn-success(id="save-changes" type="submit") Save Changes
-                a.btn.btn-primary(href="/users/" + foundUser.username) Cancel
+                    .form-group
+                        .col-md-7.add-spacing-after
+                            button.btn.btn-success(id="save-changes" type="submit") Save Changes
+                            a.btn.btn-primary(href="/users/" + foundUser.username) Cancel
 
-        .form-group
-            label(for="comment") Comment:
-            textarea#comment.form-control
-            button#add-comment.btn.btn-success Add comment
+                .form-group
+                    .col-md-12.add-spacing-after
+                        label(for="comment") Comment:
+                        textarea#comment.form-control.add-spacing-before
+                        button#add-comment.btn.btn-success Add comment
