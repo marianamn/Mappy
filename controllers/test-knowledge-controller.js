@@ -10,7 +10,7 @@ function shuffle(array) {
     }
 }
 
-module.exports = function (data) {
+module.exports = function(data) {
     return {
         getTestKnowledgeMap(req, res) {
             data.getGameData()
@@ -33,7 +33,9 @@ module.exports = function (data) {
                 })
                 .then(question => {
                     let user = req.user;
-                    shuffle(question.answers);
+                    if (question) {
+                        shuffle(question.answers);
+                    }
                     res.render("questions/question", { user, question });
                 });
         },
@@ -53,7 +55,7 @@ module.exports = function (data) {
                         resBody.isCorrect = true;
                     }
                     console.log(question.country);
-                    
+
                     return data.getQuestionsIdsByCountry(question.country);
                 })
                 .then(questionIds => {
