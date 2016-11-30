@@ -1,0 +1,1197 @@
+{
+  "question" : "Which is the capital of Italy",
+  "answers" : [{
+      "answer" : "Rome",
+      "isCorrect" : true
+    }, {
+      "answer" : "Sofia",
+      "isCorrect" : false
+    }, {
+      "answer" : "London",
+      "isCorrect" : false
+    }, {
+      "answer" : "Madrid",
+      "isCorrect" : false
+    }],
+  "country" : "Italy"
+}
+
+{
+  "question" : "Which Italian car manufacturer sponsors a Formula One team?",
+  "answers" : [{
+      "answer" : "Ferrari",
+      "isCorrect" : true
+    }, {
+      "answer" : "Lamborgini",
+      "isCorrect" : false
+    }, {
+      "answer" : "Fiat",
+      "isCorrect" : false
+    }, {
+      "answer" : "Maserati",
+      "isCorrect" : false
+    }],
+  "country" : "Italy"
+}
+
+{
+  "question" : "Who wrote the opera 'La Boheme'?",
+  "answers" : [{
+      "answer" : "Rossini",
+      "isCorrect" : false
+    }, {
+      "answer" : "Paganini",
+      "isCorrect" : false
+    }, {
+      "answer" : "Puccini",
+      "isCorrect" : true
+    }, {
+      "answer" : "Verdi",
+      "isCorrect" : false
+    }],
+  "country" : "Italy"
+}
+
+/* 3 */
+{
+  "question" : "Which is the largest of the Italian lakes?",
+  "answers" : [{
+      "answer" : "Como",
+      "isCorrect" : false
+    }, {
+      "answer" : "Garda",
+      "isCorrect" : true
+    }, {
+      "answer" : "Maggiore",
+      "isCorrect" : false
+    }, {
+      "answer" : "Lugano",
+      "isCorrect" : false
+    }],
+  "country" : "Italy"
+}
+
+
+{
+  "question" : "Who painted the ceiling of the Sistine Chapel?",
+  "answers" : [{
+      "answer" : "Titian",
+      "isCorrect" : false
+    }, {
+      "answer" : "Michaelangelo",
+      "isCorrect" : true
+    }, {
+      "answer" : "Donatello",
+      "isCorrect" : false
+    }, {
+      "answer" : "Raphael",
+      "isCorrect" : false
+    }],
+  "country" : "Italy"
+}
+
+
+{
+  "question" : "Christopher Columbus was born in which Italian port?",
+  "answers" : [{
+      "answer" : "Naples",
+      "isCorrect" : false
+    }, {
+      "answer" : "Venice",
+      "isCorrect" : false
+    }, {
+      "answer" : "Genoa",
+      "isCorrect" : true
+    }, {
+      "answer" : "Palermo",
+      "isCorrect" : false
+    }],
+  "country" : "Italy"
+}
+
+
+{
+  "question" : "What is the capital of Belarus?",
+  "answers" : [{
+      "answer" : "Rome",
+      "isCorrect" : false
+    }, {
+      "answer" : "Minsk",
+      "isCorrect" : true
+    }, {
+      "answer" : "Skopje",
+      "isCorrect" : false
+    }, {
+      "answer" : "Tirana",
+      "isCorrect" : false
+    }],
+  "country" : "Belarus"
+}
+
+
+{
+  "question" : "How many countries border Belarus? ",
+  "answers" : [{
+      "answer" : "5",
+      "isCorrect" : true
+    }, {
+      "answer" : "3",
+      "isCorrect" : false
+    }, {
+      "answer" : "4",
+      "isCorrect" : false
+    }, {
+      "answer" : "6",
+      "isCorrect" : false
+    }],
+  "country" : "Belarus"
+}
+
+
+{
+  "question" : "Which top-ranked tennis player is from Belarus?",
+  "answers" : [{
+      "answer" : "Maria Sharapova",
+      "isCorrect" : false
+    }, {
+      "answer" : "Anna Kournikova ",
+      "isCorrect" : false
+    }, {
+      "answer" : "Maria Kirilenko",
+      "isCorrect" : false
+    }, {
+      "answer" : "Victoria Azarenka",
+      "isCorrect" : true
+    }],
+  "country" : "Belarus"
+}
+
+{
+  "question" : "Which of these foods is the most common traditional Belarusian dish? ",
+  "answers" : [{
+      "answer" : "Vareniki ",
+      "isCorrect" : false
+    }, {
+      "answer" : "Blini",
+      "isCorrect" : false
+    }, {
+      "answer" : "Draniki ",
+      "isCorrect" : true
+    }, {
+      "answer" : "Machanka ",
+      "isCorrect" : false
+    }],
+  "country" : "Belarus"
+}
+
+{
+  "question" : "Belarus was sometimes called by which of these names? ",
+  "answers" : [{
+      "answer" : "Livonia",
+      "isCorrect" : false
+    }, {
+      "answer" : "Thuringia",
+      "isCorrect" : false
+    }, {
+      "answer" : "Tasmania",
+      "isCorrect" : false
+    }, {
+      "answer" : "Ruthenia ",
+      "isCorrect" : true
+    }],
+  "country" : "Belarus"
+}
+
+{
+  "question" : "For the manufacturing of what product did Belarus become famous? ",
+  "answers" : [{
+      "answer" : "Automobiles",
+      "isCorrect" : false
+    }, {
+      "answer" : "Stel",
+      "isCorrect" : false
+    }, {
+      "answer" : "Exporting pharmceuticals",
+      "isCorrect" : false
+    }, {
+      "answer" : "None of the above",
+      "isCorrect" : true
+    }],
+  "country" : "Belarus"
+}
+
+{
+  "question" : "What is the capital of Belgium?",
+  "answers" : [{
+      "answer" : "Sofia",
+      "isCorrect" : false
+    }, {
+      "answer" : "Brussels",
+      "isCorrect" : true
+    }, {
+      "answer" : "Riga",
+      "isCorrect" : false
+    }, {
+      "answer" : "Skopje",
+      "isCorrect" : false
+    }],
+  "country" : "Belgium"
+}
+
+
+{
+  "question" : "How long do children go to primary school in Belgium?",
+  "answers" : [{
+      "answer" : "6 years",
+      "isCorrect" : true
+    }, {
+      "answer" : "4 years",
+      "isCorrect" : false
+    }, {
+      "answer" : "5 years",
+      "isCorrect" : false
+    }, {
+      "answer" : "8 years",
+      "isCorrect" : false
+    }],
+  "country" : "Belgium"
+}
+
+
+{
+  "question" : "What are Les Marolles?",
+  "answers" : [{
+      "answer" : "a Belgian music band",
+      "isCorrect" : false
+    }, {
+      "answer" : " a quarter in Brussels",
+      "isCorrect" : true
+    }, {
+      "answer" : "a Belgian chocolate",
+      "isCorrect" : false
+    }, {
+      "answer" : "a Belgian king's name",
+      "isCorrect" : false
+    }],
+  "country" : "Belgium"
+}
+
+
+{
+  "question" : "Which country is to the south of Belgium?",
+  "answers" : [{
+      "answer" : "Netherlands",
+      "isCorrect" : false
+    }, {
+      "answer" : "Germany",
+      "isCorrect" : false
+    }, {
+      "answer" : "France",
+      "isCorrect" : true
+    }, {
+      "answer" : "Luxembourg",
+      "isCorrect" : false
+    }],
+  "country" : "Belgium"
+}
+
+
+{
+  "question" : "What is the name of Hercule Poirot's chronicler and best friend?",
+  "answers" : [{
+      "answer" : "Chichester",
+      "isCorrect" : false
+    }, {
+      "answer" : "Totton",
+      "isCorrect" : false
+    }, {
+      "answer" : "Maltravers",
+      "isCorrect" : false
+    }, {
+      "answer" : "Hastings",
+      "isCorrect" : true
+    }],
+  "country" : "Belgium"
+}
+
+
+{
+  "question" : "Which of these countries was once part of the Belgian empire?",
+  "answers" : [{
+      "answer" : "Mali",
+      "isCorrect" : false
+    }, {
+      "answer" : "Congo",
+      "isCorrect" : true
+    }, {
+      "answer" : "Kenya",
+      "isCorrect" : false
+    }, {
+      "answer" : "South Africa",
+      "isCorrect" : false
+    }],
+  "country" : "Belgium"
+}
+
+
+{
+  "question" : "What is the capital of Austria?",
+  "answers" : [{
+      "answer" : "Skopje",
+      "isCorrect" : false
+    }, {
+      "answer" : "Vienna",
+      "isCorrect" : true
+    }, {
+      "answer" : "Luxembourg City",
+      "isCorrect" : false
+    }, {
+      "answer" : "Zagreb",
+      "isCorrect" : false
+    }],
+  "country" : "Austria"
+}
+
+{
+  "question" : "What is the official language of Austria?",
+  "answers" : [{
+      "answer" : "French",
+      "isCorrect" : false
+    }, {
+      "answer" : "Austrian",
+      "isCorrect" : false
+    }, {
+      "answer" : "Australian",
+      "isCorrect" : false
+    }, {
+      "answer" : "German",
+      "isCorrect" : true
+    }],
+  "country" : "Austria"
+}
+
+{
+  "question" : "Austria is a country situated in this continent",
+  "answers" : [{
+      "answer" : "Asia",
+      "isCorrect" : false
+    }, {
+      "answer" : "North America",
+      "isCorrect" : false
+    }, {
+      "answer" : "Europe",
+      "isCorrect" : true
+    }, {
+      "answer" : "Africa",
+      "isCorrect" : false
+    }],
+  "country" : "Austria"
+}
+
+
+{
+  "question" : "What is the currency used in Austria?",
+  "answers" : [{
+      "answer" : "Won",
+      "isCorrect" : false
+    }, {
+      "answer" : "US dollar",
+      "isCorrect" : false
+    }, {
+      "answer" : "Dram",
+      "isCorrect" : false
+    }, {
+      "answer" : "Euro",
+      "isCorrect" : true
+    }],
+  "country" : "Austria"
+}
+
+{
+  "question" : "What is the official language of Austria?",
+  "answers" : [{
+      "answer" : "Slovene",
+      "isCorrect" : false
+    }, {
+      "answer" : "German",
+      "isCorrect" : true
+    }, {
+      "answer" : "Serbo-Croatian",
+      "isCorrect" : false
+    }, {
+      "answer" : "Hungarian",
+      "isCorrect" : false
+    }],
+  "country" : "Austria"
+}
+
+
+{
+  "question" : "Which of the following is a famous Austrian-born American actor?",
+  "answers" : [{
+      "answer" : "Sylvester Stallone",
+      "isCorrect" : false
+    }, {
+      "answer" : "Leonardo DiCaprio",
+      "isCorrect" : false
+    }, {
+      "answer" : "Arnold Schwarzenegger",
+      "isCorrect" : true
+    }, {
+      "answer" : "Johnny Depp",
+      "isCorrect" : false
+    }],
+  "country" : "Austria"
+}
+
+
+{
+  "question" : "Which of the following countries (or territories) does Albania *not* border on?",
+  "answers" : [{
+      "answer" : "Montenegro",
+      "isCorrect" : false
+    }, {
+      "answer" : "Greece",
+      "isCorrect" : false
+    }, {
+      "answer" : "Macedonia",
+      "isCorrect" : false
+    }, {
+      "answer" : "Croatia",
+      "isCorrect" : true
+    }],
+  "country" : "Albania"
+}
+
+
+{
+  "question" : "On which sea is most of Albania's coastline?",
+  "answers" : [{
+      "answer" : "Aegean",
+      "isCorrect" : false
+    }, {
+      "answer" : "Black Sea",
+      "isCorrect" : false
+    }, {
+      "answer" : "Adriatic",
+      "isCorrect" : true
+    }, {
+      "answer" : "Sea of Azov",
+      "isCorrect" : false
+    }],
+  "country" : "Albania"
+}
+
+
+{
+  "question" : "What is the main port of Albania?",
+  "answers" : [{
+      "answer" : "Elbasan",
+      "isCorrect" : false
+    }, {
+      "answer" : "Durres",
+      "isCorrect" : true
+    }, {
+      "answer" : "Vlore",
+      "isCorrect" : false
+    }, {
+      "answer" : "Shkoder",
+      "isCorrect" : false
+    }],
+  "country" : "Albania"
+}
+
+{
+  "question" : "For nearly four centuries Albania was part of an Empire. Which?",
+  "answers" : [{
+      "answer" : "The Austro-Hungarian Empire",
+      "isCorrect" : false
+    }, {
+      "answer" : "The Ottoman Empire",
+      "isCorrect" : true
+    }, {
+      "answer" : "The Russian Empire",
+      "isCorrect" : false
+    }, {
+      "answer" : "The Bulgarian Empire",
+      "isCorrect" : false
+    }],
+  "country" : "Albania"
+}
+
+
+{
+  "question" : "What is the capital of Albania?",
+  "answers" : [{
+      "answer" : "Rome",
+      "isCorrect" : false
+    }, {
+      "answer" : "Tirana",
+      "isCorrect" : true
+    }, {
+      "answer" : "Skopje",
+      "isCorrect" : false
+    }, {
+      "answer" : "Zagreb",
+      "isCorrect" : false
+    }],
+  "country" : "Albania"
+}
+
+{
+  "question" : "What is the capital of Croatia?",
+  "answers" : [{
+      "answer" : "Sofia",
+      "isCorrect" : false
+    }, {
+      "answer" : "Zagreb",
+      "isCorrect" : true
+    }, {
+      "answer" : "Rome",
+      "isCorrect" : false
+    }, {
+      "answer" : "Skopje",
+      "isCorrect" : false
+    }],
+  "country" : "Croatia"
+}
+
+
+{
+  "question" : "What is the native name for Croatia?",
+  "answers" : [{
+      "answer" : "Kvarner",
+      "isCorrect" : false
+    }, {
+      "answer" : "Hrvatska",
+      "isCorrect" : true
+    }, {
+      "answer" : "Istria",
+      "isCorrect" : false
+    }, {
+      "answer" : "Dalmatia",
+      "isCorrect" : false
+    }],
+  "country" : "Croatia"
+}
+
+
+{
+  "question" : "What is the main religion of Croatia?",
+  "answers" : [{
+      "answer" : "Eastern Orthodox",
+      "isCorrect" : false
+    }, {
+      "answer" : "Lutheran",
+      "isCorrect" : false
+    }, {
+      "answer" : "Serbian Orthodox",
+      "isCorrect" : false
+    }, {
+      "answer" : "Roman Catholic",
+      "isCorrect" : true
+    }],
+  "country" : "Croatia"
+}
+
+{
+  "question" : "What in Croatia is Sava?",
+  "answers" : [{
+      "answer" : "River",
+      "isCorrect" : true
+    }, {
+      "answer" : "Folk music",
+      "isCorrect" : false
+    }, {
+      "answer" : "Brandy",
+      "isCorrect" : false
+    }, {
+      "answer" : "Train service",
+      "isCorrect" : false
+    }],
+  "country" : "Croatia"
+}
+
+{
+  "question" : "On which sea is Croatia located?",
+  "answers" : [{
+      "answer" : "Adriatic",
+      "isCorrect" : true
+    }, {
+      "answer" : "Aegean",
+      "isCorrect" : false
+    }, {
+      "answer" : "None, it's inland",
+      "isCorrect" : false
+    }, {
+      "answer" : "Mediterranean",
+      "isCorrect" : false
+    }],
+  "country" : "Croatia"
+}
+
+{
+  "question" : "Which Croatian city was formerly known as Ragusa?",
+  "answers" : [{
+      "answer" : "Dubrovnik",
+      "isCorrect" : true
+    }, {
+      "answer" : "Osijek",
+      "isCorrect" : false
+    }, {
+      "answer" : "Zagreb",
+      "isCorrect" : false
+    }, {
+      "answer" : "Sibenik",
+      "isCorrect" : false
+    }],
+  "country" : "Croatia"
+}
+
+{
+  "question" : "What is the capital of Moldova?",
+  "answers" : [{
+      "answer" : "Chisinau",
+      "isCorrect" : true
+    }, {
+      "answer" : "Vienna",
+      "isCorrect" : false
+    }, {
+      "answer" : "Tirana",
+      "isCorrect" : false
+    }, {
+      "answer" : "Vilnius",
+      "isCorrect" : false
+    }],
+  "country" : "Moldova"
+}
+
+
+{
+  "question" : "Who or what is Moldova named after?",
+  "answers" : [{
+      "answer" : "A mountain",
+      "isCorrect" : false
+    }, {
+      "answer" : "A river",
+      "isCorrect" : false
+    }, {
+      "answer" : "A person",
+      "isCorrect" : false
+    }, {
+      "answer" : "A vineyard",
+      "isCorrect" : true
+    }],
+  "country" : "Moldova"
+}
+
+
+{
+  "question" : "For which industry is Moldova widely known?",
+  "answers" : [{
+      "answer" : "Private equity",
+      "isCorrect" : false
+    }, {
+      "answer" : "Publishing",
+      "isCorrect" : false
+    }, {
+      "answer" : "Wine production",
+      "isCorrect" : true
+    }, {
+      "answer" : "Transportation",
+      "isCorrect" : false
+    }],
+  "country" : "Moldova"
+}
+
+
+{
+  "question" : "Moldova is a landlocked country. Which two countries surround it?",
+  "answers" : [{
+      "answer" : "Serbia and Croatia",
+      "isCorrect" : false
+    }, {
+      "answer" : "Belarus and Ukraine",
+      "isCorrect" : false
+    }, {
+      "answer" : "Romania and Ukraine",
+      "isCorrect" : true
+    }, {
+      "answer" : "Turkey and Romania",
+      "isCorrect" : false
+    }],
+  "country" : "Moldova"
+}
+
+
+{
+  "question" : "The national language of Moldova is Moldovan. What alphabet is its writing based upon?",
+  "answers" : [{
+      "answer" : "Romanian",
+      "isCorrect" : false
+    }, {
+      "answer" : "Latin",
+      "isCorrect" : true
+    }, {
+      "answer" : "Greek",
+      "isCorrect" : false
+    }, {
+      "answer" : "Russian",
+      "isCorrect" : false
+    }],
+  "country" : "Moldova"
+}
+
+{
+  "question" : "Which two rivers does the largest part of Moldova lie between?",
+  "answers" : [{
+      "answer" : "Dniester and Prut",
+      "isCorrect" : true
+    }, {
+      "answer" : "Raut and Danube",
+      "isCorrect" : false
+    }, {
+      "answer" : "Bic and Cogalnic",
+      "isCorrect" : false
+    }, {
+      "answer" : "Criva and Dintievici",
+      "isCorrect" : false
+    }],
+  "country" : "Moldova"
+}
+
+
+{
+  "question" : "What is the capital of Luxembourg?",
+  "answers" : [{
+      "answer" : "Skopje",
+      "isCorrect" : false
+    }, {
+      "answer" : "Luxembourg City",
+      "isCorrect" : true
+    }, {
+      "answer" : "Vienna",
+      "isCorrect" : false
+    }, {
+      "answer" : "Chisinau",
+      "isCorrect" : false
+    }],
+  "country" : "Luxembourg"
+}
+
+
+{
+  "question" : "Which of these countries does not border Luxembourg?",
+  "answers" : [{
+      "answer" : "Belgium",
+      "isCorrect" : false
+    }, {
+      "answer" : "France",
+      "isCorrect" : false
+    }, {
+      "answer" : "Germany",
+      "isCorrect" : false
+    }, {
+      "answer" : "Netherlands",
+      "isCorrect" : true
+    }],
+  "country" : "Luxembourg"
+}
+
+
+{
+  "question" : "Which of these describes Luxembourg?",
+  "answers" : [{
+      "answer" : "Principality",
+      "isCorrect" : false
+    }, {
+      "answer" : "Kingdom",
+      "isCorrect" : false
+    }, {
+      "answer" : "Republic",
+      "isCorrect" : false
+    }, {
+      "answer" : "Grand Duchy",
+      "isCorrect" : true
+    }],
+  "country" : "Luxembourg"
+}
+
+
+{
+  "question" : "Luxembourg's industry is based on a very important mineral resource. What is it?",
+  "answers" : [{
+      "answer" : "copper",
+      "isCorrect" : false
+    }, {
+      "answer" : "coal",
+      "isCorrect" : false
+    }, {
+      "answer" : "zinc",
+      "isCorrect" : false
+    }, {
+      "answer" : "iron",
+      "isCorrect" : true
+    }],
+  "country" : "Luxembourg"
+}
+
+
+{
+  "question" : "What crop is grown on terraces above the river that forms part of the eastern border?",
+  "answers" : [{
+      "answer" : "raspberries",
+      "isCorrect" : false
+    }, {
+      "answer" : "hops",
+      "isCorrect" : false
+    }, {
+      "answer" : "grapes",
+      "isCorrect" : true
+    }, {
+      "answer" : "beans",
+      "isCorrect" : false
+    }],
+  "country" : "Luxembourg"
+}
+
+
+{
+  "question" : "What is the currency used in Luxembourg?",
+  "answers" : [{
+      "answer" : "Lira",
+      "isCorrect" : false
+    }, {
+      "answer" : "Euro",
+      "isCorrect" : true
+    }, {
+      "answer" : "Ruble",
+      "isCorrect" : false
+    }, {
+      "answer" : "US dollar",
+      "isCorrect" : false
+    }],
+  "country" : "Luxembourg"
+}
+
+{
+  "question" : "What is the capital of Latvia?",
+  "answers" : [{
+      "answer" : "Vienna",
+      "isCorrect" : false
+    }, {
+      "answer" : "Sofia",
+      "isCorrect" : false
+    }, {
+      "answer" : "Riga",
+      "isCorrect" : true
+    }, {
+      "answer" : "Skopje",
+      "isCorrect" : false
+    }],
+  "country" : "Latvia"
+}
+
+
+{
+  "question" : "Surrounded by four countries, Latvia touches which body of water to the west?",
+  "answers" : [{
+      "answer" : "Caspian Sea",
+      "isCorrect" : false
+    }, {
+      "answer" : "Baltic Sea",
+      "isCorrect" : true
+    }, {
+      "answer" : "Mediterranean Sea",
+      "isCorrect" : false
+    }, {
+      "answer" : "Atlantic Ocean",
+      "isCorrect" : false
+    }],
+  "country" : "Latvia"
+}
+
+
+{
+  "question" : "Of the four countries which share a land border with Latvia, which is closest in size to Latvia?",
+  "answers" : [{
+      "answer" : "Belarus",
+      "isCorrect" : false
+    }, {
+      "answer" : "Estonia",
+      "isCorrect" : false
+    }, {
+      "answer" : "Lithuania",
+      "isCorrect" : true
+    }, {
+      "answer" : "Russia",
+      "isCorrect" : false
+    }],
+  "country" : "Latvia"
+}
+
+
+{
+  "question" : "Which sport is held to be the one of the most popular in Latvia, one which you might normally associate with Canada?",
+  "answers" : [{
+      "answer" : "American football",
+      "isCorrect" : false
+    }, {
+      "answer" : "Ice hockey",
+      "isCorrect" : true
+    }, {
+      "answer" : "Golf",
+      "isCorrect" : false
+    }, {
+      "answer" : "Alpine skiing",
+      "isCorrect" : false
+    }],
+  "country" : "Latvia"
+}
+
+
+{
+  "question" : "If you were to visit a Latvian website, chances are it would have which internet country code?",
+  "answers" : [{
+      "answer" : ".la",
+      "isCorrect" : false
+    }, {
+      "answer" : ".li",
+      "isCorrect" : false
+    }, {
+      "answer" : ".lt",
+      "isCorrect" : false
+    }, {
+      "answer" : ".lv",
+      "isCorrect" : true
+    }],
+  "country" : "Latvia"
+}
+
+
+{
+  "question" : "Which colourful-sounding bird is recognised as Latvia's national animal?",
+  "answers" : [{
+      "answer" : "Zenaida Dove",
+      "isCorrect" : false
+    }, {
+      "answer" : "Barn Swallow",
+      "isCorrect" : false
+    }, {
+      "answer" : "Tocororo",
+      "isCorrect" : false
+    }, {
+      "answer" : "White Wagtail",
+      "isCorrect" : true
+    }],
+  "country" : "Latvia"
+}
+
+
+{
+  "question" : "What is the capital of Lithuania?",
+  "answers" : [{
+      "answer" : "Rome",
+      "isCorrect" : false
+    }, {
+      "answer" : "Vienna",
+      "isCorrect" : false
+    }, {
+      "answer" : "Tirana",
+      "isCorrect" : false
+    }, {
+      "answer" : "Vilnius",
+      "isCorrect" : true
+    }],
+  "country" : "Lithuania"
+}
+
+
+{
+  "question" : "According to Lithuanian beliefs, on which holiday are animals able to speak?",
+  "answers" : [{
+      "answer" : "Easter",
+      "isCorrect" : false
+    }, {
+      "answer" : "Christmas Eve",
+      "isCorrect" : true
+    }, {
+      "answer" : "New Years Eve",
+      "isCorrect" : false
+    }, {
+      "answer" : "St. John's Night",
+      "isCorrect" : false
+    }],
+  "country" : "Lithuania"
+}
+
+
+{
+  "question" : "How many different dishes should be served for the traditional Lithuanian Christmas Eve dinner?",
+  "answers" : [{
+      "answer" : "None - it's a fast day",
+      "isCorrect" : false
+    }, {
+      "answer" : "Twelve",
+      "isCorrect" : true
+    }, {
+      "answer" : "Three",
+      "isCorrect" : false
+    }, {
+      "answer" : "Seven",
+      "isCorrect" : false
+    }],
+  "country" : "Lithuania"
+}
+
+
+{
+  "question" : "If a Lithuanian maiden wants to dream about her future husband, on Christmas Eve she should eat:",
+  "answers" : [{
+      "answer" : "Herring",
+      "isCorrect" : true
+    }, {
+      "answer" : "Oyster",
+      "isCorrect" : false
+    }, {
+      "answer" : "Mushrooms",
+      "isCorrect" : false
+    }, {
+      "answer" : "Banana",
+      "isCorrect" : false
+    }],
+  "country" : "Lithuania"
+}
+
+
+{
+  "question" : "What are the colours of the Lithuanian flag?",
+  "answers" : [{
+      "answer" : "blue, black and white",
+      "isCorrect" : false
+    }, {
+      "answer" : "red, white and green",
+      "isCorrect" : false
+    }, {
+      "answer" : "yellow, green and red",
+      "isCorrect" : true
+    }, {
+      "answer" : "red, white and blue",
+      "isCorrect" : false
+    }],
+  "country" : "Lithuania"
+}
+
+
+{
+  "question" : "Lithuania was in a dynastic union with which country from 1386-1569?",
+  "answers" : [{
+      "answer" : "Poland",
+      "isCorrect" : true
+    }, {
+      "answer" : "Hungary",
+      "isCorrect" : false
+    }, {
+      "answer" : "Sweden",
+      "isCorrect" : false
+    }, {
+      "answer" : "Denmark",
+      "isCorrect" : false
+    }],
+  "country" : "Lithuania"
+}
+
+
+{
+  "question" : "What is the capital of Iceland?",
+  "answers" : [{
+      "answer" : "Reykjavík",
+      "isCorrect" : true
+    }, {
+      "answer" : "Vienna",
+      "isCorrect" : false
+    }, {
+      "answer" : "Vilnius",
+      "isCorrect" : false
+    }, {
+      "answer" : "Sofia",
+      "isCorrect" : false
+    }],
+  "country" : "Iceland"
+}
+
+
+{
+  "question" : "What is the climate of Iceland's coastal regions?",
+  "answers" : [{
+      "answer" : "Humid continental",
+      "isCorrect" : false
+    }, {
+      "answer" : "Tropical",
+      "isCorrect" : false
+    }, {
+      "answer" : "Cold oceanic",
+      "isCorrect" : true
+    }, {
+      "answer" : "Polar ice cap",
+      "isCorrect" : false
+    }],
+  "country" : "Iceland"
+}
+
+
+{
+  "question" : "Iceland has gone down in the history books for being the first nation to democratically elect a female head of state. What was that president's name?",
+  "answers" : [{
+      "answer" : "Vigdis Finnbogadottir",
+      "isCorrect" : true
+    }, {
+      "answer" : "Olafur Ragnar Grimsson",
+      "isCorrect" : false
+    }, {
+      "answer" : "Ingibjorg Solrun Gisladottir",
+      "isCorrect" : false
+    }, {
+      "answer" : "Gudrun Osvifursdottir",
+      "isCorrect" : false
+    }],
+  "country" : "Iceland"
+}
+
+
+{
+  "question" : "In which month do Icelanders celebrate their national day?",
+  "answers" : [{
+      "answer" : "December",
+      "isCorrect" : false
+    }, {
+      "answer" : "December",
+      "isCorrect" : false
+    }, {
+      "answer" : "June",
+      "isCorrect" : true
+    }, {
+      "answer" : "September",
+      "isCorrect" : false
+    }],
+  "country" : "Iceland"
+}
+
+
+{
+  "question" : "Which is the odd town out?",
+  "answers" : [{
+      "answer" : "Hafnarfjordur",
+      "isCorrect" : false
+    }, {
+      "answer" : "Akureyri",
+      "isCorrect" : true
+    }, {
+      "answer" : "Gardabaer",
+      "isCorrect" : false
+    }, {
+      "answer" : "Kopavogur",
+      "isCorrect" : false
+    }],
+  "country" : "Iceland"
+}
