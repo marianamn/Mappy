@@ -60,5 +60,5 @@ $("body").on("click", "#createQuestion", () => {
 });
 
 $("body").on("click", ".country-item", (ev) => {
-    $("#question-country").val($(ev.target).html());
+    $("#question-country").val($.trim($(ev.target).html()));
 });
