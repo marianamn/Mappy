@@ -1,6 +1,6 @@
 extends ../_layout
 block content
-    .row.text-center
+    .row.text-center.add-spacing-before
         each country in countries
             .col-sm-2
                 a(href="countries/" + country._id class="flags" class="text-center")

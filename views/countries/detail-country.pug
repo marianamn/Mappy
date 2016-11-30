@@ -1,12 +1,12 @@
 extends ../_layout
 block content
-    .text-center
-        p.country-name #{country.name}
+    .text-center.add-spacing-before
+        p.country-name.add-spacing-after #{country.name}
         img(src= country.countryImgUrl, class="country-img")
         
         .table-country-details
             .col-md-6.col-md-offset-3
-                table.table.table-striped.table-hover.table-country-details
+                table.table.table-striped.table-hover.table-country-details.add-spacing-after
                     thead
                         tr
                         th.text-center Capital
@@ -22,8 +22,8 @@ block content
                         td.text-center=country.area
                         td.text-center=country.populationDensity
     
-    .country-info
-        div=country.countryInformation
+    .country-info.add-spacing-before.add-spacing-after
+        p=country.countryInformation
     
     p.text-center
             a.btn.btn-primary(href="/countries") Back to countries

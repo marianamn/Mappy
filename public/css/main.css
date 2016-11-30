@@ -14,8 +14,17 @@ body {
 #content {
     background: #ECF0F1;
     width: 95%;
-    height: 90%;
+    height: auto;
+    min-height: 80%;
     margin-top: -20px;
+}
+
+.add-spacing-before {
+    padding-top: 5%;
+}
+
+.add-spacing-after {
+    padding-bottom: 5%;
 }
 
 .country-names {
