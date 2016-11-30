@@ -144,3 +144,13 @@ body {
 .answers-item {
     list-style: none;
 }
+
+#question {
+    padding-top: 0.3%;
+    padding-bottom: 2%;
+}
+
+.answer-wrap {
+    height: 5%;
+    padding-top: 0.2%;
+}
