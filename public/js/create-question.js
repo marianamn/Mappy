@@ -58,3 +58,7 @@ $("body").on("click", "#createQuestion", () => {
             toastr.error("Something went wrong!");
         });
 });
+
+$("body").on("click", ".country-item", (ev) => {
+    $("#question-country").val($(ev.target).html());
+});
