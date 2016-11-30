@@ -1,6 +1,8 @@
 /* globals module */
 
-module.exports = function (data) {
+const REQUIRED_POINTS_PER_STAR = 45;
+
+module.exports = function(data) {
     return {
         getUserByUsername(req, res) {
             let username = req.params.username;
@@ -11,9 +13,9 @@ module.exports = function (data) {
                     let ownProfile = foundUser.username === user.username;
                     let isAdmin = user.isAdmin;
 
-                    let guessTheCountryStars = Math.floor(foundUser.guessTheCountryScore / 100);
-                    let testYourKnowledgeStars = Math.floor(foundUser.testYourKnowledgeScore / 100);
-                    
+                    let guessTheCountryStars = Math.floor(foundUser.guessTheCountryScore / REQUIRED_POINTS_PER_STAR);
+                    let testYourKnowledgeStars = Math.floor(foundUser.testYourKnowledgeScore / REQUIRED_POINTS_PER_STAR);
+
                     res.render("users/profile", {
                         ownProfile,
                         isAdmin,

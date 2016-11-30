@@ -77,7 +77,8 @@ block content
             div 
                 span Last name :
                 span  #{foundUser.lastName}
-        if authorized
+        - var notFbUser = authorized && !foundUser.facebookId;
+        if notFbUser 
             .form-group
                 h4.col-lg-3.control-label Password:           
                 .col-lg-7
@@ -96,10 +97,10 @@ block content
                         input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
 
 
-            .form-group
-                .col-md-7
-                    button.btn.btn-success(id="save-changes" type="submit") Save Changes
-                    a.btn.btn-primary(href="/users/" + foundUser.username) Cancel
+        .form-group
+            .col-md-7
+                button.btn.btn-success(id="save-changes" type="submit") Save Changes
+                a.btn.btn-primary(href="/users/" + foundUser.username) Cancel
 
         .form-group
             label(for="comment") Comment:
