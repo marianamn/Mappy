@@ -27,8 +27,8 @@ module.exports = function({ app, data }) {
 
     passport.use(strategy);
     passport.use(new FacebookStrategy({
-        clientID: 343664235995338,
-        clientSecret: "a5f0d8451859698f618e29c3de62cb71",
+        clientID: 343650825996679,
+        clientSecret: "f1bed70cad9816e1e638f77b316ccc85",
         callbackURL: "http://localhost:3001/auth/facebook/callback",
         profileFields: ["id", "displayName", "photos", "email", "gender", "profileUrl"]
     },
