@@ -14,7 +14,7 @@ module.exports = function ({ app, data }) {
         .get("/register", controller.getRegisterForm)
         .get("/login", controller.getLoginForm)
         .get("/facebook", passport.authenticate("facebook"))
-        .get("/facebook/callback", passport.authenticate("facebook", { failureRedirect: "/auth/login" }),
+        .get("/facebook/callback", passport.authenticate("facebook", { scope: "email", failureRedirect: "/auth/login" }),
         (req, res) => {
             res.redirect("/");
         })

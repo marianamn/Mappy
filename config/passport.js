@@ -24,13 +24,13 @@ module.exports = function({ app, data }) {
             })
             .catch(error => done(error, null));
     });
-
+// ""
     passport.use(strategy);
     passport.use(new FacebookStrategy({
         clientID: 343650825996679,
         clientSecret: "f1bed70cad9816e1e638f77b316ccc85",
         callbackURL: "http://localhost:3001/auth/facebook/callback",
-        profileFields: ["id", "displayName", "photos", "email", "gender", "profileUrl"]
+        profileFields: ["id", "displayName", "picture.type(large)", "email", "gender", "profileUrl"]
     },
         (accessToken, refreshToken, profile, done) => {
             data.findUserByFacebookId(profile.id)
