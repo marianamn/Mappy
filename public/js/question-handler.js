@@ -7,7 +7,7 @@ function shuffle(array) {
     }
 }
 
-$("body").on("click", ".btn", (ev) => {
+$("body").on("click", "#send-answer", (ev) => {
     let $target = $(ev.target);
     let choosedAnswer = $target.html();
     let questionId = $(".question").eq(0)

@@ -18,6 +18,9 @@ block content
                     each answer in question.answers
                         .col-lg-2.col-lg-offset-1
                             li.answers-item
-                                button.btn.btn-success= answer.answer
+                                button#send-answer.btn.btn-success= answer.answer
         else 
             h3 No questions for this country ..
+    a.btn.btn-info(href="/game/test-your-knowledge") Back to map
+        
+        
