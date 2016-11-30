@@ -21,7 +21,7 @@ $("body").on("click", "#btn-register", () => {
     }
 
     if (registerObj.password !== registerObj.confirmPassword) {
-        toastr.error("Error: Invalid password. Password and confirm password must be equal");
+        toastr.error("Error: Invalid password. Password and confirm password must be same");
         return;
     }
 
@@ -40,6 +40,11 @@ $("body").on("click", "#btn-register", () => {
             toastr.error("Error: Invalid image url");
             return;
         }
+    }
+
+    if (!registerObj.password) {
+        toastr.error("Error: Password is required");
+        return;
     }
 
     requester.postJSON("/api/register", registerObj)
