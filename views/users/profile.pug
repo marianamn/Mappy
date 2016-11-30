@@ -9,14 +9,15 @@ block headScripts
     script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
     
 block content
+    - var authorized = ownProfile || isAdmin; 
     .container
         h2
           | Personal Info
 
         .jumbotron
-            if(user.profileImgURL)
+            if(foundUser.profileImgURL)
                 p
-                    img(src= user.profileImgURL, id='profile-image')
+                    img(src= foundUser.profileImgURL, id='profile-image')
             else
                 p
                     img(src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" id='profile-image')
@@ -40,16 +41,16 @@ block content
                     while m < 5
                         span.glyphicon.glyphicon-star-empty
                         - m++;
-        if ownProfile
+        if authorized
             form(method="post", action="", class='form-horizontal')
         else
             div
-        if ownProfile
+        if authorized
             .form-group(hidden)
                 h4.col-lg-3.control-label Username:           
                 .col-lg-7
                     input.form-control(id="username", id-data=foundUser._id value = foundUser.username type='text' name='username' readonly)
-        if ownProfile
+        if authorized
             .form-group
                 h4.col-lg-3.control-label Email:           
                 .col-lg-7
@@ -58,7 +59,7 @@ block content
             div 
                 span Email :
                 span  #{foundUser.email}
-        if ownProfile
+        if authorized
             .form-group
                 h4.col-lg-3.control-label First Name:           
                 .col-lg-7
@@ -67,7 +68,7 @@ block content
             div 
                 span First name :
                 span  #{foundUser.firstName}
-        if ownProfile
+        if authorized
             .form-group
                 h4.col-lg-3.control-label Last Name:           
                 .col-lg-7
@@ -76,7 +77,7 @@ block content
             div 
                 span Last name :
                 span  #{foundUser.lastName}
-        if ownProfile
+        if authorized
             .form-group
                 h4.col-lg-3.control-label Password:           
                 .col-lg-7
@@ -89,8 +90,8 @@ block content
             .form-group
                 h4.col-lg-3.control-label Profile Image URL:
                 .col-lg-7
-                    if(user.profileImgURL)
-                        input.form-control(id="profileImg", value= user.profileImgURL, type='text', name='profileImageUrl')
+                    if(foundUser.profileImgURL)
+                        input.form-control(id="profileImg", value= foundUser.profileImgURL, type='text', name='profileImageUrl')
                     else
                         input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
 

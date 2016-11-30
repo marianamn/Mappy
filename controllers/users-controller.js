@@ -8,17 +8,15 @@ module.exports = function (data) {
             data.findUserByUsername(username)
                 .then(foundUser => {
                     let user = req.user;
-                    let ownProfile = false;
-
-                    if (foundUser.username === user.username || user.isAdmin === true) {
-                        ownProfile = true;
-                    }
+                    let ownProfile = foundUser.username === user.username;
+                    let isAdmin = user.isAdmin;
 
                     let guessTheCountryStars = Math.floor(foundUser.guessTheCountryScore / 100);
                     let testYourKnowledgeStars = Math.floor(foundUser.testYourKnowledgeScore / 100);
 
                     res.render("users/profile", {
                         ownProfile,
+                        isAdmin,
                         foundUser,
                         user,
                         guessTheCountryStars,
