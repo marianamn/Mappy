@@ -4,10 +4,10 @@ const REQUIRED_POINTS_PER_STAR = 45;
 
 module.exports = function(data) {
     return {
-        getUserByUsername(req, res) {
+        getUserProfile(req, res) {
             let username = req.params.username;
 
-            data.findUserByUsername(username)
+            data.getUserByUsername(username)
                 .then(foundUser => {
                     let user = req.user;
                     let ownProfile = foundUser.username === user.username;
@@ -26,7 +26,7 @@ module.exports = function(data) {
                     });
                 });
         },
-        returnAllUsernames(req, res) {
+        getAllUsernames(req, res) {
             return data.getAllUsernames()
                 .then(usernames => {
                     let responseUsernames = usernames.map(u => u.username);
@@ -36,15 +36,15 @@ module.exports = function(data) {
         addComment(req, res) {
             let usernameToAddComment = req.params.username;
             let commentToAdd = req.body.commentToAdd;
-            let user = req.user;
-            if (!user) {
+            let reqUser = req.user;
+            if (!reqUser) {
                 return res.json({
                     error: "UserNotAuthenticated",
                     message: "Authenticate your username first"
                 });
             }
 
-            let author = user.username;
+            let author = reqUser.username;
 
             data.addComment(usernameToAddComment, commentToAdd, author)
                 .then((user) => {
@@ -64,7 +64,7 @@ module.exports = function(data) {
             let isAdmin = req.body.isAdmin;
 
 
-            data.modifyUserRole(username, isAdmin)
+            data.updateUserRole(username, isAdmin)
                 .then(user => {
                     let role = "normal user";
                     if (user.isAdmin) {
@@ -76,8 +76,17 @@ module.exports = function(data) {
                     });
                 })
                 .catch(error => {
-                    res.json({ error });
+                    res.json({ error }); //log this
                 });
+        },
+        updateProfile(req, res) {
+            if (req.body.password) {
+                data.updateUserAndPassword(req.body)
+                    .then(res.json({ "message": "Your password is updated " }));
+            } else {
+                data.updateUser(req.body)
+                    .then(res.json({ "message": "Profile updated successfully." }));
+            }
         }
     };
 };

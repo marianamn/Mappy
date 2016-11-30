@@ -1,5 +1,8 @@
 /* globals module */
 
+const TEST_KNOWLEDGE_INCREASING_VALUE = 1,
+    TEST_KNOWLEDGE_SCORE_TYPE = "testYourKnowledgeScore";
+
 function shuffle(array) {
     for (let i = array.length; i; i -= 1) {
         let j = Math.floor(Math.random() * i);
@@ -7,9 +10,9 @@ function shuffle(array) {
     }
 }
 
-module.exports = function(data) {
+module.exports = function (data) {
     return {
-        getTestKnowledgeQuestion(req, res) {
+        getTestKnowledgeMap(req, res) {
             data.getGameData()
                 .then(countriesData => {
                     return res.render("map/test-your-knowledge-map", {
@@ -49,6 +52,8 @@ module.exports = function(data) {
                     if (correctAnswer === requestAnswer) {
                         resBody.isCorrect = true;
                     }
+                    console.log(question.country);
+                    
                     return data.getQuestionsIdsByCountry(question.country);
                 })
                 .then(questionIds => {
@@ -68,14 +73,17 @@ module.exports = function(data) {
                     resBody.newQuestion = newQuestion;
 
                     if (resBody.isCorrect) {
-                        return data.increaseUserScore(req.user._id, "testYourKnowledgeScore", 1);
+                        return data.increaseUserScore(
+                            req.user._id,
+                            TEST_KNOWLEDGE_SCORE_TYPE,
+                            TEST_KNOWLEDGE_INCREASING_VALUE);
                     }
                 })
                 .then(() => {
                     res.json(resBody);
                 })
                 .catch(err => {
-                    console.log(err);
+                    res.json({ err }); //log this
                 });
         }
     };

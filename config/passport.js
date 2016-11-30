@@ -9,7 +9,7 @@ module.exports = function({ app, data }) {
     app.use(passport.session());
 
     const strategy = new LocalStrategy((username, password, done) => {
-        data.findUserByCredentials(username)
+        data.getUserByCredentials(username)
             .then(user => {
                 if (user) {
                     let userSalt = user.salt;
@@ -33,7 +33,7 @@ module.exports = function({ app, data }) {
         profileFields: ["id", "displayName", "picture.type(large)", "email", "gender", "profileUrl"]
     },
         (accessToken, refreshToken, profile, done) => {
-            data.findUserByFacebookId(profile.id)
+            data.getUserByFacebookId(profile.id)
                 .then((user) => {
                     if (user) {
                         return done(null, user);
@@ -60,7 +60,7 @@ module.exports = function({ app, data }) {
     });
 
     passport.deserializeUser((id, done) => {
-        data.findUserById(id)
+        data.getUserById(id)
             .then(user => {
                 if (user) {
                     return done(null, user);

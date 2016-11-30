@@ -106,7 +106,7 @@ module.exports = function (models) {
                 return dataUtils.update(user);
             });
         },
-        findUserById(id) {
+        getUserById(id) {
             return new Promise((resolve, reject) => {
                 User.findById(id, (err, user) => {
                     if (err) {
@@ -117,7 +117,7 @@ module.exports = function (models) {
                 });
             });
         },
-        findUserByUsername(username) {
+        getUserByUsername(username) {
             return new Promise((resolve, reject) => {
                 User.findOne({ username }, (err, user) => {
                     if (err) {
@@ -128,7 +128,7 @@ module.exports = function (models) {
                 });
             });
         },
-        findUserByFacebookId(facebookId) {
+        getUserByFacebookId(facebookId) {
             return new Promise((resolve, reject) => {
                 User.findOne({ facebookId }, (err, user) => {
                     if (err) {
@@ -182,7 +182,7 @@ module.exports = function (models) {
                     return dataUtils.save(user);
                 });
         },
-        modifyUserRole(username, isAdmin) {
+        updateUserRole(username, isAdmin) {
             return new
                 Promise((resolve, reject) => {
                     User.findOne({ username }, (err, user) => {

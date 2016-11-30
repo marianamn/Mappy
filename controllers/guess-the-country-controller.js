@@ -5,8 +5,7 @@ const GUESS_THE_COUNTRY_INCREASING_VALUE = 1,
 
 module.exports = function(data) {
     return {
-        getFindTheCountryQuestion(req, res) {
-
+        getRandomCountryQuestion(req, res) {
             // TODO: add caching to make less queries to DB
             data.getGameData()
                 .then(countriesData => {
@@ -39,7 +38,8 @@ module.exports = function(data) {
                 .then(country => {
                     let selectedCountryName = country.name.toLowerCase().replace(/-/g, " ");
                     let requiredCountryName = req.params.requiredCountryName.toLowerCase().replace(/-/g, " ");
-
+                    console.log(selectedCountryName);
+                    console.log(requiredCountryName);
                     if (selectedCountryName === requiredCountryName) {
                         req.session.isCorrectAnswer = true;
 

@@ -15,7 +15,7 @@ module.exports = function(models) {
                 });
             });
         },
-        allCountries() {
+        getAllCountries() {
             return new Promise((resolve, reject) => {
                 Country.find({}, (err, country) => {
                     if (err) {

@@ -6,7 +6,6 @@ module.exports = function(data) {
             let {
                 username,
                 password,
-                confirmPassword,
                 email,
                 profileImgURL,
                 firstName,
@@ -40,20 +39,6 @@ module.exports = function(data) {
         },
         getLoginForm(req, res) {
             return res.render("authentication/login");
-        },
-        getProfile(req, res) {
-            return res.render("users/test-profile", {
-                user: req.user
-            });
-        },
-        updateProfile(req, res) {
-            if (req.body.password) {
-                data.updateUserAndPassword(req.body)
-                    .then(res.json({ "message": "Your password is updated " }));
-            } else {
-                data.updateUser(req.body)
-                    .then(res.json({ "message": "Profile updated successfully." }));
-            }
         },
         unauthorized(req, res) {
             return res.render("authentication/unauthorized", {

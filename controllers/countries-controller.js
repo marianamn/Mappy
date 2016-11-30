@@ -3,11 +3,11 @@
 module.exports = function(data) {
     return {
         allCountries(req, res) {
-            data.allCountries()
+            data.getAllCountries()
                 .then(countries => {
                     let user = req.user;
 
-                    res.render("countries/allCountries", {
+                    res.render("countries/all-countries", {
                         countries,
                         user
                     });

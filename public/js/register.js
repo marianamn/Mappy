@@ -6,10 +6,10 @@
 const userImgURLPattern = /:\/\//;
 
 $("body").on("click", "#btn-register", () => {
-    let registerObj = {
+    var confirmPassword = $("#confirmPassword").val();
+    var registerObj = {
         username: $("#username").val(),
         password: $("#password").val(),
-        confirmPassword: $("#confirmPassword").val(),
         email: $("#email").val(),
         profileImgURL: $("#profileImgURL").val(),
         firstName: $("#firstName").val(),
@@ -21,7 +21,7 @@ $("body").on("click", "#btn-register", () => {
         return;
     }
 
-    if (registerObj.password !== registerObj.confirmPassword) {
+    if (registerObj.password !== confirmPassword) {
         toastr.error("Error: Invalid password. Password and confirm password must be same");
         return;
     }

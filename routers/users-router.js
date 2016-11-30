@@ -11,7 +11,7 @@ module.exports = function({ app, data }) {
     let router = new Router();
 
     router
-        .get("/:username", isAuthenticated, controller.getUserByUsername);
+        .get("/:username", isAuthenticated, controller.getUserProfile);
 
     app.use("/users", router);
 

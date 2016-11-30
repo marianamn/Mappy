@@ -3,8 +3,7 @@
 const express = require("express");
 let Router = express.Router;
 
-module.exports = function ({ app, data }) {
-    let controller = require("../controllers/search-controller")(data);
+module.exports = function ({ app }) {
 
     let router = new Router();
 

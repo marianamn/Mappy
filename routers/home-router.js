@@ -9,7 +9,10 @@ module.exports = function ({ app, data }) {
     let router = new Router();
 
     router
-        .get("/", controller.home);
+        .get("/", controller.home)
+        .get("/terms", (req, res) => {
+            res.render("terms-of-use/terms-of-use");
+        });
 
     app.use("/", router);
 

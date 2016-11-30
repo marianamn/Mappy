@@ -7,10 +7,10 @@ module.exports = function (data) {
                 user: req.user
             });
         },
-        getCreateQuestion(req, res) {
+        getCreateQuestionForm(req, res) {
             data.getAllCountryNames()
                 .then(countries => {
-                    res.render("admin/createQuestion", {
+                    res.render("admin/create-question", {
                         user: req.user,
                         countries
                     });
