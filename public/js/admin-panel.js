@@ -36,7 +36,7 @@ $("#modify").on("click", function (ev) {
                 toastr.success(response.message);
             }
             $username.val("");
-            $("admin-user").prop("checked", false);
-            $("normal-user").prop("checked", false);
+            $("#admin-user").prop("checked", false);
+            $("#normal-user").prop("checked", false);
         });
 });
