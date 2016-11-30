@@ -8,9 +8,14 @@ module.exports = function (data) {
             });
         },
         getCreateQuestion(req, res) {
-            res.render("admin/createQuestion", {
-                user: req.user
-            });
+            data.getAllCountryNames()
+                .then(countries => {
+                    res.render("admin/createQuestion", {
+                        user: req.user,
+                        countries
+                    });
+                });
+
         },
         createQuestion(req, res) {
             data.createQuestion(req.body.question, req.body.answers, req.body.country)

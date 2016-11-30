@@ -1,6 +1,7 @@
 extends ../_layout
 block styles
     link(rel="stylesheet", href="/static/bower_components/toastr/toastr.css")
+    link(rel="stylesheet", href="/static/css/create-question.css")
 
 block headScripts
     script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
@@ -12,10 +13,26 @@ block content
             label.control-label.requiredField(for='title') Question title
             span.asteriskField *
             input.form-control(id="question-title", name='title', type='text')
-        .form-group
-            label.control-label.requiredField(for='country') Set country
+        .input-append.btn-group
+            label.control-label.requiredField(for='appendedInputButton') Country
             span.asteriskField *
-            input.form-control(id="question-country", name='country', type='text')
+            input#question-country.span2.form-control(size='16', type='text')
+            a.btn.btn-primary.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.caret
+            ul.dropdown-menu
+                each country in countries
+                    li
+                        a.country-item(href="#") 
+                            | #{country.name}
+                
+        
+        //- .dropdown
+        //-     button.btn.btn-info.dropdown-toggle(type="button" data-toggle="dropdown") Country
+        //-         span.caret
+        //-     ul.dropdown-menu
+        //-         each country in countries
+        //-             li
+        //-                 a(href="#") #{country.name}
         .form-group
             label.control-label Question answers
         .form-group

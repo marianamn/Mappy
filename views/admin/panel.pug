@@ -1,17 +1,27 @@
 extends ../_layout
 
 block styles
-    link(rel='stylesheet', type='text/css', href='/static/css/jquery-autocomplete.css')
+    link(rel="stylesheet", href="/static/bower_components/toastr/toastr.css")
+
+block headScripts
+    script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
 block content
     h3= "Administration"
-    form.form-inline(action="/search" method="get")
-        label.col-md-2.control-label(for="username") Find user
-        .col-md-10
-            input#search-input.searchUsers.form-control(type="text" name="username")
-            button.btn.btn-danger
-                span.glyphicon.glyphicon-search
 
     div
-        a.btn.btn-success(href="/admin/panel/createQuestion") Create new question
-    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js')  
-    script(type='text/javascript', src='/static/js/admin-panel.js')  
+        a.btn.btn-success(href="/admin/panel/createQuestion") Create new question  
+    br 
+    .col-md-6 Modify user's role
+        .form-group 
+            label.control-label(for='username') Username:              
+            input#username.form-control(type="text")
+    .col-md-6    
+        .form-group
+            label.control-label(for='normal-user') Normal user
+            input(id="normal-user", type="radio", name="radio-group")   
+        .form-group
+            label.control-label(for='admin-user') Admin
+            input(id="admin-user", type="radio", name="radio-group")  
+        button#modify.btn.btn-danger Modify
+    script(type='text/javascript', src='/static/js/admin-panel.js')
+        
