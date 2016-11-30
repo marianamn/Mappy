@@ -1,0 +1,210 @@
+{
+  "name" : "Moldova",
+  "countryImgUrl" : "https://www.vjv.com/media/331525/t-secret-moldova.jpg",
+  "flagUrl" : "http://www.worldatlas.com/webimage/flags/countrys/zzzflags/mdlarge.gif",
+  "capital" : "Chisinau",
+  "currency" : "Moldovan leu",
+  "population" : 4205747,
+  "area" : 33851,
+  "populationDensity" : 124,
+  "latitude" : "06°55'N",
+  "longitude" : "158°09'E",
+  "countryInformation" : "Part of Romania during the interwar period, Moldova was incorporated into the Soviet Union at the close of World War II. Although the country has been independent from the USSR since 1991, Russian forces have remained on Moldovan territory east of the Nistru River supporting the breakaway region of Transnistria, composed of a Slavic majority population (mostly Ukrainians and Russians), but with a sizable ethnic Moldovan minority. Europe's poorest economy, Moldova became the first former Soviet state to elect a communist, Vladimir VORONIN, as its president in 2001. VORONIN served as Moldova's president until he resigned in September 2009. Four Moldovan opposition parties then formed a new coalition, the Alliance for European Integration (AEI), iterations of which acted as Moldova's governing coalitions over the next several years. In May 2013, two of the original AEI parties and a splinter group from a third re-formed a ruling coalition called the Pro-European Coalition. The Moldovan Government in summer 2014 signed and ratified an Association Agreement with the EU, advancing the Coalition's policy priority of EU integration. Following the country's most recent legislative election in November 2014, the three pro-European parties that entered Parliament won a total of 55 of the body's 101 seats. Infighting among coalition members led to prolonged legislative gridlock and political instability, as well as the collapse of two governments, all ruled by pro-European coalitions centered around the Liberal Democratic Party (PLDM) and the Democratic Party (PDM). A political impasse ended in January 2016 when a new parliamentary majority led by PDM, joined by defectors from the Communists and PLDM, supported Pavel FILIP as prime minister.",
+  "euValue" : 30
+}
+{
+  "name" : "Luxembourg",
+  "countryImgUrl" : "http://www.cedefop.europa.eu/files/images/luxembourg_grund_bridge_over_alzette_river_istock_000027092899large.jpg",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/1280px-Flag_of_Luxembourg.svg.png",
+  "capital" : "Luxembourg City",
+  "currency" : "Euro",
+  "population" : 464904,
+  "area" : 2586,
+  "populationDensity" : 180,
+  "latitude" : "49°37'N",
+  "longitude" : "06°09'E",
+  "countryInformation" : "Founded in 963, Luxembourg became a grand duchy in 1815 and an independent state under the Netherlands. It lost more than half of its territory to Belgium in 1839 but gained a larger measure of autonomy. Full independence was attained in 1867. Overrun by Germany in both world wars, it ended its neutrality in 1948 when it entered into the Benelux Customs Union and when it joined NATO the following year. In 1957, Luxembourg became one of the six founding countries of the EEC (later the EU), and in 1999 it joined the euro currency area.",
+  "euValue" : 27
+}
+{
+  "name" : "Belgium",
+  "countryImgUrl" : "http://images.independenttraveler.com/homepage/belgiumssintro.jpg",
+  "flagUrl" : "http://www.flags.net/images/largeflags/BELG0001.GIF",
+  "capital" : "Brussels",
+  "currency" : "Euro",
+  "population" : 10419050,
+  "area" : 30528,
+  "populationDensity" : 341,
+  "latitude" : "50°51'N",
+  "longitude" : "04°21'E",
+  "countryInformation" : "Belgium became independent from the Netherlands in 1830; it was occupied by Germany during World Wars I and II. The country prospered in the past half century as a modern, technologically advanced European state and member of NATO and the EU. Political divisions between the Dutch-speaking Flemings of the north and the French-speaking Walloons of the south have led in recent years to constitutional amendments granting these regions formal recognition and autonomy. Its capital, Brussels, is home to numerous international organizations including the EU and NATO.",
+  "euValue" : 5
+}
+{
+  "name" : "Latvia",
+  "countryImgUrl" : "http://immigration-latvia.com/wp-content/uploads/2014/11/Beautiful-Riga1.png",
+  "flagUrl" : "http://www.flags.net/images/largeflags/LATV0001.GIF",
+  "capital" : "Riga",
+  "currency" : "Latvian lats",
+  "population" : 2306988,
+  "area" : 64600,
+  "populationDensity" : 36,
+  "latitude" : "56°53'N",
+  "longitude" : "24°08'E",
+  "countryInformation" : "A tapestry of sea, lakes and woods, Latvia is best described as a vast unspoilt parkland with just one real city – its cosmopolitan capital, Rīga. The country might be small, but the amount of personal space it provides is enormous. You can always secure a chunk of pristine nature all for yourself, be it for trekking, cycling or dreaming away on a white-sand beach amid pine-covered dunes. Having been invaded by every regional power, Latvia has more cultural layers and a less homogenous population than its neighbours. People here fancy themselves to be the least pragmatic and the most artistic of the Baltic lot. They prove the point with myriad festivals and a merry, devil-may-care attitude – well, a subdued Nordic version of it.",
+  "euValue" : 24
+}
+{
+  "name" : "Lithuania",
+  "countryImgUrl" : "http://cdn.images.express.co.uk/img/dynamic/109/590x/Vilnius-Lithuania-651598.jpg",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/2000px-Flag_of_Lithuania.svg.png",
+  "capital" : "Vilnius",
+  "currency" : "Lithuanian litas",
+  "population" : 3431033,
+  "area" : 65300,
+  "populationDensity" : 53,
+  "latitude" : "54°38'N",
+  "longitude" : "25°19'E",
+  "countryInformation" : "Lithuanian lands were united under MINDAUGAS in 1236; over the next century, through alliances and conquest, Lithuania extended its territory to include most of present-day Belarus and Ukraine. By the end of the 14th century Lithuania was the largest state in Europe. An alliance with Poland in 1386 led the two countries into a union through the person of a common ruler. In 1569, Lithuania and Poland formally united into a single dual state, the Polish-Lithuanian Commonwealth. This entity survived until 1795 when its remnants were partitioned by surrounding countries. Lithuania regained its independence following World War I but was annexed by the USSR in 1940 - an action never recognized by the US and many other countries. On 11 March 1990, Lithuania became the first of the Soviet republics to declare its independence, but Moscow did not recognize this proclamation until September of 1991 (following the abortive coup in Moscow). The last Russian troops withdrew in 1993. Lithuania subsequently restructured its economy for integration into Western European institutions; it joined both NATO and the EU in the spring of 2004. In January 2014, Lithuania assumed a nonpermanent seat on the UN Security Council for the 2014-15 term; in January 2015, Lithuania joined the euro zone.",
+  "euValue" : 26
+}
+{
+  "name" : "Iceland",
+  "countryImgUrl" : "http://ichef.bbci.co.uk/news/624/cpsprodpb/16D08/production/_88184439_iceland_capital.jpg",
+  "flagUrl" : "http://www.sciencekids.co.nz/images/pictures/flags680/Iceland.jpg",
+  "capital" : "Reykjavík",
+  "currency" : "Icelandic króna",
+  "population" : 294561,
+  "area" : 103000,
+  "populationDensity" : 2,
+  "latitude" : "64°10'N",
+  "longitude" : "21°57'W",
+  "countryInformation" : "The Republic of Iceland (Listeni/\u02c8aɪslænd/; Icelandic: Ísland [\u02c8istlant]), Lýðveldið Ísland in Icelandic, is a Nordic island country in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[7] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains and glaciers, while many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence still keeps summers chilly, with most of the archipelago having a tundra climate.According to Landnámabók, the settlement of Iceland began in the year 874 CE when the Norwegian chieftain Ingólfr Arnarson became the first permanent settler on the island.[8] In the following centuries, Norwegians, and to a lesser extent other Scandinavians, immigrated to Iceland, bringing with them thralls of Gaelic origin. The island was governed as an independent commonwealth under the Althing, one of the world's oldest functioning legislative assemblies. Following a period of civil strife, Iceland acceded to Norwegian rule in the 13th century. In 1814, it came under the rule of Denmark, during which a distinct Icelandic national identity emerged. This culminated in independence in 1918 and the founding of a republic in 1944. Until the 20th century, Iceland relied largely on subsistence fishing and agriculture, and was among the poorest in Europe. Industrialisation of the fisheries and Marshall Plan aid following World War II brought prosperity, and Iceland became one of the wealthiest and most developed nations in the world. In 1994, it became a part of the European Economic Area, which further diversified the economy into sectors such as finance, biotechnology, and manufacturing.",
+  "euValue" : 19
+}
+{
+  "name" : "Ireland",
+  "countryImgUrl" : "http://www.valenscube.com/wp-content/uploads/2016/02/Ireland-landscape1.jpg",
+  "flagUrl" : "http://www.worldatlas.com/webimage/flags/countrys/zzzflags/ielarge.gif",
+  "capital" : "Dublin",
+  "currency" : "Euro",
+  "population" : 4147901,
+  "area" : 70273,
+  "populationDensity" : 59,
+  "latitude" : "53°21'N",
+  "longitude" : "06°15'W",
+  "countryInformation" : "Celtic tribes arrived on the island between 600 and 150 B.C. Invasions by Norsemen that began in the late 8th century were finally ended when King Brian BORU defeated the Danes in 1014. Norman invasions began in the 12th century and set off more than seven centuries of Anglo-Irish struggle marked by fierce rebellions and harsh repressions. The Irish famine of the mid-19th century saw the population of the island drop by one third through starvation and emigration. For more than a century after that the population of the island continued to fall only to begin growing again in the 1960s. Over the last 50 years, Ireland's high birthrate has made it demographically one of the youngest populations in the EU. The modern Irish state traces its origins to the failed 1916 Easter Monday Uprising that touched off several years of guerrilla warfare resulting in independence from the UK in 1921 for 26 southern counties; six northern (Ulster) counties remained part of the UK. Unresolved issues in Northern Ireland erupted into years of violence known as the Troubles that began in the 1960s. The Government of Ireland was part of a process along with the UK and US Governments that helped broker what is known as The Good Friday Agreement in Northern Ireland in 1998. This initiated a new phase of cooperation between the Irish and British Governments. Ireland was neutral in World War II and continues its policy of military neutrality. Ireland joined the European Community in 1973 and the euro-zone currency union in 1999. The economic boom years of the Celtic Tiger (1995-2007) saw rapid economic growth, which came to an abrupt end in 2008 with the meltdown of the Irish banking system. Today the economy is recovering, fueled by large and growing foreign direct investment, especially from US multi-nationals.",
+  "euValue" : 19
+}
+{
+  "name" : "Italy",
+  "countryImgUrl" : "https://s-media-cache-ak0.pinimg.com/originals/ce/57/28/ce572850873ad639b03c86895759d5c5.jpg",
+  "flagUrl" : "http://www.lacortice.it/images/flag-it.png",
+  "capital" : "Rome",
+  "currency" : "Euro",
+  "population" : 58092740,
+  "area" : 301318,
+  "populationDensity" : 193,
+  "latitude" : "41°54'N",
+  "longitude" : "12°29'E",
+  "countryInformation" : "Italy, officially the Italian Republic (Italian: Repubblica Italiana), is a unitary parliamentary republic in Europe.[note 1] Located in the heart of the Mediterranean Sea, Italy shares open land borders with France, Switzerland, Austria, Slovenia, San Marino and Vatican City. Italy covers an area of 301,338 km2 (116,347 sq mi) and has a largely temperate seasonal climate or Mediterranean climate; due to its shape, it is often referred to in Italy as lo Stivale (the Boot).[11][12] With 61 million inhabitants, it is the fourth most populous EU member state.Since classical times, ancient Carthaginian/Phoenicians and Greeks, Etruscans, and Celts have inhabited the south, centre and north of the Italian Peninsula respectively, with various Italic peoples dispersed throughout Italy alongside other ancient Italian tribes and Greek and Carthaginian/Phoenician colonies. The Italic tribe known as the Latins formed the Roman Kingdom, which eventually spread throughout Italy, assimilating and conquering other nearby civilisations and forming the Roman Republic. Rome ultimately emerged as the dominant power, conquering much of the ancient world and becoming the leading cultural, political, and religious centre of Western civilisation. The legacy of the Roman Empire is widespread and can be observed in the global distribution of civilian law, republican governments, Christianity and the Latin script.",
+  "euValue" : 22
+}
+{
+  "name" : "Liechtenstein",
+  "countryImgUrl" : "http://www.guiaviajes.org/wordpress/wp-content/uploads/2013/05/Castillo-de-Vaduz-Liechtenstein.-Autor-Michael-Gredenberg.-Licensed-under-the-Creative-Commons-Attribution-Share-Alike.jpg",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/2000px-Flag_of_Liechtenstein.svg.png",
+  "capital" : "Vaduz",
+  "currency" : "Swiss franc",
+  "population" : 34521,
+  "area" : 160,
+  "populationDensity" : 216,
+  "latitude" : "47°08'N",
+  "longitude" : "09°31'E",
+  "countryInformation" : "A pipsqueak of a country, Liechtenstein snuggles between Switzerland and Austria, among mountain ranges that rise steep and rugged above the Rhine. Besides the sheer novelty value of visiting one of the world's tiniest and richest countries, Liechtenstein is pure fairytale stuff – a mountain principality governed by an iron-willed monarch, embedded deep in the Alps and crowned by whimsically turreted castles. Only 25km long by 12km wide (at its broadest point), Liechtenstein doesn’t have an international airport, and access from Switzerland is by local bus, but the journey is worthwhile.Outdoor enthusiasts are in their element here, with a remarkable number of trails to hike and slopes to ski given the country's diminutive size. Strike out into the Alpine wilderness beyond Vaduz and, suddenly, this landlocked sliver of a micronation no longer seems quite so small.",
+  "euValue" : 25
+}
+{
+  "name" : "Malta",
+  "countryImgUrl" : "http://josephbraude.com/wp-content/uploads/2016/10/malta-country.jpg",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/2000px-Flag_of_Malta.svg.png",
+  "capital" : "Valletta",
+  "currency" : "Maltese lira",
+  "population" : 401630,
+  "area" : 316,
+  "populationDensity" : 1271,
+  "latitude" : "35°54'N",
+  "longitude" : "14°31'E",
+  "countryInformation" : "Although small, Malta has a rich history, with evidence for habitation going back to the Neolithic era (4th millennium BC). The country has some of the world's most ancient standing buildings (the Neolithic temples), and its strategic location and good harbours in the middle of the Mediterranean have attracted Phoenicians, Greeks, Romans, Arabs, Normans, Crusaders, the French and finally the British, with the colonial period lasting until 1964. The Knights of the Order of St. John of Jerusalem, also known as the Knights Hospitallers and Knights of Malta, took over sovereign control of Malta in 1530, and by 1533 the Order had built a hospital at Birgu (one of the Three Cities) to care for the sick. In 1565, Suleiman the Magnificent, Sultan of the Ottoman Empire, mounted a great siege of Malta with a fleet of 180 ships and a landing force of 30,000 men. In response the Order, with only 8,000 defenders, drove the Ottoman Turks away after a hard siege of several months. After this siege, the Order founded the city of Valletta on a peninsula, and fortified it with massive stone walls, which even withstood heavy bombing during the Second World War. By 1575 the Order had built a new large hospital known as the Grand Hospital or Sacred Infirmary in order to continue with its primary mission of caring for the sick. In 1798, the French under Napoleon took the island on 12 June, without resistance, when the Grand Master of the Order capitulated after deciding that the island could not be defended against the opposing French naval force. French rule lasted a little over 2 years, until they surrendered to the British Royal Navy, under Admiral Nelson's command, in September 1800.",
+  "euValue" : 29
+}
+{
+  "name" : "Macedonia",
+  "countryImgUrl" : "http://www.discovergreece.com/~/media/images/top10/wheretogo_regions_topten/toptenregions8_makedonia/toptenregions8_makedonia_02kastoria.ashx?w=820&h=483&crop=1",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Macedonia.svg/2000px-Flag_of_Macedonia.svg.png",
+  "capital" : "Skopje",
+  "currency" : "Macedonian denar",
+  "population" : 2034060,
+  "area" : 25713,
+  "populationDensity" : 79,
+  "latitude" : "22°12'N",
+  "longitude" : "113°33'E",
+  "countryInformation" : "Macedonia gained its independence peacefully from Yugoslavia in 1991. Greek objection to Macedonia’s name, insisting it implies territorial pretensions to the northern Greek province of the same name, have stalled the country’s movement toward Euro-Atlantic integration. Immediately after Macedonia declared independence, Greece sought to block Macedonian efforts to gain UN membership if the name “Macedonia” was used. Macedonia was eventually admitted to the UN in 1993 as “The Former Yugoslav Republic of Macedonia,” and at the same time it agreed to UN-sponsored negotiations on the name dispute. In 1995, Greece lifted a 20-month trade embargo and the two countries agreed to normalize relations, but the issue of the name remained unresolved and negotiations for a solution are ongoing. Since 2004, the US and over 130 other nations have recognized Macedonia by its constitutional name, Republic of Macedonia. Ethnic Albanian grievances over perceived political and economic inequities escalated into an insurgency in 2001 that eventually led to the internationally brokered Ohrid Framework Agreement, which ended the fighting and established guidelines for constitutional amendments and the creation of new laws that enhanced the rights of minorities. Relations between Macedonians and ethnic Albanians remain fragile, however. Although Macedonia became an EU candidate in 2005, the country still faces challenges, including overcoming the ongoing political crisis that began in 2015 when opposition party SDSM began releasing wiretap content that it alleged showed widespread government corruption, the ongoing migration crisis, fully implementing the Framework Agreement, resolving the outstanding name dispute with Greece, improving relations with Bulgaria, halting democratic backsliding, and stimulating economic growth and development. Macedonia's membership in NATO was blocked by Greece at the Alliance's Summit of Bucharest in 2008.",
+  "euValue" : 28
+}
+{
+  "name" : "Belarus",
+  "countryImgUrl" : "http://www.look.com.ua/pic/201209/1680x1050/look.com.ua-21723.jpg",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Belarus_(1995-2012).svg/1280px-Flag_of_Belarus_(1995-2012).svg.png",
+  "capital" : "Minsk",
+  "currency" : "Belarusian ruble",
+  "population" : 9755106,
+  "area" : 207600,
+  "populationDensity" : 47,
+  "latitude" : "53°52'N",
+  "longitude" : "27°30'E",
+  "countryInformation" : "Eastern Europe’s outcast, Belarus (Белару\u0301сь) lies at the edge of the region and seems determined to avoid integration with the rest of the continent at all costs. Taking its lead from the Soviet Union rather than the European Union, this little-visited dictatorship may seem like a strange choice for travellers, but its isolation lies at the heart of its appeal. While the rest of Eastern Europe has charged headlong into capitalism, Belarus allows the chance to visit a Europe with minimal advertising and no litter or graffiti. Outside the monumental Stalinist capital of Minsk, Belarus offers a simple yet pleasing landscape of cornflower fields, thick forests and picturesque villages. The country also has two excellent national parks and is home to Europe’s largest mammal, the zubr (European bison). While travellers will always be the subject of curiosity, they’ll also be on the receiving end of warm hospitality and a genuine welcome.",
+  "euValue" : 4
+}
+{
+  "name" : "Austria",
+  "countryImgUrl" : "http://vienna.athome-network.com/userfiles/images/austria.jpg",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/2000px-Flag_of_Austria.svg.png",
+  "capital" : "Vienna",
+  "currency" : "Euro",
+  "population" : 8189444,
+  "area" : 83858,
+  "populationDensity" : 98,
+  "latitude" : "48°12'N",
+  "longitude" : "16°22'E",
+  "countryInformation" : "Once the center of power for the large Austro-Hungarian Empire, Austria was reduced to a small republic after its defeat in World War I. Following annexation by Nazi Germany in 1938 and subsequent occupation by the victorious Allies in 1945, Austria's status remained unclear for a decade. A State Treaty signed in 1955 ended the occupation, recognized Austria's independence, and forbade unification with Germany. A constitutional law that same year declared the country's perpetual neutrality as a condition for Soviet military withdrawal. The Soviet Union's collapse in 1991 and Austria's entry into the EU in 1995 have altered the meaning of this neutrality. A prosperous, democratic country, Austria entered the EU Economic and Monetary Union in 1999.",
+  "euValue" : 3
+}
+{
+  "name" : "Albania",
+  "countryImgUrl" : "http://albaniataste.com/uploads/images/tirana_2.jpg",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/2000px-Flag_of_Albania.svg.png",
+  "capital" : "Tirana",
+  "currency" : "Albanian lek",
+  "population" : 3129678,
+  "area" : 28748,
+  "populationDensity" : 109,
+  "latitude" : "41°18'N",
+  "longitude" : "19°49'E",
+  "countryInformation" : "Albania declared its independence from the Ottoman Empire in 1912, but was conquered by Italy in 1939 and occupied by Germany in 1943. Communist partisans took over the country in 1944. Albania allied itself first with the USSR (until 1960), and then with China (to 1978). In the early 1990s, Albania ended 46 years of xenophobic communist rule and established a multiparty democracy. The transition has proven challenging as successive governments have tried to deal with high unemployment, widespread corruption, dilapidated infrastructure, powerful organized crime networks, and combative political opponents. Albania has made progress in its democratic development since first holding multiparty elections in 1991, but deficiencies remain. International observers judged elections to be largely free and fair since the restoration of political stability following the collapse of pyramid schemes in 1997; however, most of Albania's post-communist elections have been marred by claims of electoral fraud. Albania joined NATO in April 2009 and in June 2014 became a candidate for EU accession. Although Albania's economy continues to grow, it has slowed, and the country is still one of the poorest in Europe. A large informal economy and an inadequate energy and transportation infrastructure remain obstacles.",
+  "euValue" : 1
+}
+{
+  "name" : "Andorra",
+  "countryImgUrl" : "http://www.andorrawelcome.com/wp-content/uploads/2016/04/andorra.jpg",
+  "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/1280px-Flag_of_Andorra.svg.png",
+  "capital" : "Andorra la Vella",
+  "currency" : "Euro",
+  "population" : 67151,
+  "area" : 468,
+  "populationDensity" : 143,
+  "latitude" : "42°31'N",
+  "longitude" : "01°32'E",
+  "countryInformation" : "The landlocked Principality of Andorra is one of the smallest states in Europe, nestled high in the Pyrenees between the French and Spanish borders. For 715 years, from 1278 to 1993, Andorrans lived under a unique coprincipality, ruled by French and Spanish leaders (from 1607 onward, the French chief of state and the Bishop of Urgell). In 1993, this feudal system was modified with the introduction of a modern, constitution; the co-princes remained as titular heads of state, but the government transformed into a parliamentary democracy. Andorra has become a popular tourist destination visited by approximately 10 million people each year drawn by the winter sports, summer climate, and duty-free shopping. Andorra has also become a wealthy international commercial center because of its mature banking sector and low taxes. As part of its effort to modernize its economy, Andorra has opened to foreign investment, and engaged in other reforms, such as advancing tax initiatives aimed at supporting a broader infrastructure. Although not a member of the EU, Andorra enjoys a special relationship with the organization and uses the euro as its national currency.",
+  "euValue" : 2
+}
