@@ -7,41 +7,46 @@ block headScripts
     script(type='text/javascript', src='/static/js/create-question.js')
 
 block content
-    div
-        .form-group
-            label.control-label.requiredField(for='title') Question title
-            span.asteriskField *
-            input.form-control(id="question-title", name='title', type='text')
-        .input-append.btn-group
-            label.control-label.requiredField(for='appendedInputButton') Country
-            span.asteriskField *
-            input#question-country.span2.form-control(size='16', type='text')
-            a.btn.btn-primary.dropdown-toggle(data-toggle='dropdown', href='#')
-                span.caret
-            ul.dropdown-menu
-                each country in countries
-                    li
-                        a.country-item(href="#") 
-                            | #{country.name}
-        .form-group
-            label.control-label Question answers
-        .form-group
-            label.control-label(for='firstAnswer') Answer 1
-            input.form-control(id="firstA", name='firstAnswer', type='text')
-            input(id="radio1", type="radio", name="radio-group")   
-        .form-group
-            label.control-label(for='secondAnswer') Answer 2
-            input.form-control(id="secondA", name='secondAnswer', type='text')
-            input(id="radio2", type="radio", name="radio-group")   
-        .form-group
-            label.control-label(for='thirdAnswer') Answer 3
-            input.form-control(id="thirdA", name='thirdAnswer', type='text')
-            input(id="radio3", type="radio", name="radio-group")   
-        .form-group
-            label.control-label(for='forthAnswer') Answer 4
-            input.form-control(id="forthA", name='forthAnswer', type='text')
-            input(id="radio4", type="radio", name="radio-group")   
-        .form-group
-            button.btn.btn-primary(id="createQuestion") Create question
-        div
-            p * check which is the correct question
+    .container
+        .col-md-10.col-md-offset-1
+            .well
+                .form-group
+                    label.control-label.requiredField(for='title') Question title
+                    span.asteriskField *
+                    input.form-control(id="question-title", name='title', type='text')
+                .form-group
+                    .input-append.btn-group
+                        label.control-label.requiredField(for='appendedInputButton') Country
+                        span.asteriskField *
+                        .form-inline
+                            input#question-country.span2.form-control(size='20', type='text')
+                            a.btn.btn-primary.dropdown-toggle(data-toggle='dropdown', href='#')
+                                span.caret
+                            ul.dropdown-menu
+                                each country in countries
+                                    li
+                                        a.country-item(href="#") 
+                                            | #{country.name}
+                
+                .form-group
+                    label.control-label Question answers:
+                .form-group
+                    label.control-label(for='firstAnswer') Answer 1
+                    input.form-control(id="firstA", name='firstAnswer', type='text')
+                    input(id="radio1", type="radio", name="radio-group")   
+                .form-group
+                    label.control-label(for='secondAnswer') Answer 2
+                    input.form-control(id="secondA", name='secondAnswer', type='text')
+                    input(id="radio2", type="radio", name="radio-group")   
+                .form-group
+                    label.control-label(for='thirdAnswer') Answer 3
+                    input.form-control(id="thirdA", name='thirdAnswer', type='text')
+                    input(id="radio3", type="radio", name="radio-group")   
+                .form-group
+                    label.control-label(for='forthAnswer') Answer 4
+                    input.form-control(id="forthA", name='forthAnswer', type='text')
+                    input(id="radio4", type="radio", name="radio-group")   
+                .form-group
+                    button.btn.btn-primary(id="createQuestion") Create question
+                div
+                    p * check which is the correct question
