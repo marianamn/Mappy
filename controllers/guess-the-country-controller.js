@@ -3,7 +3,8 @@
 const GUESS_THE_COUNTRY_INCREASING_VALUE = 1,
     GUESS_THE_COUNTRY_SCORE_TYPE = "guessTheCountryScore";
 
-module.exports = function(data) {
+module.exports = function(params) {
+    let { data, validator } = params;
     return {
         getRandomCountryQuestion(req, res) {
             // TODO: add caching to make less queries to DB

@@ -2,7 +2,8 @@
 
 const REQUIRED_POINTS_PER_STAR = 45;
 
-module.exports = function(data) {
+module.exports = function(params) {
+    let { data, validator } = params;
     return {
         getUserProfile(req, res) {
             let username = req.params.username;

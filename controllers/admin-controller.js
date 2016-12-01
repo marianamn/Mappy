@@ -1,6 +1,7 @@
 /* globals module */
 
-module.exports = function (data) {
+module.exports = function(params) {
+    let { data, validator } = params;
     return {
         getPanel(req, res) {
             res.render("admin/panel", {

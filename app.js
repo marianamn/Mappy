@@ -5,7 +5,7 @@ const validator = require("./utils/validator");
 
 let data = require("./data")(config.connectionString, validator);
 
-let controllers = require("./controllers")(data);
+let controllers = require("./controllers")({ data, validator });
 
 const app = require("./config/application")({ data });
 

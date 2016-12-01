@@ -1,6 +1,7 @@
 /* globals module */
 
-module.exports = function(data) {
+module.exports = function(params) {
+    let { data, validator } = params;
     return {
         register(req, res) {
             let {

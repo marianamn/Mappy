@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function (data) {
+module.exports = function () {
     return {
         getChat(req, res) {
             res.render("communication/chat", {

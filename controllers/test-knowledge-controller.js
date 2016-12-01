@@ -10,7 +10,8 @@ function shuffle(array) {
     }
 }
 
-module.exports = function(data) {
+module.exports = function(params) {
+    let { data, validator } = params;
     return {
         getTestKnowledgeMap(req, res) {
             data.getGameData()

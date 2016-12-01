@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function(data) {
+module.exports = function() {
     return {
         home(req, res) {
             let user = req.user;
