@@ -5,13 +5,11 @@ const express = require("express");
 let Router = express.Router;
 let isAuthenticated = require("../middlewares/is-user-authenticated");
 
-module.exports = function({ app, data }) {
-
-    let controller = require("../controllers/users-controller")(data);
+module.exports = function({ app, controllers }) {
     let router = new Router();
 
     router
-        .get("/:username", isAuthenticated, controller.getUserProfile);
+        .get("/:username", isAuthenticated, controllers.getUserProfile);
 
     app.use("/users", router);
 

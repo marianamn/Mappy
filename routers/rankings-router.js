@@ -3,15 +3,13 @@
 const express = require("express");
 let Router = express.Router;
 
-module.exports = function({ app, data }) {
-    let rankingController = require("../controllers/rankings-controller")(data);
-
+module.exports = function({ app, controllers }) {
     let router = new Router();
 
     router
-        .get("/guess-the-country-score", rankingController.guessTheCountryScoreRanking)
-        .get("/test-your-knowledg-score", rankingController.testYourKnolegeScoreRanking)
-        .get("/", rankingController.totalRanking);
+        .get("/guess-the-country-score", controllers.guessTheCountryScoreRanking)
+        .get("/test-your-knowledg-score", controllers.testYourKnolegeScoreRanking)
+        .get("/", controllers.totalRanking);
 
     app.use("/rankings", router);
 

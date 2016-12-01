@@ -7,16 +7,14 @@ let Router = express.Router;
 
 let isAuthenticated = require("../middlewares/is-user-authenticated");
 
-module.exports = function({ app, data }) {
-    let controller = require("../controllers/authentication-controller")(data);
-
+module.exports = function({ app, controllers }) {
     let router = new Router();
 
     router
-        .get("/register", controller.getRegisterForm)
-        .get("/login", controller.getLoginForm)
+        .get("/register", controllers.getRegisterForm)
+        .get("/login", controllers.getLoginForm)
         .get("/facebook", passport.authenticate("facebook"))
-        .get("/unauthorized", controller.unauthorized)
+        .get("/unauthorized", controllers.unauthorized)
         .get("/facebook/callback", passport.authenticate("facebook", { scope: "email", failureRedirect: "/auth/login" }),
         (req, res) => {
             res.redirect("/");
@@ -26,7 +24,7 @@ module.exports = function({ app, data }) {
         (req, res) => {
             res.redirect("/");
         })
-        .post("/logout", isAuthenticated, controller.logout);
+        .post("/logout", isAuthenticated, controllers.logout);
 
     app.use("/auth", router);
 
