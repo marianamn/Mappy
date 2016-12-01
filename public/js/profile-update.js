@@ -63,6 +63,20 @@ $("body").on("click", "#save-changes", () => {
         });
 });
 
+$("body").on("click", "#show-comments", () => {
+    let self = $("#show-comments");
+
+    if (self.hasClass("show-comments")) {
+        self.removeClass("show-comments");
+        self.text("Hide comments");
+    } else {
+        self.addClass("show-comments");
+        self.text("Show comments");
+    }
+
+    $(".hidden-form").toggle();
+});
+
 $("body").on("click", "#add-comment", () => {
     let $commentInput = $("#comment");
     let commentToAdd = $commentInput.val();
@@ -76,6 +90,7 @@ $("body").on("click", "#add-comment", () => {
             if (response.error) {
                 toastr.error(response.message);
             } else {
+                console.log(response.comments);
                 toastr.success(response.message);
             }
             $commentInput.val("");

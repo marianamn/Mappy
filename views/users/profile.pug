@@ -88,22 +88,23 @@ block content
                         label.col-md-2.control-label Confirm Password:           
                         .col-md-10
                             input.form-control(id="confirmPassword" type='password' name='confirmPassword')
-
                     .form-group
-                        label.col-md-2.control-label Profile Image URL:
+                        label.col-md-2.control-label Image URL:
                         .col-md-10
-                            if(foundUser.profileImgURL)
-                                input.form-control(id="profileImg", value= foundUser.profileImgURL, type='text', name='profileImageUrl')
-                            else
-                                input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
+                        if(foundUser.profileImgURL)
+                            input.form-control(id="profileImg", value= foundUser.profileImgURL, type='text', name='profileImageUrl')
+                        else
+                            input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
 
                 if authorized
                     .form-group
                         .col-md-7.add-spacing-after
                             button.btn.btn-success(id="save-changes" type="submit") Save Changes
                             a.btn.btn-primary(href="/users/" + foundUser.username) Cancel
-
                 .form-group
+                    .col-md-12.add-spacing-after
+                        button#show-comments.show-comments.btn.btn-success Show comments
+                .form-group.hidden-form(style="display: none;")
                     .col-md-12.add-spacing-after
                         label(for="comment") Comment:
                         textarea#comment.form-control.add-spacing-before
