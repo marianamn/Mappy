@@ -7,7 +7,7 @@ const fs = require("fs"),
 
 mongoose.Promise = global.Promise;
 
-module.exports = function (connectionString) {
+module.exports = function (connectionString, validator) {
     mongoose.connect(connectionString);
 
     let User = require("../models/user-model.js");
@@ -22,7 +22,7 @@ module.exports = function (connectionString) {
         .filter(file => file.includes("-data"))
         .forEach(file => {
             let modulePath = path.join(__dirname, file);
-            let dataModule = require(modulePath)(models);
+            let dataModule = require(modulePath)(models, validator);
 
             Object.keys(dataModule)
                 .forEach(key => {

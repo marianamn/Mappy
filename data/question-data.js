@@ -1,7 +1,7 @@
 /* globals module */
 
-module.exports = function (models) {
-    let { Question } = models;
+module.exports = function (models, validator) {
+    let { Question, Country } = models;
 
     return {
         getQuestionsIdsByCountry(country) {
@@ -28,21 +28,56 @@ module.exports = function (models) {
             });
         },
         createQuestion(question, answers, country) {
-            let newQuestion = new Question({
-                question,
-                answers,
-                country
-            });
+            if (!validator.validateIsStringValid(question)) {
+                return Promise.reject("Question name fail");
+            }
+
+            if (!validator.validateStringLength(question, 5, 100)) {
+                return Promise.reject("Question name length fail");
+            }
+
+            if (!Array.isArray(answers)) {
+                return Promise.reject("Answers must be array");
+            } else {
+                answers.forEach((value) => {
+                    if (!validator.validateIsStringValid(value.answer)) {
+                        return Promise.reject("Some of the answers fail");
+                    }
+
+                    if (typeof value.isCorrect !== "boolean") {
+                        return Promise.reject("Some of the answers property isCorrect is not boolean");
+                    }
+                });
+            }
+
+            if (!validator.validateIsStringValid(country)) {
+                return Promise.reject("Country name fail");
+            }
 
             return new Promise((resolve, reject) => {
-                newQuestion.save((err) => {
+                Country.findOne({ name: country }, (err) => {
                     if (err) {
                         return reject(err);
                     }
 
-                    return resolve(newQuestion);
+                    return resolve();
                 });
-            });
+            })
+                .then(() => {
+                    let newQuestion = new Question({
+                        question,
+                        answers,
+                        country
+                    });
+
+                    newQuestion.save((err) => {
+                        if (err) {
+                            return Promise.reject(err);
+                        }
+
+                        return Promise.resolve(newQuestion);
+                    });
+                });
         }
     };
 };

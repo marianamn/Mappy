@@ -1,8 +1,9 @@
 /* globals require console */
 
 const config = require("./config");
+const validator = require("./utils/validator");
 
-let data = require("./data")(config.connectionString);
+let data = require("./data")(config.connectionString, validator);
 
 let controllers = require("./controllers")(data);
 

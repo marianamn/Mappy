@@ -19,7 +19,10 @@ module.exports = function (data) {
         },
         createQuestion(req, res) {
             data.createQuestion(req.body.question, req.body.answers, req.body.country)
-                .then(res.status(201).json({ "message": "Successfully created message." }));
+                .then(res.status(201).json({ "message": "Successfully created message." }))
+                .catch(err => {
+                    console.log(err);
+                });
         }
     };
 };
