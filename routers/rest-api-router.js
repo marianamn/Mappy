@@ -11,11 +11,13 @@ module.exports = function ({ app, data }) {
     let questionController = require("../controllers/test-knowledge-controller")(data);
     let authController = require("../controllers/authentication-controller")(data);
     let usersController = require("../controllers/users-controller")(data);
+    let countriesController = require("../controllers/countries-controller")(data);
 
     let router = new Router();
 
     router
         .get("/users", usersController.getAllUsernames)
+        .get("/countries", isAuthenticated, isAdmin, countriesController.getAllCountriesNames)
         .post("/register", authController.register)
         .post("/createQuestion", isAuthenticated, isAdmin, adminController.createQuestion)
         .post("/evaluate", isAuthenticated, questionController.evaluateQuestion)
