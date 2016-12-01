@@ -187,3 +187,9 @@ body {
 .radio-label {
     margin-right: 5px;
 }
+
+.chat-content{
+    width: 200px; 
+    height: 200px;
+    background-color:white;
+}
