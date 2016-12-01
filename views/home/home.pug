@@ -2,17 +2,19 @@ extends ../_layout
 
 block content
   .home-main-img
-  .container
-    h1.col.lg-12.text-center Welcome to Mappy
-    .row.add-spacing-before
+  .container.add-spacing-after
+    h1.col.lg-12.text-center WELCOME TO MAPPY
+    h4.col.lg-12.text-center
+      i  Test your geography knowledge
+    
+    .row.text-center.add-spacing-before.add-spacing-after
+      .col-lg-6      
+        a(href="/game/guess-the-country" class="text-center")
+          p.home-link-title GUESS THE COUNTRY
+          img(src="http://prpinc.com/wp-content/uploads/2011/09/globe.png", class="home-img")
+        //- p How many countries can you name? As you answer, the map will be filled in. Try it now! 
       
-        .row.text-center.add-spacing-after
-          .col-lg-6
-            a(href="/game/guess-the-country" class="text-center")
-              p.home-link-title Guess The Country
-              img(src="http://prpinc.com/wp-content/uploads/2011/09/globe.png", class="home-img")
-              //img(src="http://prpinc.com/wp-content/uploads/2011/09/globe.png", class="home-img")
-          .col-lg-6
-            a(href='/game/test-your-knowledge' class="text-center ")
-              p.home-link-title Test Your Knowledge
-              img(src="https://www.drugtestingcourses.com/wp-content/uploads/2014/02/certificate.png", class="home-img")   
+      .col-lg-6
+         a(href='/game/test-your-knowledge' class="text-center ")
+           p.home-link-title TEST YOUR KNOWLEGE
+           img(src="https://www.drugtestingcourses.com/wp-content/uploads/2014/02/certificate.png", class="home-img")   
