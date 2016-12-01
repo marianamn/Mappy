@@ -1,11 +1,10 @@
 /* globals $ requester toastr */
 "use strict";
 
-$("body").on("click", "#question-country", function(ev) {
-    console.log('here');
+$("body").on("focus", "#question-country", function(ev) {
     requester.getJSON("/api/countries")
         .then(response => {
-            var countries = response.countriesNames;
+            var countries = response.countriesNames || [];
             var countriesNames = countries.map(c => c.name);
             $(ev.target).autocomplete({ source: countriesNames });
         });
@@ -27,8 +26,9 @@ $("body").on("click", "#createQuestion", () => {
 
     requester.getJSON("/api/countries")
         .then(response => {
-            var countriesNames = response.countriesNames;
-            var isvalidCountry = countriesNames.some(c => c === $country.val());
+            var countries = response.countriesNames || [];
+            var countriesNames = countries.map(c => c.name);
+            var isvalidCountry = countriesNames.some(c => c === $.trim($country.val()));
             console.log(isvalidCountry);
             if (!isvalidCountry) {
                 toastr.error("There is no such a country");

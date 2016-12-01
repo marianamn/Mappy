@@ -11,6 +11,7 @@ module.exports = function ({ app, controllers }) {
 
     router
         .get("/users", controllers.getAllUsernames)
+        .get("/countries", isAuthenticated, isAdmin, controllers.getAllCountriesNames)
         .post("/register", controllers.register)
         .post("/createQuestion", isAuthenticated, isAdmin, controllers.createQuestion)
         .post("/evaluate", isAuthenticated, controllers.evaluateQuestion)
