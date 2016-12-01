@@ -1,7 +1,7 @@
 /* globals module */
 
 module.exports = function(params) {
-    let { data, validator } = params;
+    let { data } = params;
     return {
         allCountries(req, res) {
             data.getAllCountries()
@@ -16,14 +16,24 @@ module.exports = function(params) {
         },
         countryDetails(req, res) {
             let id = req.params.id;
+            if (isNaN(id) || id < 0) {
+                return res.redirect("/countries");
+            }
+
             data.getCountryById(id)
                 .then(country => {
+                    if (!country) {
+                        return res.redirect("/countries");
+                    }
                     let user = req.user;
 
                     res.render("countries/detail-country", {
                         country,
                         user
                     });
+                })
+                .catch(() => {
+                    res.redirect("/countries");
                 });
         },
         getAllCountriesNames(req, res) {
