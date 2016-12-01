@@ -100,9 +100,6 @@ block content
         .form-group
             .col-md-7
                 button.btn.btn-success(id="save-changes" type="submit") Save Changes
-                a.btn.btn-primary(href="/users/" + foundUser.username) Cancel
-
-        .form-group
-            label(for="comment") Comment:
-            textarea#comment.form-control
-            button#add-comment.btn.btn-success Add comment
+                a.btn.btn-primary(href="/users/" + foundUser.username) Cancels
+                
+                button#add-comment.btn.btn-success Show comments
