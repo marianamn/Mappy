@@ -41,6 +41,9 @@ mixin site-navigation
                                     form(action="/auth/logout" method="post")
                                         button(class="btn btn-primary")
                                             | Sign out
+                        li.chat
+                            a(href="/communication/chat")
+                                | Chat
                             if user.isAdmin
                                 li.admin
                                     a(href="/admin/panel")

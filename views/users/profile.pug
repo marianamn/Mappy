@@ -104,6 +104,10 @@ block content
                 .form-group
                     .col-md-12.add-spacing-after
                         button#show-comments.show-comments.btn.btn-success Show comments
+                if foundUser.comments
+                    div Comment sled malko
+                else
+                    div Currently no comments
                 .form-group.hidden-form(style="display: none;")
                     .col-md-12.add-spacing-after
                         label(for="comment") Comment:
