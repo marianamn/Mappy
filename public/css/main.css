@@ -165,3 +165,10 @@ body {
 #search-input {
     float: left
 }
+
+.panel-footer {
+    border-color: transparent;
+    color: #ffffff;
+    background-color: #1a242f;
+    border-radius: 4px;
+}
