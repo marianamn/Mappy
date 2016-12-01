@@ -10,7 +10,7 @@ module.exports = function ({ app }) {
     router
         .get("/", (req, res) => {
             let username = req.query.username;
-            let redirectUrl = "/users/" + username;
+            let redirectUrl = `/users/${username}`;
             res.redirect(redirectUrl);
         });
 
