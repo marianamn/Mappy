@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function(data) {
+module.exports = function (data) {
     return {
         allCountries(req, res) {
             data.getAllCountries()
@@ -23,6 +23,12 @@ module.exports = function(data) {
                         country,
                         user
                     });
+                });
+        },
+        getAllCountriesNames(req, res) {
+            data.getAllCountryNames()
+                .then(countriesNames => {
+                    res.json({ countriesNames });
                 });
         }
     };

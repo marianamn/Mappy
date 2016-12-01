@@ -1,6 +1,16 @@
 /* globals $ requester toastr */
 "use strict";
 
+$("body").on("click", "#question-country", function(ev) {
+    console.log('here');
+    requester.getJSON("/api/countries")
+        .then(response => {
+            var countries = response.countriesNames;
+            var countriesNames = countries.map(c => c.name);
+            $(ev.target).autocomplete({ source: countriesNames });
+        });
+});
+
 $("body").on("click", "#createQuestion", () => {
     let $question = $("#question-title");
     let $country = $("#question-country");
@@ -14,30 +24,42 @@ $("body").on("click", "#createQuestion", () => {
     let $radio2 = $("#radio2");
     let $radio3 = $("#radio3");
     let $radio4 = $("#radio4");
-    let questionObj = {
-        question: $question.val(),
-        country: $country.val(),
-        answers: [
-            {
-                answer: $firstA.val(),
-                isCorrect: $radio1.is(":checked")
-            },
-            {
-                answer: $secondA.val(),
-                isCorrect: $radio2.is(":checked")
-            },
-            {
-                answer: $thirdA.val(),
-                isCorrect: $radio3.is(":checked")
-            },
-            {
-                answer: $forthA.val(),
-                isCorrect: $radio4.is(":checked")
-            }
-        ]
-    };
 
-    requester.postJSON("/api/createQuestion", questionObj)
+    requester.getJSON("/api/countries")
+        .then(response => {
+            var countriesNames = response.countriesNames;
+            var isvalidCountry = countriesNames.some(c => c === $country.val());
+            console.log(isvalidCountry);
+            if (!isvalidCountry) {
+                toastr.error("There is no such a country");
+                return Promise.reject();
+            }
+
+            let questionObj = {
+                question: $question.val(),
+                country: $country.val(),
+                answers: [
+                    {
+                        answer: $firstA.val(),
+                        isCorrect: $radio1.is(":checked")
+                    },
+                    {
+                        answer: $secondA.val(),
+                        isCorrect: $radio2.is(":checked")
+                    },
+                    {
+                        answer: $thirdA.val(),
+                        isCorrect: $radio3.is(":checked")
+                    },
+                    {
+                        answer: $forthA.val(),
+                        isCorrect: $radio4.is(":checked")
+                    }
+                ]
+            };
+
+            return requester.postJSON("/api/createQuestion", questionObj);
+        })
         .then((success) => {
             toastr.success(success.message);
 
