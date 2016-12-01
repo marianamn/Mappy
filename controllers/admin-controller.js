@@ -58,6 +58,14 @@ module.exports = function(params) {
                 validatorError.messages.push("Country is not valid");
             }
 
+            if (validatorError.error) {
+                let error = {
+                    messages: validatorError.messages
+                };
+
+                return res.json({ error });
+            }
+
             data.createQuestion(req.body.question, req.body.answers, req.body.country)
                 .then(res.status(201).json({ "message": "Successfully created message." }))
                 .catch(err => {
