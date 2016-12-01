@@ -20,11 +20,11 @@ body {
 }
 
 .add-spacing-before {
-    padding-top: 5%;
+    padding-top: 4%;
 }
 
 .add-spacing-after {
-    padding-bottom: 5%;
+    padding-bottom: 4%;
 }
 
 .home-main-img {
@@ -43,12 +43,24 @@ body {
     font-weight: bold;
 }
 
+.country-info {
+    width: 90%;
+    padding-left: 5%;
+    margin: 0;
+}
+
+.country-info :first-letter {
+    font-size: 30px;
+    padding-left: 1%; 
+    font-family: Georgia;
+}
+
 .flags {
     text-decoration: none;
 }
 
 .flag-img {
-    width: 130px;
+    width: 120px;
     height: 80px;
     border: 1px solid gray;
 }
@@ -150,8 +162,7 @@ body {
 }
 
 .answer-wrap {
-    height: 5%;
-    padding-top: 0.2%;
+    padding-top: 0.1%;
 }
 
 .profile-info {

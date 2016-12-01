@@ -22,8 +22,8 @@ block content
                         td.text-center=country.area
                         td.text-center=country.populationDensity
     
-    .country-info.add-spacing-before.add-spacing-after
-        p=country.countryInformation
+        .country-info.add-spacing-before
+            p=country.countryInformation
     
-    p.text-center
+    p.text-center.add-spacing-after
             a.btn.btn-primary(href="/countries") Back to countries
