@@ -2,7 +2,7 @@ extends ../_layout
 
 block content
     .text-center
-        form.form-inline(action="/search" method="GET")
+        form.form-inline.add-spacing-before(action="/search" method="GET")
             input.form-control(type="text" name="pattern" value=params.pattern)
             button.btn.btn-danger Search
             // something for showing .. maybe with mixin

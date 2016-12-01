@@ -10,7 +10,7 @@ mixin site-navigation
             #navbar-collapse.collapse.navbar-collapse
                 ul.nav.navbar-nav
                     li
-                        a.navbar-brand(href="/") Mappy
+                       a.navbar-brand(href="/") Mappy
                     li
                         a(href="/rankings") Rankings
                     li
@@ -18,10 +18,10 @@ mixin site-navigation
                     li
                         a(href="/terms") Terms of use
                     li
-                        form.form-inline(action="/search" method="get")
+                        form.navbar-form.navbar-left(role='search').form-group.form-inline(action="/search" method="get")
                             label.col-md-2.control-label(for="username") Find user
                             .col-md-10
-                                input#search-input.searchUsers.form-control(type="text" name="username")
+                                input#search-input.searchUsers.form-control(type="text" name="username" placeholder='Find user' )
                                 button.btn.btn-danger
                                     span.glyphicon.glyphicon-search                        
 
