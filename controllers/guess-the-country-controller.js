@@ -3,7 +3,7 @@
 const GUESS_THE_COUNTRY_INCREASING_VALUE = 1,
     GUESS_THE_COUNTRY_SCORE_TYPE = "guessTheCountryScore";
 
-module.exports = function(params) {
+module.exports = function (params) {
     let { data, validator } = params;
     return {
         getRandomCountryQuestion(req, res) {
@@ -35,12 +35,22 @@ module.exports = function(params) {
                 });
         },
         evaluateGuessTheCountryAnswer(req, res) {
-            data.getCountryByEuValue(req.params.selectedCountryName)
+            if (isNaN(req.params.selectedCountryEuValue) ||
+                req.params.selectedCountryEuValue < 0 ||
+                !validator.validateIsStringValid(req.params.requiredCountryName) ||
+                req.params.requiredCountryName) {
+                return res.redirect("/game/guess-the-country");
+            }
+
+            data.getCountryByEuValue(req.params.selectedCountryEuValue)
                 .then(country => {
+                    if (!country) {
+                        return res.redirect("/game/guess-the-country");
+                    }
+
                     let selectedCountryName = country.name.toLowerCase().replace(/-/g, " ");
                     let requiredCountryName = req.params.requiredCountryName.toLowerCase().replace(/-/g, " ");
-                    console.log(selectedCountryName);
-                    console.log(requiredCountryName);
+
                     if (selectedCountryName === requiredCountryName) {
                         req.session.isCorrectAnswer = true;
 
