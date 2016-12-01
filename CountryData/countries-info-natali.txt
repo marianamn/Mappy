@@ -1,0 +1,140 @@
+{
+    "name" : "Monaco",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/125px-Flag_of_Monaco.svg.png",
+    "countryImgUrl" : "https://cache-graphicslib.viator.com/graphicslib/thumbs674x446/2356/SITours/monaco-and-eze-small-group-day-trip-from-nice-in-nice-48425.jpg",
+    "capital" : "Monaco",
+    "currency" : "Euro",
+    "population" : 37800,
+    "area" : 2.02,
+    "populationDensity" : 18713,
+    "latitude" : "43°44'N",
+    "longitude" : "7.4246'E",
+    "euValue" : 31,
+    "countryInformation" : "Monaco is a tiny independent city-state on France’s Mediterranean coastline known for its upscale casinos, yacht-lined harbor and prestigious Grand Prix motor race, which runs through Monaco’s streets once a year. Monte-Carlo, its major district, is home to an elegant belle-époque casino complex and ornate Salle Garnier opera house. It also has many luxe hotels, boutiques, nightclubs and restaurants. Monaco (Listeni/ˈmɒnəkoʊ/; French pronunciation: ​[mɔnako]), has an area of 2.02 km2 (0.78 sq mi) and a population of about 37,800; it is the second smallest and the most densely populated country in the world"
+}
+{
+    "name" : "Montenegro",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/125px-Flag_of_Montenegro.svg.png",
+    "countryImgUrl" : "http://www.eurail.com/sites/eurail.com/files/styles/asset_image_images_slider_big/public/kotor_bay_montenegro_adriatic_sea.jpg?itok=ewYO8ROU",
+    "capital" : "Podgorica",
+    "currency" : "Euro",
+    "population" : 620029,
+    "area" : 13812,
+    "populationDensity" : 45,
+    "latitude" : "52°22'N",
+    "longitude" : "4°53'E",
+    "euValue" : 32,
+    "countryInformation" : "Montenegro is a Balkan country with rugged mountains, medieval villages and a narrow strip of beaches along its Adriatic coastline. The Bay of Kotor, resembling a fjord, is dotted with coastal churches and fortified towns such as Kotor and Herceg Novi. Durmitor National Park, home to bears and wolves, encompasses limestone peaks, glacial lakes and 1,300m-deep Tara River Canyon."
+}
+{
+    "name" : "Netherlands",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/125px-Flag_of_the_Netherlands.svg.png",
+    "countryImgUrl" : "http://www.worldatlas.com/webimage/countrys/europe/netherlands/nlpics/aaaphotos/keizersgracht.jpg",
+    "capital" : "Amsterdam",
+    "currency" : "Euro",
+    "population" : 17000059,
+    "area" : 41543 ,
+    "populationDensity" : 411,
+    "latitude" : "42°47'N",
+    "longitude" : "19°28'E",
+    "euValue" : 33,
+    "countryInformation" : "The Netherlands is known for a flat landscape of canals, tulip fields, windmills and cycling routes. It is a small, densely populated country located in Western Europe with three island territories in the Caribbean.The European part of the Netherlands borders Germany to the east, Belgium to the south, and the North Sea to the northwest, sharing maritime borders with Belgium, the United Kingdom, and Germany.The largest cities in the Netherlands are Amsterdam, The Hague and Rotterdam. Amsterdam is the country's capital, while The Hague holds the Dutch seat of government and parliament.The port of Rotterdam is the largest port in Europe – as large as the next three largest combined – and was the world's largest port between 1962 and 2004. The name Holland is also frequently and incorrectly used to refer informally to the whole of the country of the Netherlands."
+}
+{
+    "name" : "Norway",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/125px-Flag_of_Norway.svg.png",
+    "countryImgUrl" : "http://louisianaconsularcorps.com/wp-content/gallery/norway/norway-1.jpg",
+    "capital" : "Oslo",
+    "currency" : "Norwegian krone",
+    "population" : 5252166,
+    "area" : 385178,
+    "populationDensity" : 15,
+    "latitude" : "59°56'N",
+    "longitude" : "10°41'E",
+    "euValue" : 34,
+    "countryInformation" : "Norway is a Scandinavian country encompassing mountains, glaciers and deep coastal fjords. Oslo, the capital, is a city of green spaces and museums. Preserved 9th-century Viking ships are displayed at Oslo’s Viking Ship Museum. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing, notably at Lillehammer’s Olympic resort."
+}
+{
+    "name" : "Poland",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/125px-Flag_of_Poland.svg.png",
+    "countryImgUrl" : "http://kids.nationalgeographic.com/content/dam/kids/photos/Countries/H-P/poland-warsaw.jpg.adapt.945.1.jpg",
+    "capital" : "Warsaw",
+    "currency" : "Zloty",
+    "population" : 38483957 ,
+    "area" : 312679,
+    "populationDensity" : 123,
+    "latitude" : "52°13'N",
+    "longitude" : "21°02'E",
+    "euValue" : 35,
+    "countryInformation" : "Poland (Polish: Polska), officially the Republic of Poland is a country in Central Europe, situated between the Baltic Sea in the north and two mountain ranges (the Sudetes and Carpathian Mountains) in the south. Bordered by Germany to the west; the Czech Republic and Slovakia to the south; Ukraine and Belarus to the east; and the Baltic Sea, Kaliningrad Oblast (a Russian exclave) and Lithuania to the north. The total area of Poland is 312,679 square kilometres, making it the 69th largest country in the world and the 9th largest in Europe. With a population of over 38.5 million people, Poland is the 34th most populous country in the world, the 8th most populous country in Europe and the sixth most populous member of the European Union, as well as the most populous post-communist member of the European Union. Poland is a unitary state divided into 16 administrative subdivisions, and its capital and largest city is Warsaw. Other metropolises include Kraków, Wrocław, Poznań, Gdańsk and Szczecin—the country's largest urban agglomeration is the Silesian Metropolis."
+}
+{
+    "name" : "Portugal",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/125px-Flag_of_Portugal.svg.png",
+    "countryImgUrl" : "http://cdn2.hubspot.net/hubfs/491068/Blog/portugal_wine_regions_porto_portugal_ribeira_ponte_dom_luis.jpeg",
+    "capital" : "Lisbon",
+    "currency" : "Euro",
+    "population" : 10341330,
+    "area" : 92212,
+    "populationDensity" : 115,
+    "latitude" : "38°46'N",
+    "longitude" : "9°9'W",
+    "euValue" : 36,
+    "countryInformation" : "Portugal is a country on the Iberian Peninsula, in Southwestern Europe. It is the westernmost country of mainland Europe. To the west and south it is bordered by the Atlantic Ocean and to the east and north by Spain. The Portugal–Spain border is 1,214 km (754 mi) long and considered the longest uninterrupted border within the European Union. The republic also includes the Atlantic archipelagos of the Azores and Madeira, both autonomous regions with their own regional governments.Its location on the Atlantic Ocean has influenced many aspects of its culture: salt cod and grilled sardines are national dishes, the Algarve's beaches are a major destination and much of the nation’s architecture dates to the 1500s–1800s, when Portugal had a powerful maritime empire."
+}
+{
+    "name" : "Romania",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/125px-Flag_of_Romania.svg.png",
+    "countryImgUrl" : "http://otnemea.com/wp-content/uploads/bucharest1.png",
+    "capital" : "Bucharest",
+    "currency" : "Romanian leu",
+    "population" : 19511000,
+    "area" : 238391,
+    "populationDensity" : 84,
+    "latitude" : "44°25'N",
+    "longitude" : "26°06'E",
+    "euValue" : 37,
+    "countryInformation" : "Romania is a sovereign state located in Southeastern Europe. It borders the Black Sea, Bulgaria, Ukraine, Hungary, Serbia, and Moldova. It has an area of 238,391 square kilometres (92,043 sq mi) and a temperate-continental climate. With 19.94 million inhabitants, the country is the seventh most populous member state of the European Union. Its capital and largest city, Bucharest, is the sixth largest city in the EU. Romania is known for the forested region of Transylvania, ringed by the Carpathian Mountains. Its preserved medieval towns include Sighişoara, and there are many fortified churches and castles, notably clifftop Bran Castle, long associated with the Dracula legend."
+}
+{
+    "name" : "Russia",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/125px-Flag_of_Russia.svg.png",
+    "countryImgUrl" : "http://images.nationalgeographic.com/wpf/media-live/photos/000/280/cache/st-basil-cathedral-red-square-moscow_28024_600x450.jpg",
+    "capital" : "Moscow",
+    "currency" : "Ruble",
+    "population" : 146544710[,
+    "area" : 17075200 ,
+    "populationDensity" : 8,
+    "latitude" : "55°45'N",
+    "longitude" : "37°37'E",
+    "euValue" : 38,
+    "countryInformation" : "Russia, also officially known as the Russian Federation, is a federal state in Eurasia. At 17,075,200 square kilometres, Russia is the largest country in the world, covering more than one eighth of Earth's inhabited land area, and the ninth most populous, with over 146.6 million people at the end of March 2016.The European western part of the country is much more populated and urbanised than the East, about 77% of the population live in European Russia. Russia's capital Moscow is one of the largest cities in the world, other major urban centers include Saint Petersburg, Novosibirsk, Yekaterinburg, Nizhny Novgorod and Samara."
+}
+{
+    "name" : "Serbia",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/125px-Flag_of_Serbia.svg.png",
+    "countryImgUrl" : "http://i.dailymail.co.uk/i/pix/2012/11/08/article-2226975-15EBF3F0000005DC-381_634x401.jpg",
+    "capital" : "Belgrade",
+    "currency" : "Serbian dinar",
+    "population" : 7041599 ,
+    "area" : 77474,
+    "populationDensity" : 93,
+    "latitude" : "44°48'N",
+    "longitude" : "20°28'E",
+    "euValue" : 39,
+    "countryInformation" : "Serbia, officially the Republic of Serbia (Serbian: Република Србија / Republika Srbija), is a sovereign state situated at the crossroads between Central and Southeast Europe, covering the southern part of the Pannonian Plain and the central Balkans. Relative to its small territory, it is a diverse country distinguished by a transitional character, situated along cultural, geographic, climatic and other boundaries. Serbia is landlocked and borders Hungary to the north; Romania and Bulgaria to the east; Macedonia to the south; and Croatia, Bosnia-Herzegovina, and Montenegro to the west; it also claims a border with Albania through the disputed territory of Kosovo. Serbia numbers around 7 million residents, and its capital, Belgrade, ranks among the largest cities in Southeast Europe."
+}
+{
+    "name" : "Slovakia",
+    "flagUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/125px-Flag_of_Slovakia.svg.png",
+    "countryImgUrl" : "http://assets.fodors.com/destinations/713266/bratislava-slovakia_main.jpg",
+    "capital" : "Bratislava",
+    "currency" : "Euro",
+    "population" : 5426252 ,
+    "area" : 49035 ,
+    "populationDensity" : 111,
+    "latitude" : "48°09'N",
+    "longitude" : "17°07'E",
+    "euValue" : 40,
+    "countryInformation" : "Slovakia is a landlocked country in Central Europe. It is bordered by the Czech Republic and Austria to the west, Poland to the north, Ukraine to the east and Hungary to the south. Slovakia's territory spans about 49,000 square kilometres and is mostly mountainous. The population is over 5 million and comprises mostly ethnic Slovaks. The capital and largest city is Bratislava. The official language is Slovak, a member of the Slavic language family. Slovakia is a high-income advanced economy with a very high Human Development Index, a very high standard of living and performs favourably in measurements of civil liberties, press freedom, democratic governance and peacefulness. The country maintains a combination of market economy with universal health care and a comprehensive social security system. The country joined the European Union in 2004 and the Eurozone on 1 January 2009."
+}
