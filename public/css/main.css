@@ -51,7 +51,7 @@ body {
 
 .country-info :first-letter {
     font-size: 30px;
-    padding-left: 1%; 
+    padding-left: 1%;
     font-family: Georgia;
 }
 
@@ -182,4 +182,8 @@ body {
     color: #ffffff;
     background-color: #1a242f;
     border-radius: 4px;
+}
+
+.radio-label {
+    margin-right: 5px;
 }

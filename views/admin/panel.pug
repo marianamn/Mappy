@@ -6,22 +6,28 @@ block styles
 block headScripts
     script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
 block content
-    h3= "Administration"
 
-    div
-        a.btn.btn-success(href="/admin/panel/createQuestion") Create new question  
-    br 
-    .col-md-6 Modify user's role
-        .form-group 
-            label.control-label(for='username') Username:              
-            input#username.form-control(type="text")
-    .col-md-6    
-        .form-group
-            label.control-label(for='normal-user') Normal user
-            input(id="normal-user", type="radio", name="radio-group")   
-        .form-group
-            label.control-label(for='admin-user') Admin
-            input(id="admin-user", type="radio", name="radio-group")  
-        button#modify.btn.btn-danger Modify
-    script(type='text/javascript', src='/static/js/admin-panel.js')
-        
+    .container
+        .col-md-6.col-md-offset-3
+            .well
+                h3.add-spacing-after= "Administration"
+
+                a.btn.btn-success(href="/admin/panel/createQuestion") Create new question  
+
+                legend.add-spacing-before  Modify user's role
+                .form-group 
+                    label.control-label(for='username') Choose username:       
+                    input#username.form-control(type="text")
+                
+                .form-group
+                    label.control-label.radio-label(for='normal-user') Normal user 
+                    input(id="normal-user", type="radio", name="radio-group")
+
+                .form-group
+                    label.control-label.radio-label(for='admin-user') Admin 
+                    input(id="admin-user", type="radio", name="radio-group")  
+                
+                button#modify.btn.btn-danger Modify
+
+            script(type='text/javascript', src='/static/js/admin-panel.js')
+            
