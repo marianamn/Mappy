@@ -35,10 +35,10 @@ module.exports = function (params) {
                 });
         },
         evaluateGuessTheCountryAnswer(req, res) {
-            if (isNaN(req.params.selectedCountryEuValue) ||
-                req.params.selectedCountryEuValue < 0 ||
-                !validator.validateIsStringValid(req.params.requiredCountryName) ||
-                req.params.requiredCountryName) {
+            if (isNaN(Number(req.params.selectedCountryEuValue)) ||
+                Number(req.params.selectedCountryEuValue) < 0 ||
+                !req.params.requiredCountryName ||
+                !validator.validateIsStringValid(req.params.requiredCountryName)) {
                 return res.redirect("/game/guess-the-country");
             }
 
@@ -63,7 +63,7 @@ module.exports = function (params) {
                     }
                 })
                 .then(() => {
-                    res.redirect(301, "/game/guess-the-country");
+                    return res.redirect(301, "/game/guess-the-country");
                 })
                 .catch(err => {
                     console.log(err);

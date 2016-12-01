@@ -1,7 +1,7 @@
 /* globals module */
 
 module.exports = function(params) {
-    let { data } = params;
+    let { data, validator } = params;
     return {
         allCountries(req, res) {
             data.getAllCountries()
@@ -16,7 +16,7 @@ module.exports = function(params) {
         },
         countryDetails(req, res) {
             let id = req.params.id;
-            if (isNaN(id) || id < 0) {
+            if (!validator.validateIsStringValid(id)) {
                 return res.redirect("/countries");
             }
 
