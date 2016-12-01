@@ -8,7 +8,7 @@ body {
     position: absolute;
     padding-left: 5%;
     background: #9EA4AB;
-    /*background: url("../img/backgroung-img2.jpg");*/
+    font-family: sans-serif;
 }
 
 #content {
@@ -31,7 +31,7 @@ body {
     margin-left: 0px;
     width: 100%;
     height: 300px;
-    background: url("../img/backgroung-img3.jpg");
+    background: url("../img/backgroung-img1.jpg");
 }
 
 .country-names {
@@ -158,10 +158,10 @@ body {
     padding: 5%;
 }
 
-.search-bar{
+.search-bar {
     display: inline-block
 }
 
-#search-input{
+#search-input {
     float: left
 }
