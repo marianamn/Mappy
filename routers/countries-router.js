@@ -3,17 +3,16 @@
 const express = require("express");
 
 let Router = express.Router;
-let isAuthenticated = require("../middlewares/is-user-authenticated");
 let analytics = require("../middlewares/analytics");
 
 module.exports = function({ app, controllers }) {
     let router = new Router();
 
     router
-        .get("/test-your-knowledge", analytics, isAuthenticated, controllers.getTestKnowledgeMap)
-        .get("/test-your-knowledge/:countryName", isAuthenticated, controllers.getQuestion);
+        .get("/", analytics, controllers.allCountries)
+        .get("/:id", analytics, controllers.countryDetails);
 
-    app.use("/game", router);
+    app.use("/countries", router);
 
     return router;
 };
