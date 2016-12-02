@@ -1195,3 +1195,93 @@
     }],
   "country" : "Iceland"
 }
+
+{
+  "question" : "Before 1991 and the fall of communism in Eastern Europe, Macedonia wouldn't have appeared on most maps as its own country. What larger, multinational state was Macedonia part of for most of the twentieth century?",
+  "answers" : [{
+      "answer" : "Poland",
+      "isCorrect" : false
+    }, {
+      "answer" : "Luxembourg",
+      "isCorrect" : false
+    }, {
+      "answer" : "Yugoslavia",
+      "isCorrect" : true
+    }, {
+      "answer" : "The USSR",
+      "isCorrect" : false
+    }],
+  "country" : "Macedonia"
+}
+
+{
+  "question" : "The main river of Macedonia effectively bisects the country and drains about 90% of its territory. What is the name of this waterway?",
+  "answers" : [{
+      "answer" : "The Vardar River",
+      "isCorrect" : true
+    }, {
+      "answer" : "The Danube River",
+      "isCorrect" : false
+    }, {
+      "answer" : "The Platte River",
+      "isCorrect" : false
+    }, {
+      "answer" : "The Rhine River",
+      "isCorrect" : false
+    }],
+  "country" : "Macedonia"
+}
+
+{
+  "question" : "Macedonia has one UNESCO world heritage site, an ancient city historically known as the 'Slavic Jerusalem'. What is this city on the shores of a beautiful lake that bears its name?",
+  "answers" : [{
+      "answer" : "Salamis",
+      "isCorrect" : false
+    }, {
+      "answer" : "Macchu Picchu",
+      "isCorrect" : false
+    }, {
+      "answer" : "Ohrid",
+      "isCorrect" : true
+    }, {
+      "answer" : "Novgorod",
+      "isCorrect" : false
+    }],
+  "country" : "Macedonia"
+}
+
+{
+  "question" : "The highest mountain in Macedonia is also the highest mountain in Albania. What is this border-straddling alpine giant?",
+  "answers" : [{
+      "answer" : "Mount Denali",
+      "isCorrect" : false
+    }, {
+      "answer" : "Mount Ararat",
+      "isCorrect" : false
+    }, {
+      "answer" : "Mount Korab",
+      "isCorrect" : true
+    }, {
+      "answer" : "Mount Kenya",
+      "isCorrect" : false
+    }],
+  "country" : "Macedonia"
+}
+
+{
+  "question" : "Jordan is known for its city of Petra (carved directly into the rock), and Egypt is known for its pyramids. Macedonia is known for its stone town made of natural earth pyramids near what village?",
+  "answers" : [{
+      "answer" : "Ankara",
+      "isCorrect" : false
+    }, {
+      "answer" : "Sofia",
+      "isCorrect" : false
+    }, {
+      "answer" : "Kuklica",
+      "isCorrect" : true
+    }, {
+      "answer" : "Thebes",
+      "isCorrect" : false
+    }],
+  "country" : "Macedonia"
+}
