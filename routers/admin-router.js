@@ -14,7 +14,7 @@ module.exports = function({ app, controllers }) {
         .get("/panel", isAuthenticated, isAdmin, controllers.getPanel)
         .get("/panel/createQuestion", isAuthenticated, isAdmin, controllers.getCreateQuestionForm)
         .get("/panel/analytics", isAuthenticated, controllers.getAllAnalytics)
-        .get("/panel/analytics/user/:userId", isAuthenticated, controllers.getAllAnalyticsPerUser);
+        .get("/panel/analytics/user/:dataId", isAuthenticated, controllers.getAllAnalyticsPerUser);
     app.use("/admin", router);
 
     return router;

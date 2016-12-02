@@ -29,9 +29,9 @@ block content
                     td=li=analytics.indexOf(data) + 1  
                     td
                         if data.userId
-                            a.red-text(href="/admin/panel/analytics/user/" + data.userId) #{data.userId}
+                            a.red-text(href="/admin/panel/analytics/user/" + data._id) #{data.userId}
                         else
-                            div No User Id
+                            a.red-text(href="/admin/panel/analytics/user/" + data._id) No User Id
                     td=li=data.userAgent
                     td=li=data.cameFrom
                     td=li=data.arriveTimeStamp
