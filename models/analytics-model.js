@@ -6,7 +6,7 @@ module.exports = modelRegistrator.register("Analytics", {
     userAgent: {
         type: String
     },
-    arriveTime: {
+    arriveTimeStamp: {
         type: String
     },
     cameFrom: {
@@ -18,7 +18,7 @@ module.exports = modelRegistrator.register("Analytics", {
     userId: {
         type: String
     },
-    loginTime: {
+    loginTimeStamp: {
         type: String
     },
     pagesAfterLogin: [{
@@ -26,5 +26,8 @@ module.exports = modelRegistrator.register("Analytics", {
     }],
     hasRegistered: {
         type: Boolean
+    },
+    registeredTimeStamp: {
+        type: String
     }
 });

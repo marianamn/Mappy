@@ -19,6 +19,7 @@ function addPageBeforeLogin(req) {
 
     if (pageBeforeLogin === "/api/register") {
         req.session.hasRegistered = true;
+        req.session.registeredTimeStamp = getTimeStamp();
     }
 
     req.session.pagesBeforeLogin.push(pageBeforeLogin);
