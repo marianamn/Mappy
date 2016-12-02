@@ -10,19 +10,19 @@ block content
     .col-md-9.col-md-offset-1.add-spacing-before
         h3.text-center.add-spacing-after Detailed Analytics
 
-        div UserId: #{userAnalytics.userId}
+        h4 UserId: 
+            a.red-text(href="/users/analytics/" + userAnalytics.userId) #{userAnalytics.userId}
         div User Agent: #{userAnalytics.userAgent}
         div Land from: #{userAnalytics.cameFrom}
         div Land time: #{userAnalytics.arriveTimeStamp}
         div Has registered: #{userAnalytics.hasRegistered}
         div Login time: #{userAnalytics.loginTimeStamp}
         
-        //- for pages before login
-        h5 Pages before login
+        h4 Pages before login
         ul
             each page in userAnalytics.pagesBeforeLogin
                 li=page
-        h5 Pages after login
+        h4 Pages after login
         ul
             each page in userAnalytics.pagesAfterLogin
                 li=page
