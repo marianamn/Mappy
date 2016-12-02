@@ -94,7 +94,6 @@ module.exports = function(params) {
             }
         },
         getUserByUserId(req, res) {
-            console.log("here");
             let userId = req.params.userId;
 
             data.getUserById(userId)

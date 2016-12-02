@@ -1,10 +1,18 @@
 extends ../_layout
 
+block styles
+    link(rel="stylesheet", href="/static/bower_components/toastr/toastr.css")
+
+block headScripts
+    script(type='text/javascript', src='/static/js/utils/validator.js')
+    script(type='text/javascript', src='/static/js/login.js')
+    script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
+
 block content
     .container
         .col-md-6.col-md-offset-3
             .well
-                form.form-horizontal(method="post", action="")
+                div.form-horizontal
                     fieldset
                         legend Login
                         .form-group
@@ -17,5 +25,5 @@ block content
                                 input.form-control(id="password" type="password" name="password" placeholder="Password" required)
                         .form-group
                             col-md-10.col-md-offset-2
-                                button.btn.btn-success(type="submit") Login
+                                button.btn.btn-success(id="btn-login" type="submit") Login
                                 a.btn.btn-primary(href="/auth/facebook") Login with Facebook
