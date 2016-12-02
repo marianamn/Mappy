@@ -16,6 +16,21 @@ module.exports = function (models) {
                 });
 
             });
+        },
+        getLatestMessages() {
+            return new Promise((resolve, reject) => {
+                Chat
+                    .find()
+                    .sort({ datetime: -1 })
+                    .limit(50)
+                    .exec((err, chatAnswers) => {
+                        if (err) {
+                            return reject(err);
+                        }
+
+                        return resolve(chatAnswers);
+                    });
+            });
         }
     };
 };
