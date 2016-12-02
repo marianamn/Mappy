@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function(params) {
+module.exports = function (params) {
     let { data, validator } = params;
     return {
         getPanel(req, res) {
@@ -67,9 +67,15 @@ module.exports = function(params) {
             }
 
             data.createQuestion(req.body.question, req.body.answers, req.body.country)
-                .then(res.status(201).json({ "message": "Successfully created message." }))
+                .then(newQuestion => {
+                    if (!newQuestion.answers) {
+                        return;
+                    }
+
+                    return res.status(201).json({ "message": "Successfully created message." });
+                })
                 .catch(err => {
-                    console.log(err);
+                    res.json(err);
                 });
         }
     };

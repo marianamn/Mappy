@@ -50,6 +50,15 @@ module.exports = function (models, validator) {
                 });
             }
 
+            let isThereCorrectAnswer = false;
+            answers.forEach(a => {
+                isThereCorrectAnswer = isThereCorrectAnswer && a.isCorrect;
+            });
+
+            if (!isThereCorrectAnswer) {
+                return Promise.reject("There is no correct answer");
+            }
+
             if (!validator.validateIsStringValid(country)) {
                 return Promise.reject("Country name fail");
             }
