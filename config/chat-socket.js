@@ -1,15 +1,14 @@
 /* globals module */
 "use strict";
 
-module.exports = function ({ app }) {
-    const http = require("http").Server(app);
-    const io = require("socket.io")(http);
+module.exports = function ({ app, server, data }) {
+    const io = require("socket.io")(server);
 
-    io.on("connection", function (socket) {
-        console.log("a user connected");
+    io.on("connection", (socket) => {
+        socket.on("chat message", (msg) => {
+            io.emit("chat message", msg);
+        });
     });
 
-    http.listen(3000, function () {
-        console.log("listening on *:3000");
-    });
+    return io;
 };
