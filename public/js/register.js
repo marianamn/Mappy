@@ -1,13 +1,12 @@
 /* globals $ toastr validator requester location */
 "use strict";
 
-// todo validate email and password length
-// bug when user visits others user profile your profile image is shown
 const userImgURLPattern = /:\/\//;
+const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 $("body").on("click", "#btn-register", () => {
-    var confirmPassword = $("#confirmPassword").val();
-    var registerObj = {
+    let confirmPassword = $("#confirmPassword").val();
+    let registerObj = {
         username: $("#username").val(),
         password: $("#password").val(),
         email: $("#email").val(),
@@ -23,6 +22,11 @@ $("body").on("click", "#btn-register", () => {
 
     if (registerObj.password !== confirmPassword) {
         toastr.error("Error: Invalid password. Password and confirm password must be same");
+        return;
+    }
+
+    if (!emailRegex.test(registerObj.email)) {
+        toastr.error("Error: Invalid email format");
         return;
     }
 
