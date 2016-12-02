@@ -11,7 +11,7 @@ module.exports = function({ app, controllers }) {
 
     router
         .get("/guess-the-country", analytics, isAuthenticated, controllers.getRandomCountryQuestion)
-        .get("/guess-the-country/:requiredCountryName/:selectedCountryEuValue", isAuthenticated, controllers.evaluateGuessTheCountryAnswer);
+        .get("/guess-the-country/:requiredCountryName/:selectedCountryEuValue", analytics, isAuthenticated, controllers.evaluateGuessTheCountryAnswer);
 
     app.use("/game", router);
 
