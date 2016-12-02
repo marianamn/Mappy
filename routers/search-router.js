@@ -2,13 +2,14 @@
 
 const express = require("express");
 let Router = express.Router;
+let analytics = require("../middlewares/visited-pages");
 
-module.exports = function ({ app }) {
+module.exports = function({ app }) {
 
     let router = new Router();
 
     router
-        .get("/", (req, res) => {
+        .get("/", analytics, (req, res) => {
             let username = req.query.username;
             let redirectUrl = `/users/${username}`;
             res.redirect(redirectUrl);

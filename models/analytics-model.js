@@ -23,5 +23,8 @@ module.exports = modelRegistrator.register("Analytics", {
     },
     pagesAfterLogin: [{
         type: String
-    }]
+    }],
+    hasRegistered: {
+        type: Boolean
+    }
 });

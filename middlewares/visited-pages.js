@@ -7,15 +7,8 @@ function addUserAgent(req) {
 
 function addPageBeforeLogin(req) {
     if (!req.session.pagesBeforeLogin) {
-        let now = new Date();
-        let datetime = now.getDate() + "/" +
-            (now.getMonth() + 1) + "/" +
-            now.getFullYear() +
-            now.getHours() + ":" +
-            now.getMinutes() + ":" +
-            now.getSeconds();
 
-        req.session.arriveTime = datetime;
+        req.session.arriveTimeStamp = getTimeStamp();
 
         req.session.cameFrom = req.header("Referer");
 
@@ -24,29 +17,40 @@ function addPageBeforeLogin(req) {
 
     let pageBeforeLogin = req.originalUrl;
 
+    if (pageBeforeLogin === "/api/register") {
+        req.session.hasRegistered = true;
+    }
+
     req.session.pagesBeforeLogin.push(pageBeforeLogin);
 }
 
 function addPageAfterLogin(req) {
     if (!req.session.pagesAfterLogin) {
-        let now = new Date();
-        let datetime = now.getDate() + "/" +
-            (now.getMonth() + 1) + "/" +
-            now.getFullYear() +
-            now.getHours() + ":" +
-            now.getMinutes() + ":" +
-            now.getSeconds();
 
+        req.session.loginTimeStamp = getTimeStamp();
 
-        req.session.loginTime = datetime;
         req.session.pagesAfterLogin = [];
     }
 
     let pageAfterLogin = req.originalUrl;
+
     req.session.pagesAfterLogin.push(pageAfterLogin);
 }
 
+function getTimeStamp() {
+    let now = new Date();
+    let datetime = now.getDate() + "/" +
+        (now.getMonth() + 1) + "/" +
+        now.getFullYear() +
+        now.getHours() + ":" +
+        now.getMinutes() + ":" +
+        now.getSeconds();
+
+    return datetime;
+}
+
 module.exports = function(req, res, next) {
+
 
     if (!req.session.userAgent) {
         addUserAgent(req);
@@ -59,7 +63,7 @@ module.exports = function(req, res, next) {
 
     addPageAfterLogin(req);
 
-    console.log(req.session);
+    // console.log(req.session);
 
     return next();
 };
