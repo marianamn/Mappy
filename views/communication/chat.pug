@@ -5,8 +5,9 @@ block headScripts
     script(type='text/javascript', src='/static/js/chat.js')
 
 block content
-    div.chat-content(style="width: 200px; height: 200px;background-color:white;")
-    ul#messages
-    form(action='')
-        input#m(autocomplete='off')
-        button Send
+    .container.add-spacing-before
+        .chat-content
+        ul#messages
+        form(action='')
+            input#m(autocomplete='off')
+            button.btn-sm.btn-primary Send
