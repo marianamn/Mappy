@@ -5,7 +5,7 @@ let Router = express.Router;
 
 let isAdmin = require("../middlewares/is-user-admin");
 let isAuthenticated = require("../middlewares/is-user-authenticated");
-let analytics = require("../middlewares/visited-pages");
+let analytics = require("../middlewares/analytics");
 
 module.exports = function({ app, controllers }) {
     let router = new Router();

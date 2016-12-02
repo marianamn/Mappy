@@ -2,7 +2,7 @@
 
 const express = require("express");
 let Router = express.Router;
-let analytics = require("../middlewares/visited-pages");
+let analytics = require("../middlewares/analytics");
 
 module.exports = function({ app, controllers }) {
     let router = new Router();
