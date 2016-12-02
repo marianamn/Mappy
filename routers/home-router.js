@@ -2,13 +2,14 @@
 
 const express = require("express");
 let Router = express.Router;
+let visitedPages = require("../middlewares/visited-pages");
 
-module.exports = function ({ app, controllers }) {
+module.exports = function({ app, controllers }) {
     let router = new Router();
 
     router
-        .get("/", controllers.home)
-        .get("/terms", (req, res) => {
+        .get("/", visitedPages, controllers.home)
+        .get("/terms", visitedPages, (req, res) => {
             res.render("terms-of-use/terms-of-use");
         });
 

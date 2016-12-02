@@ -40,7 +40,7 @@ function validateUser({ validator, username, firstName, lastName, profileImgURL 
     }
 }
 
-module.exports = function (params) {
+module.exports = function(params) {
     let { data, validator } = params;
     return {
         register(req, res) {
@@ -72,13 +72,13 @@ module.exports = function (params) {
             let hashPass = data.encryption.generateHashedPassword(salt, password);
 
             data.createUser(
-                username,
-                firstName,
-                lastName,
-                email,
-                profileImgURL,
-                salt,
-                hashPass)
+                    username,
+                    firstName,
+                    lastName,
+                    email,
+                    profileImgURL,
+                    salt,
+                    hashPass)
                 .then(() => {
                     res.json({ "message": "You have been registered successfully" });
                 })
