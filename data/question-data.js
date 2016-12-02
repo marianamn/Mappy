@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function (models, validator) {
+module.exports = function(models, validator) {
     let { Question, Country } = models;
 
     return {
@@ -52,7 +52,7 @@ module.exports = function (models, validator) {
 
             let isThereCorrectAnswer = false;
             answers.forEach(a => {
-                isThereCorrectAnswer = isThereCorrectAnswer && a.isCorrect;
+                isThereCorrectAnswer = isThereCorrectAnswer || a.isCorrect;
             });
 
             if (!isThereCorrectAnswer) {
@@ -69,7 +69,7 @@ module.exports = function (models, validator) {
                         return reject(err);
                     }
 
-                    return resolve();
+                    resolve();
                 });
             })
                 .then(() => {
@@ -83,9 +83,11 @@ module.exports = function (models, validator) {
                         if (err) {
                             return Promise.reject(err);
                         }
-
-                        return Promise.resolve(newQuestion);
                     });
+                    return Promise.resolve(newQuestion);
+                })
+                .catch(err => {
+                    console.log(err);
                 });
         }
     };

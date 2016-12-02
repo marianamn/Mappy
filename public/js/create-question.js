@@ -1,7 +1,14 @@
-/* globals $ requester toastr */
+/* globals $ requester toastr validator */
 "use strict";
 
-$("body").on("focus", "#question-country", function(ev) {
+function validatIsInputValid(inputValue, valueName) {
+    if (!validator.validateIsStringValid(inputValue)) {
+        toastr.error(valueName + "is not valid");
+        return Promise.reject();
+    }
+}
+
+$("body").on("focus", "#question-country", function (ev) {
     requester.getJSON("/api/countries")
         .then(response => {
             var countries = response.countriesNames || [];
@@ -12,7 +19,6 @@ $("body").on("focus", "#question-country", function(ev) {
 
 $("body").on("click", "#createQuestion", () => {
     let $question = $("#question-title");
-    let $country = $("#question-country");
 
     let $firstA = $("#firstA");
     let $secondA = $("#secondA");
@@ -24,15 +30,54 @@ $("body").on("click", "#createQuestion", () => {
     let $radio3 = $("#radio3");
     let $radio4 = $("#radio4");
 
-    requester.getJSON("/api/countries")
+    let $country = $("#question-country");
+
+    return new
+        Promise((resolve, reject) => {
+
+            if (!validator.validateIsStringValid($question.val())) {
+                return reject({ message: "Question is not valid" });
+            }
+
+            if (!validator.validateIsStringValid($firstA.val())) {
+                return reject({ message: "First answer is not valid" });
+            }
+
+            if (!validator.validateIsStringValid($secondA.val())) {
+                return reject({ message: "Second answer is not valid" });
+            }
+
+            if (!validator.validateIsStringValid($thirdA.val())) {
+                return reject({ message: "Third answer is not valid" });
+            }
+
+            if (!validator.validateIsStringValid($forthA.val())) {
+                return reject({ message: "Forth answer is not valid" });
+            }
+
+            var isThereCorrectAnswer = false;
+
+            if ($radio1.is(":checked") ||
+                $radio2.is(":checked") ||
+                $radio3.is(":checked") ||
+                $radio4.is(":checked")) {
+                isThereCorrectAnswer = true;
+            }
+
+            if (!isThereCorrectAnswer) {
+                return reject({ message: "There is no correct answer" });
+            }
+
+            // return requester.getJSON("/api/countries");
+            return resolve(requester.getJSON("/api/countries"));
+        })
         .then(response => {
             var countries = response.countriesNames || [];
             var countriesNames = countries.map(c => c.name);
             var isvalidCountry = countriesNames.some(c => c === $.trim($country.val()));
-            console.log(isvalidCountry);
+
             if (!isvalidCountry) {
-                toastr.error("There is no such a country");
-                return Promise.reject();
+                return Promise.reject({ message: "There is no such a country" });
             }
 
             let questionObj = {
@@ -76,8 +121,9 @@ $("body").on("click", "#createQuestion", () => {
             $radio3.prop("checked", false);
             $radio4.prop("checked", false);
         })
-        .catch(() => {
-            toastr.error("Something went wrong!");
+        .catch((err) => {
+            console.log(err);
+            toastr.error(err.message);
         });
 });
 

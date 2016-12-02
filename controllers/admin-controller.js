@@ -20,7 +20,7 @@ module.exports = function (params) {
         },
         createQuestion(req, res) {
             let validatorError = {};
-            validator.messages = [];
+            validatorError.messages = [];
 
             let question = req.body.question;
             let answers = req.body.answers;
@@ -65,13 +65,11 @@ module.exports = function (params) {
 
                 return res.json({ error });
             }
-
             data.createQuestion(req.body.question, req.body.answers, req.body.country)
                 .then(newQuestion => {
                     if (!newQuestion.answers) {
                         return;
                     }
-
                     return res.status(201).json({ "message": "Successfully created message." });
                 })
                 .catch(err => {
