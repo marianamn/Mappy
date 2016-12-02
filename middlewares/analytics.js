@@ -5,6 +5,18 @@ function addUserAgent(req) {
     req.session.userAgent = userAgent;
 }
 
+function getTimeStamp() {
+    let now = new Date();
+    let datetime = now.getDate() + "/" +
+        (now.getMonth() + 1) + "/" +
+        now.getFullYear() +
+        now.getHours() + ":" +
+        now.getMinutes() + ":" +
+        now.getSeconds();
+
+    return datetime;
+}
+
 function addPageBeforeLogin(req) {
     if (!req.session.pagesBeforeLogin) {
 
@@ -36,18 +48,6 @@ function addPageAfterLogin(req) {
     let pageAfterLogin = req.originalUrl;
 
     req.session.pagesAfterLogin.push(pageAfterLogin);
-}
-
-function getTimeStamp() {
-    let now = new Date();
-    let datetime = now.getDate() + "/" +
-        (now.getMonth() + 1) + "/" +
-        now.getFullYear() +
-        now.getHours() + ":" +
-        now.getMinutes() + ":" +
-        now.getSeconds();
-
-    return datetime;
 }
 
 module.exports = function(req, res, next) {
