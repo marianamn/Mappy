@@ -1,27 +1,5 @@
 [
     {
-        question: "What is the capital of Ukraine?",
-        answers: [
-            {
-                answer: "Kyiv",
-                isCorrect: true
-            },
-            {
-                answer: "Sofia",
-                isCorrect: false
-            },
-            {
-                answer: "Luanda",
-                isCorrect: false
-            },
-            {
-                answer: "Tbilisi,",
-                isCorrect: false
-            }
-        ],
-        country: "Ukraine"
-    },
-    {
         question: "What is the official  currency of Ukraine?",
         answers: [
             {

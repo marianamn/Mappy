@@ -1,4 +1,6 @@
 /* globals module */
+const DEFAULT_PAGE = 1,
+    COUNTRIES_PER_PAGE = 12;
 
 module.exports = function(models) {
     let { Country } = models;
@@ -15,15 +17,36 @@ module.exports = function(models) {
                 });
             });
         },
-        getAllCountries() {
-            return new Promise((resolve, reject) => {
-                Country.find({}, (err, country) => {
-                    if (err) {
-                        return reject(err);
-                    }
+        getAllCountries({ page, pageSize }) {
+            page = page || DEFAULT_PAGE;
+            pageSize = pageSize || COUNTRIES_PER_PAGE;
 
-                    return resolve(country);
-                });
+            return Promise.all([
+                new Promise((resolve, reject) => {
+                    Country.find()
+                        .sort({ name: "asc" })
+                        .limit(pageSize)
+                        .skip((page - 1) * pageSize)
+                        .exec((err, countries) => {
+                            if (err) {
+                                return reject(err);
+                            }
+
+                            return resolve(countries);
+                        });
+                }), new Promise((resolve, reject) => {
+                    Country.count({})
+                        .exec((err, count) => {
+                            if (err) {
+                                return reject(err);
+                            }
+
+                            return resolve(count);
+                        });
+                })
+            ]).then(results => {
+                let [countries, count] = results;
+                return { countries, count };
             });
         },
         getCountryById(id) {

@@ -1,9 +1,22 @@
 extends ../_layout
+
 block content
+
     .row.text-center.add-spacing-before
-        each country in countries
+        each country in model
             .col-sm-2
                 a(href="countries/" + country._id class="flags" class="text-center")
                     p.country-names=country.name
                     |  
                     img(src= country.flagUrl, class="flag-img") 
+    
+    .row.text-center.add-spacing-before                 
+        ul.pagination.text-center
+            - for(let i = 1; i <= params.pages; i+=1 )
+                li
+                    if params.page === i
+                        a(href="/countries?page=" + i)
+                            = i
+                    else
+                        a(href="/countries?page=" + i)
+                            = i

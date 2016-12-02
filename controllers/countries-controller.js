@@ -2,15 +2,47 @@
 
 module.exports = function(params) {
     let { data, validator } = params;
+
     return {
         allCountries(req, res) {
-            data.getAllCountries()
-                .then(countries => {
-                    let user = req.user;
+            let page = Number(req.query.page),
+                pageSize = Number(req.query.pageSize);
 
-                    res.render("countries/all-countries", {
+            data.getAllCountries({ page, pageSize })
+                .then(result => {
+                    let user = req.user;
+                    let {
                         countries,
-                        user
+                        count
+                    } = result;
+
+                    if (count === 0) {
+                        res.render("countries/all-countries", {
+                            model: countries,
+                            user,
+                            params: { page, pages: 0 }
+                        });
+                    }
+
+                    if (page < 1) {
+                        return res.redirect("/countries?page=1");
+                    }
+
+                    let pages = count / COUNTRIES_PER_PAGE;
+                    if (parseInt(pages, 10) < pages) {
+                        pages += 1;
+                        pages = parseInt(pages, 10);
+                    }
+
+                    if (page > pages) {
+                        page = pages;
+                        return res.redirect(`/countries?page=${page}`);
+                    }
+
+                    return res.render("countries/all-countries", {
+                        model: countries,
+                        user,
+                        params: { page, pages }
                     });
                 });
         },
