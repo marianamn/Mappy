@@ -1,0 +1,43 @@
+extends ../_layout
+
+block styles
+    link(rel="stylesheet", href="/static/bower_components/toastr/toastr.css")
+
+block headScripts
+    script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
+block content
+
+    .col-md-9.col-md-offset-1.add-spacing-before
+        h3.text-center.add-spacing-after Analytics
+
+        ul
+            table.table.table-striped.table-hover
+                thead
+                    tr
+                    th #
+                    th User Id
+                    th User-agent string
+                    th Land from
+                    th Land time
+                    th Has registered
+                    th Login time
+                    th Pages before login
+                    th Pages after login
+                tbody
+                each data in analytics
+                    tr.active
+                    td=li=analytics.indexOf(data) + 1  
+                    td
+                        if data.userId
+                            a.red-text(href="/admin/panel/analytics/user/" + data.userId) #{data.userId}
+                        else
+                            div No User Id
+                    td=li=data.userAgent
+                    td=li=data.cameFrom
+                    td=li=data.arriveTimeStamp
+                    td=li=data.hasRegistered
+                    td=li=data.loginTimeStamp
+                    - var numberOfPagesBeforeLogin = data.pagesBeforeLogin.length
+                    td=li=numberOfPagesBeforeLogin
+                    -var numberOfPagesAfterLogin = data.pagesAfterLogin.length
+                    td=li=numberOfPagesAfterLogin

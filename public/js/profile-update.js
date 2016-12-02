@@ -90,7 +90,7 @@ $("body").on("click", "#add-comment", () => {
             if (response.error) {
                 toastr.error(response.message);
             } else {
-                console.log(response.comments);
+                // console.log(response.comments);
                 toastr.success(response.message);
             }
             $commentInput.val("");

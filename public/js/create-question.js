@@ -29,7 +29,7 @@ $("body").on("click", "#createQuestion", () => {
             var countries = response.countriesNames || [];
             var countriesNames = countries.map(c => c.name);
             var isvalidCountry = countriesNames.some(c => c === $.trim($country.val()));
-            console.log(isvalidCountry);
+            // console.log(isvalidCountry);
             if (!isvalidCountry) {
                 toastr.error("There is no such a country");
                 return Promise.reject();
@@ -38,8 +38,7 @@ $("body").on("click", "#createQuestion", () => {
             let questionObj = {
                 question: $question.val(),
                 country: $country.val(),
-                answers: [
-                    {
+                answers: [{
                         answer: $firstA.val(),
                         isCorrect: $radio1.is(":checked")
                     },

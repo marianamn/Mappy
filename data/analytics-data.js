@@ -26,6 +26,28 @@ module.exports = function(models) {
                     return resolve(newAnalytics);
                 });
             });
+        },
+        getAllAnalyticsData() {
+            return new Promise((resolve, reject) => {
+                Analytics.find({}, (err, analytics) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(analytics);
+                });
+            });
+        },
+        getAnalyticsByUserId(userId) {
+            return new Promise((resolve, reject) => {
+                Analytics.findOne({ userId }, (err, userAnalytics) => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(userAnalytics);
+                });
+            });
         }
     };
 };
