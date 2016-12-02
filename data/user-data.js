@@ -2,6 +2,7 @@
 
 const dataUtils = require("./utils/data-utils");
 const encrypt = require("../utils/encryption");
+const TOP_USERS = 10;
 
 function validateUser({ validator, username, firstName, lastName, profileImgURL }) {
     if (!validator.validateStringLength(username, 3, 50)) {
@@ -204,13 +205,15 @@ module.exports = function(models, validator) {
         },
         getAllUsers() {
             return new Promise((resolve, reject) => {
-                User.find({}, (err, users) => {
-                    if (err) {
-                        return reject(err);
-                    }
+                User.find()
+                    .limit(TOP_USERS)
+                    .exec({}, (err, users) => {
+                        if (err) {
+                            return reject(err);
+                        }
 
-                    return resolve(users);
-                });
+                        return resolve(users);
+                    });
             });
         },
         getAllUsernames() {

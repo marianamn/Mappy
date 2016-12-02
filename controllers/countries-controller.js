@@ -1,14 +1,14 @@
 /* globals module */
+const COUNTRIES_PER_PAGE = 12;
 
 module.exports = function(params) {
     let { data, validator } = params;
 
     return {
         allCountries(req, res) {
-            let page = Number(req.query.page),
-                pageSize = Number(req.query.pageSize);
+            let page = Number(req.query.page);
 
-            data.getAllCountries({ page, pageSize })
+            data.getAllCountries({ page, pageSize: COUNTRIES_PER_PAGE })
                 .then(result => {
                     let user = req.user;
                     let {
