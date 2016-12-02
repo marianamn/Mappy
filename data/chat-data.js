@@ -21,7 +21,7 @@ module.exports = function (models) {
             return new Promise((resolve, reject) => {
                 Chat
                     .find()
-                    .sort({ datetime: -1 })
+                    .sort({ createdAt: -1 })
                     .limit(50)
                     .exec((err, chatAnswers) => {
                         if (err) {

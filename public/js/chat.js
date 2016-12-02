@@ -15,7 +15,7 @@ let socket = io();
 $("body").on("click", "#sendMsg", () => {
     let user = $("#currentUsername").text();
     let answer = $("#m").val();
-    let datetime = new Date();
+    let datetime = formatDate(new Date());
     let message = {
         user,
         answer,
