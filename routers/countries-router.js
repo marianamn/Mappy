@@ -17,11 +17,3 @@ module.exports = function({ app, controllers }) {
 
     return router;
 };
-    return router;
-};      .put("/profile", isAuthenticated, controllers.updateProfile)
-        .put("/users/:username", isAuthenticated, isAdmin, controllers.updateUserRole);
-
-    app.use("/api", router);
-
-    return router;
-};
