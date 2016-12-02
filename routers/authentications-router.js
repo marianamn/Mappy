@@ -8,7 +8,7 @@ let Router = express.Router;
 let isAuthenticated = require("../middlewares/is-user-authenticated");
 let analytics = require("../middlewares/analytics");
 
-module.exports = function({ app, controllers }) {
+module.exports = function ({ app, controllers }) {
     let router = new Router();
 
     router
@@ -17,14 +17,10 @@ module.exports = function({ app, controllers }) {
         .get("/facebook", analytics, passport.authenticate("facebook"))
         .get("/unauthorized", analytics, controllers.unauthorized)
         .get("/facebook/callback", passport.authenticate("facebook", { scope: "email", failureRedirect: "/auth/login" }),
-            (req, res) => {
-                res.redirect("/");
-            })
-        .post("/login", analytics,
-            passport.authenticate("local", { failureRedirect: "/auth/login" }),
-            (req, res) => {
-                res.redirect("/");
-            })
+        (req, res) => {
+            res.redirect("/");
+        })
+        .post("/login", analytics, controllers.login)
         .post("/logout", analytics, isAuthenticated, controllers.logout);
 
     app.use("/auth", router);

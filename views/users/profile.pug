@@ -101,15 +101,3 @@ block content
                         .col-md-7.add-spacing-after
                             button.btn.btn-success(id="save-changes" type="submit") Save Changes
                             a.btn.btn-primary(href="/users/" + foundUser.username) Cancel
-                .form-group
-                    .col-md-12.add-spacing-after
-                        button#show-comments.show-comments.btn.btn-success Show comments
-                if foundUser.comments
-                    div Comment sled malko
-                else
-                    div Currently no comments
-                .form-group.hidden-form(style="display: none;")
-                    .col-md-12.add-spacing-after
-                        label(for="comment") Comment:
-                        textarea#comment.form-control.add-spacing-before
-                        button#add-comment.btn.btn-success Add comment

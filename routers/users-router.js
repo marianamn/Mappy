@@ -10,7 +10,8 @@ module.exports = function({ app, controllers }) {
     let router = new Router();
 
     router
-        .get("/:username", analytics, isAuthenticated, controllers.getUserProfile);
+        .get("/:username", analytics, isAuthenticated, controllers.getUserProfile)
+        .get("/analytics/:userId", isAuthenticated, controllers.getUserByUserId);
 
     app.use("/users", router);
 

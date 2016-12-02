@@ -42,7 +42,9 @@ function validateUser({ validator, username, firstName, lastName, profileImgURL 
     return validatorError;
 }
 
-module.exports = function(params) {
+const passport = require("passport");
+
+module.exports = function (params) {
     let { data, validator } = params;
     return {
         register(req, res) {
@@ -62,8 +64,6 @@ module.exports = function(params) {
                 validatorError.messages.push("Email fail");
             }
 
-            console.log(validatorError);
-
             if (validatorError.error) {
                 let error = {
                     messages: validatorError.messages
@@ -76,19 +76,38 @@ module.exports = function(params) {
             let hashPass = data.encryption.generateHashedPassword(salt, password);
 
             data.createUser(
-                    username,
-                    firstName,
-                    lastName,
-                    email,
-                    profileImgURL,
-                    salt,
-                    hashPass)
+                username,
+                firstName,
+                lastName,
+                email,
+                profileImgURL,
+                salt,
+                hashPass)
                 .then(() => {
                     res.json({ "message": "You have been registered successfully" });
                 })
                 .catch(err => {
                     res.json(err);
                 });
+        },
+        login(req, res, next) {
+            passport.authenticate("local", (err, user) => {
+                if (err) {
+                    return next(err);
+                }
+
+                if (!user) {
+                    return res.send({ success: false, message: "Invalid username or password" });
+                }
+
+                req.login(user, loginErr => {
+                    if (loginErr) {
+                        return next(loginErr);
+                    }
+
+                    return res.send({ success: true, message: "Successfully logged in" });
+                });
+            })(req, res, next);
         },
         logout(req, res) {
             data.createAnalytics(req.session);

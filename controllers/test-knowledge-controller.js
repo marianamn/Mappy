@@ -10,7 +10,7 @@ function shuffle(array) {
     }
 }
 
-module.exports = function (params) {
+module.exports = function(params) {
     let { data, validator } = params;
     return {
         getTestKnowledgeMap(req, res) {
@@ -60,7 +60,7 @@ module.exports = function (params) {
                     if (correctAnswer === requestAnswer) {
                         resBody.isCorrect = true;
                     }
-                    console.log(question.country);
+                    // console.log(question.country);
 
                     return data.getQuestionsIdsByCountry(question.country);
                 })

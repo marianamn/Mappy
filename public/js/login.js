@@ -1,19 +1,20 @@
-/* globals $ toastr validator requester */
+/* globals $ toastr requester location */
 "use strict";
 
-$("body").on("click", "btn-login", () => {
+$("body").on("click", "#btn-login", () => {
     let user = {
         username: $("#username").val(),
         password: $("#password").val()
     };
 
-    let url = "/api/login";
+    let url = "/auth/login";
     requester.postJSON(url, user)
         .then((response) => {
-            if (response.error) {
-                toastr.error(response.error);
+            if (response.success) {
+                toastr.success(response.message);
+                $(location).attr("href", "/");
             } else {
-                toastr.success(response);
+                toastr.error(response.message);
             }
         });
 });

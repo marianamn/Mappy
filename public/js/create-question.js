@@ -83,23 +83,22 @@ $("body").on("click", "#createQuestion", () => {
             let questionObj = {
                 question: $question.val(),
                 country: $country.val(),
-                answers: [
-                    {
-                        answer: $firstA.val(),
-                        isCorrect: $radio1.is(":checked")
-                    },
-                    {
-                        answer: $secondA.val(),
-                        isCorrect: $radio2.is(":checked")
-                    },
-                    {
-                        answer: $thirdA.val(),
-                        isCorrect: $radio3.is(":checked")
-                    },
-                    {
-                        answer: $forthA.val(),
-                        isCorrect: $radio4.is(":checked")
-                    }
+                answers: [{
+                    answer: $firstA.val(),
+                    isCorrect: $radio1.is(":checked")
+                },
+                {
+                    answer: $secondA.val(),
+                    isCorrect: $radio2.is(":checked")
+                },
+                {
+                    answer: $thirdA.val(),
+                    isCorrect: $radio3.is(":checked")
+                },
+                {
+                    answer: $forthA.val(),
+                    isCorrect: $radio4.is(":checked")
+                }
                 ]
             };
 

@@ -2,7 +2,7 @@
 
 const REQUIRED_POINTS_PER_STAR = 45;
 
-module.exports = function (params) {
+module.exports = function(params) {
     let { data, validator } = params;
     return {
         getUserProfile(req, res) {
@@ -92,6 +92,32 @@ module.exports = function (params) {
                 data.updateUser(req.body)
                     .then(res.json({ "message": "Profile updated successfully." }));
             }
+        },
+        getUserByUserId(req, res) {
+            let userId = req.params.userId;
+
+            data.getUserById(userId)
+                .then(foundUser => {
+                    if (!foundUser) {
+                        return res.redirect("/");
+                    }
+
+                    let user = req.user;
+                    let ownProfile = foundUser.username === user.username;
+                    let isAdmin = user.isAdmin;
+
+                    let guessTheCountryStars = Math.floor(foundUser.guessTheCountryScore / REQUIRED_POINTS_PER_STAR);
+                    let testYourKnowledgeStars = Math.floor(foundUser.testYourKnowledgeScore / REQUIRED_POINTS_PER_STAR);
+
+                    res.render("users/profile", {
+                        ownProfile,
+                        isAdmin,
+                        foundUser,
+                        user,
+                        guessTheCountryStars,
+                        testYourKnowledgeStars
+                    });
+                });
         }
     };
 };
