@@ -3,7 +3,7 @@
 const fs = require("fs"),
     path = require("path");
 
-module.exports = function(params) {
+module.exports = function (params) {
     let controllers = {};
     fs.readdirSync(__dirname)
         .filter(file => file.includes("-controller"))
@@ -16,6 +16,6 @@ module.exports = function(params) {
                     controllers[key] = theModule[key];
                 });
         });
-        
+
     return controllers;
 };

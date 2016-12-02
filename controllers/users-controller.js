@@ -2,7 +2,7 @@
 
 const REQUIRED_POINTS_PER_STAR = 45;
 
-module.exports = function(params) {
+module.exports = function (params) {
     let { data, validator } = params;
     return {
         getUserProfile(req, res) {
@@ -10,6 +10,10 @@ module.exports = function(params) {
 
             data.getUserByUsername(username)
                 .then(foundUser => {
+                    if (!foundUser) {
+                        return res.redirect("/");
+                    }
+
                     let user = req.user;
                     let ownProfile = foundUser.username === user.username;
                     let isAdmin = user.isAdmin;

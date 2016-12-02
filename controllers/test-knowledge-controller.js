@@ -10,7 +10,7 @@ function shuffle(array) {
     }
 }
 
-module.exports = function(params) {
+module.exports = function (params) {
     let { data, validator } = params;
     return {
         getTestKnowledgeMap(req, res) {
@@ -25,8 +25,13 @@ module.exports = function(params) {
         getQuestion(req, res) {
             let countryName = req.params.countryName;
 
+            if (!countryName || !validator.validateIsStringValid(countryName)) {
+                return res.redirect("/game/test-your-knowledge");
+            }
+
             data.getQuestionsIdsByCountry(countryName)
                 .then(questionIds => {
+
                     let randomIndex = Math.floor(Math.random() * questionIds.length);
                     let randomQuestionId = questionIds[randomIndex];
 
