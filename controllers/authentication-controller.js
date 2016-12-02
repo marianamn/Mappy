@@ -34,10 +34,12 @@ function validateUser({ validator, username, firstName, lastName, profileImgURL 
         validatorError.messages.push("Last name fail");
     }
 
-    if (!validator.validateImageUrl(profileImgURL)) {
+    if (profileImgURL && !validator.validateImageUrl(profileImgURL)) {
         validatorError.error = true;
         validatorError.messages.push("Invalid image url");
     }
+
+    return validatorError;
 }
 
 module.exports = function(params) {
@@ -59,6 +61,8 @@ module.exports = function(params) {
                 validatorError.error = true;
                 validatorError.messages.push("Email fail");
             }
+
+            console.log(validatorError);
 
             if (validatorError.error) {
                 let error = {
@@ -87,6 +91,8 @@ module.exports = function(params) {
                 });
         },
         logout(req, res) {
+            data.createAnalytics(req.session);
+            req.session.destroy();
             req.logout();
             return res.redirect("/");
         },

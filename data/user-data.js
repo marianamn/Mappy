@@ -28,12 +28,12 @@ function validateUser({ validator, username, firstName, lastName, profileImgURL 
         return Promise.reject("Last name fail");
     }
 
-    if (!validator.validateImageUrl(profileImgURL)) {
+    if (profileImgURL && !validator.validateImageUrl(profileImgURL)) {
         return Promise.reject("Invalid image url");
     }
 }
 
-module.exports = function (models, validator) {
+module.exports = function(models, validator) {
     let { User } = models;
 
     return {
@@ -232,7 +232,7 @@ module.exports = function (models, validator) {
             };
 
             return new
-                Promise((resolve, reject) => {
+            Promise((resolve, reject) => {
                     User.findOne({ username: usernameToAdd }, (err, user) => {
                         if (err) {
                             return reject(err);
@@ -248,7 +248,7 @@ module.exports = function (models, validator) {
         },
         updateUserRole(username, isAdmin) {
             return new
-                Promise((resolve, reject) => {
+            Promise((resolve, reject) => {
                     User.findOne({ username }, (err, user) => {
                         if (err) {
                             return reject(err);

@@ -8,12 +8,14 @@ module.exports = function(models) {
             return new Promise((resolve, reject) => {
                 let newAnalytics = new Analytics({
                     userAgent: sessionData.userAgent,
-                    arriveTime: sessionData.arriveTime,
+                    arriveTimeStamp: sessionData.arriveTimeStamp,
                     cameFrom: sessionData.cameFrom,
                     pagesBeforeLogin: sessionData.pagesBeforeLogin,
                     userId: sessionData.passport.user,
-                    loginTime: sessionData.loginTime,
-                    pagesAfterLogin: sessionData.pagesAfterLogin
+                    loginTimeStamp: sessionData.loginTimeStamp,
+                    pagesAfterLogin: sessionData.pagesAfterLogin,
+                    hasRegistered: sessionData.hasRegistered,
+                    registeredTimeStamp: sessionData.registeredTimeStamp
                 });
 
                 newAnalytics.save((err) => {
