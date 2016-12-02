@@ -1,12 +1,17 @@
 /* globals module */
 
 module.exports = function (params) {
-    let {data, validator} = params;
+    let { data, validator } = params;
     return {
         getChat(req, res) {
-            res.render("communication/chat", {
-                user: req.user
-            });
+            data.getLatestMessages()
+                .then(latestAnswers => {
+                    latestAnswers.reverse();
+                    res.render("communication/chat", {
+                        user: req.user,
+                        answers: latestAnswers
+                    });
+                });
         },
         createNewChatAnswer(req, res) {
             let answer = req.body.answer;

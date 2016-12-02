@@ -14,9 +14,11 @@ block content
                 .panel-heading Chat
                 .panel-body
                     #message-container.container
-                        .row.message-bubble
-                            p.text-muted Matt Townsen
-                            span Why is yo shit so broke?
+                        each answer in answers
+                            .row.message-bubble
+                                p.text-muted #{answer.user}
+                                span #{answer.answer}
+                                div sent #{answer.datetime}
                     .panel-footer
                         .input-group
                             input.form-control(id="m" type='text')

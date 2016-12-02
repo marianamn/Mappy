@@ -14,7 +14,7 @@ module.exports = modelRegistrator.register("Chat", {
         required: requiredMessage
     },
     datetime: {
-        type: Date,
+        type: String,
         required: requiredMessage
     }
 });
