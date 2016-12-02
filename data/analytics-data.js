@@ -38,9 +38,10 @@ module.exports = function(models) {
                 });
             });
         },
-        getAnalyticsByUserId(userId) {
+        getAnalyticsById(dataId) {
+            let _id = dataId;
             return new Promise((resolve, reject) => {
-                Analytics.findOne({ userId }, (err, userAnalytics) => {
+                Analytics.findOne({ _id }, (err, userAnalytics) => {
                     if (err) {
                         return reject(err);
                     }

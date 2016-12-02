@@ -15,13 +15,13 @@ module.exports = function(params) {
                 });
         },
         getAllAnalyticsPerUser(req, res) {
-            let userId = req.params.userId;
+            let dataId = req.params.dataId;
 
-            if (!validator.validateIsStringValid(userId)) {
+            if (!validator.validateIsStringValid(dataId)) {
                 return res.redirect("/admin/panel");
             }
 
-            data.getAnalyticsByUserId(userId)
+            data.getAnalyticsById(dataId)
                 .then(userAnalytics => {
                     if (!userAnalytics) {
                         return res.redirect("/admin/panel");
