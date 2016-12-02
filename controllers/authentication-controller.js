@@ -87,10 +87,7 @@ module.exports = function(params) {
                 });
         },
         logout(req, res) {
-            data.createAnalytics(req.session);
             req.logout();
-            req.session.destroy();
-
             return res.redirect("/");
         },
         getRegisterForm(req, res) {
