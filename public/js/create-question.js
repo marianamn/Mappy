@@ -8,7 +8,7 @@ function validatIsInputValid(inputValue, valueName) {
     }
 }
 
-$("body").on("focus", "#question-country", function (ev) {
+$("body").on("focus", "#question-country", function(ev) {
     requester.getJSON("/api/countries")
         .then(response => {
             var countries = response.countriesNames || [];
@@ -86,16 +86,13 @@ $("body").on("click", "#createQuestion", () => {
                 answers: [{
                     answer: $firstA.val(),
                     isCorrect: $radio1.is(":checked")
-                },
-                {
+                }, {
                     answer: $secondA.val(),
                     isCorrect: $radio2.is(":checked")
-                },
-                {
+                }, {
                     answer: $thirdA.val(),
                     isCorrect: $radio3.is(":checked")
-                },
-                {
+                }, {
                     answer: $forthA.val(),
                     isCorrect: $radio4.is(":checked")
                 }
@@ -121,7 +118,6 @@ $("body").on("click", "#createQuestion", () => {
             $radio4.prop("checked", false);
         })
         .catch((err) => {
-            console.log(err);
             toastr.error(err.message);
         });
 });
