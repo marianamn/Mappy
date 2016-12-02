@@ -7,14 +7,15 @@ const fs = require("fs"),
 
 mongoose.Promise = global.Promise;
 
-module.exports = function (connectionString, validator) {
+module.exports = function(connectionString, validator) {
     mongoose.connect(connectionString);
 
     let User = require("../models/user-model.js");
     let Country = require("../models/country-model");
     let Question = require("../models/question-model");
+    let Analytics = require("../models/analytics-model");
 
-    let models = { User, Country, Question };
+    let models = { User, Country, Question, Analytics };
 
     let data = {};
 
