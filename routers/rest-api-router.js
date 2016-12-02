@@ -16,6 +16,7 @@ module.exports = function ({ app, controllers }) {
         .post("/createQuestion", isAuthenticated, isAdmin, controllers.createQuestion)
         .post("/evaluate", isAuthenticated, controllers.evaluateQuestion)
         .post("/users/:username/comments", isAuthenticated, controllers.addComment)
+        .post("/chat", isAuthenticated, controllers.createNewChatAnswer)
         .put("/profile", isAuthenticated, controllers.updateProfile)
         .put("/users/:username", isAuthenticated, isAdmin, controllers.updateUserRole);
 

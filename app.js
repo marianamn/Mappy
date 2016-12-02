@@ -9,7 +9,7 @@ let controllers = require("./controllers")({ data, validator });
 
 let { app, server } = require("./config/application")({ data });
 
-let io = require("./config/chat-socket")({ server, data });
+let io = require("./config/socket")({ server, data });
 
 require("./routers")({ app, data, controllers });
 

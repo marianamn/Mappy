@@ -13,8 +13,9 @@ module.exports = function (connectionString, validator) {
     let User = require("../models/user-model.js");
     let Country = require("../models/country-model");
     let Question = require("../models/question-model");
+    let Chat = require("../models/chat-model");
 
-    let models = { User, Country, Question };
+    let models = { User, Country, Question, Chat };
 
     let data = {};
 
