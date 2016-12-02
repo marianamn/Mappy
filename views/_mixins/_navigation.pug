@@ -29,7 +29,7 @@ mixin site-navigation
                 ul.nav.navbar-nav.navbar-right
                     if user
                         li.dropdown
-                            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+                            a.dropdown-toggle(id="currentUsername" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
                                 = user.username
                                 span.caret
                             ul.dropdown-menu

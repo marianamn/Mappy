@@ -1,13 +1,24 @@
 extends ../_layout
 
+block styles
+    link(rel="stylesheet", type="text/css", href="/static/css/chat.css")
+
 block headScripts
-    script(src="https://cdn.socket.io/socket.io-1.4.5.js")
-    script(type='text/javascript', src='/static/js/chat.js')
+    script(src="/socket.io/socket.io.js")
+    script(type="text/javascript", src="/static/js/chat.js")
 
 block content
-    .container.add-spacing-before
-        .chat-content
-        ul#messages
-        form(action='')
-            input#m(autocomplete='off')
-            button.btn-sm.btn-primary Send
+    #main-chat.container
+        .row
+            .panel.panel-default
+                .panel-heading Chat
+                .panel-body
+                    #message-container.container
+                        .row.message-bubble
+                            p.text-muted Matt Townsen
+                            span Why is yo shit so broke?
+                    .panel-footer
+                        .input-group
+                            input.form-control(id="m" type='text')
+                            span.input-group-btn
+                                button.btn.btn-default(id="sendMsg" type='button') Send

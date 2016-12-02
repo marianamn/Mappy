@@ -22,5 +22,8 @@ module.exports = function ({ data }) {
     data.encryption = encryption;
 
     require("./passport")({ app, data });
-    return app;
+
+    let server = require("http").Server(app);
+
+    return { app, server };
 };
