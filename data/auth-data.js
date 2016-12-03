@@ -11,7 +11,7 @@ module.exports = function (models) {
                         return reject(err);
                     }
 
-                    return resolve(user);
+                    return resolve(user || null);
                 });
             });
         }

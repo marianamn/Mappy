@@ -14,7 +14,6 @@ module.exports = function (models) {
 
                     return resolve(chatAnswer);
                 });
-
             });
         },
         getLatestMessages() {
