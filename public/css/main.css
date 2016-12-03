@@ -194,7 +194,7 @@ body {
     text-shadow: 1px 1px #2C3E50;
 }
 
-.profile-points {
+.profile-info-center {
     padding-left: 40%;
 }
 
@@ -202,4 +202,16 @@ body {
     height: auto;
     max-height: 200px;
     overflow-x: hidden;
+}
+
+.color-change {
+    color: #128F76;
+}
+
+table {
+    table-layout: auto
+}
+
+.table-col-width {
+    width: 30%;
 }

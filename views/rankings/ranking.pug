@@ -2,33 +2,34 @@ extends ../_layout
 
 block content
     - var loggedUser = user;
-    .col-md-6.col-md-offset-3.add-spacing-before
-        h3.text-center Total Games Ranking
-        h4.col.lg-12.text-center.add-spacing-after
-            i  Top 10 Players list
+    .container
+        .col-md-6.col-md-offset-3.add-spacing-before
+            h3.text-center Total Games Ranking
+            h4.col.lg-12.text-center.add-spacing-after
+                i  Top 10 Players list
 
-        ul
-            table.table.table-striped.table-hover
-                thead
-                    tr
-                    th #
-                    th User name
-                    th.text-center Total games score
-                tbody
-                each user in result
-                    tr.active
-                    td=li=result.indexOf(user) + 1  
-                    td
-                        if loggedUser
-                            if loggedUser.username == user.username
-                                a.red-text(href='/users/' + user.username) #{user.username}
+            ul
+                table.table.table-striped.table-hover
+                    thead
+                        tr
+                        th #
+                        th User name
+                        th.text-center Total games score
+                    tbody
+                    each user in result
+                        tr.active
+                        td=li=result.indexOf(user) + 1  
+                        td
+                            if loggedUser
+                                if loggedUser.username == user.username
+                                    a.red-text(href='/users/' + user.username) #{user.username}
+                                else
+                                    a(href='/users/' + user.username) #{user.username}
                             else
-                                a(href='/users/' + user.username) #{user.username}
-                        else
-                            =li=user.username
-                    td.text-center=li=user.guessTheCountryScore + user.testYourKnowledgeScore
-    
-        p.text-center
-            a.btn.btn-success(href="/rankings/guess-the-country-score") See Guess The Country Score
-        p.text-center
-            a.btn.btn-primary(href="/rankings/test-your-knowledg-score") See Test Your Knowledge Score
+                                =li=user.username
+                        td.text-center=li=user.guessTheCountryScore + user.testYourKnowledgeScore
+        
+            p.text-center
+                a.btn.btn-success(href="/rankings/guess-the-country-score") See Guess The Country Score
+            p.text-center
+                a.btn.btn-primary(href="/rankings/test-your-knowledg-score") See Test Your Knowledge Score
