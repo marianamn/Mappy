@@ -16,7 +16,6 @@ module.exports = function({ app, controllers }) {
         .post("/register", analytics, controllers.register)
         .post("/createQuestion", isAuthenticated, isAdmin, controllers.createQuestion)
         .post("/evaluate", isAuthenticated, controllers.evaluateQuestion)
-        .post("/users/:username/comments", analytics, isAuthenticated, controllers.addComment)
         .post("/chat", analytics, isAuthenticated, controllers.createNewChatAnswer)
         .put("/profile", analytics, isAuthenticated, controllers.updateProfile)
         .put("/users/:username", analytics, isAuthenticated, isAdmin, controllers.updateUserRole);
