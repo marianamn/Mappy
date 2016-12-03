@@ -35,8 +35,8 @@ module.exports = function(models) {
                             return resolve(countries);
                         });
                 }), new Promise((resolve, reject) => {
-                    Country.count({})
-                        .exec((err, count) => {
+                    Country.find()
+                        .count((err, count) => {
                             if (err) {
                                 return reject(err);
                             }
