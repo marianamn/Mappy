@@ -216,31 +216,32 @@ table {
     width: 30%;
 }
 
-.instructions-header{
-   padding-left: 4%
+.instructions-header {
+    padding-left: 4%
 }
-.game-img-globe{
+
+.game-img-globe {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 13%; 
+    width: 13%;
 }
 
-.guess-the-country{
+.guess-the-country {
     padding-top: 13px;
     margin-left: auto;
     margin-right: auto;
     width: 90%
 }
 
-.game-img-test{
+.game-img-test {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 13%; 
+    width: 13%;
 }
 
-.test-your-knowledge{
+.test-your-knowledge {
     padding-top: 13px;
     margin-left: auto;
     margin-right: auto;
