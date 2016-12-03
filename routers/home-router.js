@@ -10,7 +10,9 @@ module.exports = function({ app, controllers }) {
     router
         .get("/", visitedPages, controllers.home)
         .get("/terms", visitedPages, (req, res) => {
-            res.render("terms-of-use/terms-of-use");
+            res.render("terms-of-use/terms-of-use", {
+                user: req.user
+            });
         });
 
     app.use("/", router);
