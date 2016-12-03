@@ -4,6 +4,8 @@ const dataUtils = require("./utils/data-utils");
 const encrypt = require("../utils/encryption");
 const TOP_USERS = 10;
 
+const CORRECT_SCORE_TYPES = ["guessTheCountryScore", "testYourKnowledgeScore"];
+
 module.exports = function (models, validator) {
     let { User } = models;
 
@@ -184,16 +186,27 @@ module.exports = function (models, validator) {
         },
         increaseUserScore(userId, scoreType, increasingValue) {
             return new Promise((resolve, reject) => {
+                if (scoreType !== CORRECT_SCORE_TYPES[0] && scoreType !== CORRECT_SCORE_TYPES[1]) {
+                    return reject("Score type is not correct");
+                }
+
+                if (increasingValue < 0) {
+                    return reject("Increasing value is not correct");
+                }
+
                 User.findById(userId, (err, user) => {
                     if (err) {
                         return reject(err);
+                    }
+
+                    if (!user) {
+                        return reject("User cannot be found");
                     }
 
                     return resolve(user);
                 });
             }).then(user => {
                 user[scoreType] += increasingValue;
-
                 return dataUtils.update(user);
             });
         },

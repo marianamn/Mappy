@@ -33,15 +33,5 @@ module.exports = modelRegistrator.register("User", {
         default: 0
     },
     isAdmin: Boolean,
-    comments: [{
-        content: {
-            type: String,
-            required: requiredMessage
-        },
-        author: {
-            type: String,
-            required: requiredMessage
-        }
-    }],
     facebookId: String
 });

@@ -14,6 +14,8 @@ describe("Test user data", () => {
     class User {
         constructor(properties) {
             this.id = properties.id || 1;
+            this.testYourKnowledgeScore = properties.testYourKnowledgeScore || 0;
+            this.guessTheCountryScore = properties.guessTheCountryScore || 0;
             this.username = properties.username;
             this.firstName = properties.firstName;
             this.lastName = properties.lastName;
@@ -26,6 +28,7 @@ describe("Test user data", () => {
         save() { }
 
         static findOne() { }
+        static findById() { }
     }
 
     class Validator {
@@ -438,5 +441,89 @@ describe("Test user data", () => {
         });
     });
 
+    describe("increaseUserScore", () => {
+        let id = 1;
+        let username = "testuser";
+        let firstName = "testFirstName";
+        let lastName = "testLastName";
+        let email = "testEmail";
+        let profileImgURL = "http://test";
+        let guessTheCountryScore = 0;
+        let testYourKnowledgeScore = 0;
+
+        let expectedUser = new User({
+            id,
+            username,
+            firstName,
+            lastName,
+            email,
+            profileImgURL,
+            guessTheCountryScore,
+            testYourKnowledgeScore
+        });
+        let guessTheCountryScoreType = "guessTheCountryScore";
+        let testYourKnowledgeScoreType = "testYourKnowledgeScore";
+        let increasingValue = 1;
+
+        describe("increaseUserScore when cannot find user", () => {
+            beforeEach(() => {
+                sinon.stub(User, "findById", (_, cb) => {
+                    cb(null, null);
+                });
+            });
+
+            afterEach(() => {
+                sinon.restore();
+            });
+
+            it("Expect to reject with correcct message when cannot find user", done => {
+                data.increaseUserScore(null, guessTheCountryScoreType, increasingValue)
+                    .catch((msgErr) => {
+                        expect(msgErr).to.be.equal("User cannot be found");
+                        done();
+                    });
+            });
+        });
+
+        describe("increaseUserScore when user is found", () => {
+            beforeEach(() => {
+                sinon.stub(User, "findById", (_, cb) => {
+                    cb(null, expectedUser);
+                });
+            });
+
+            afterEach(() => {
+                sinon.restore();
+            });
+
+            it("Expect to reject with correct message when score type is not valid", done => {
+                data.increaseUserScore(null, "notCorrectScoreType", increasingValue)
+                    .catch((msgErr) => {
+                        expect(msgErr).to.be.equal("Score type is not correct");
+                        done();
+                    });
+            });
+
+            it("Expect to reject with correct message when incresing value is negative", done => {
+                data.increaseUserScore(null, guessTheCountryScoreType, -1)
+                    .catch((msgErr) => {
+                        expect(msgErr).to.be.equal("Increasing value is not correct");
+                        done();
+                    });
+            });
+
+            it("Expect to increase guess the country score when all params are valid", done => {
+                sinon.stub(User.prototype, "save", cb => {
+                    cb(null, expectedUser);
+                });
+                data.increaseUserScore(null, guessTheCountryScoreType, increasingValue)
+                    .then((resExpectedUser) => {
+                        expect(resExpectedUser.guessTheCountryScore).to.be.equal(1);
+                        done();
+                    });
+            });
+
+        });
+    });
 
 });
