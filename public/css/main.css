@@ -227,6 +227,7 @@ table {
 }
 
 .guess-the-country{
+    text-align: justify;
     padding-top: 13px;
     margin-left: auto;
     margin-right: auto;
@@ -241,6 +242,7 @@ table {
 }
 
 .test-your-knowledge{
+    text-align: justify;
     padding-top: 13px;
     margin-left: auto;
     margin-right: auto;
