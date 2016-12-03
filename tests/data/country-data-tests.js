@@ -1,4 +1,4 @@
-/* globals require describe it beforeEach afterEach before */
+/* globals require describe it beforeEach afterEach */
 
 const chai = require("chai");
 const sinonModule = require("sinon");
@@ -194,12 +194,16 @@ describe("Test country data", () => {
     });
 
     describe("getCountryByEuValue()", () => {
-        before(() => {
+        beforeEach(() => {
             sinon.stub(Country, "findOne", (query, cb) => {
                 let euValue = query.euValue;
                 let foundCountry = countries.find(c => c.euValue === euValue);
                 cb(null, foundCountry);
             });
+        });
+
+        afterEach(() => {
+            sinon.restore();
         });
 
         it("Expect to return correct country", done => {

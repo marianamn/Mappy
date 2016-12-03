@@ -24,27 +24,19 @@ describe("Test question data", () => {
         static findOne() { }
     }
 
-    class Validator {
-        static validateIsStringValid() { }
-
-        static validateStringLength() {
-            // return min < value.length && value.length < max;
-        }
-
-        static validateIfNumber() {
-            // return typeof number === "number";
-        }
-
-        static validateEmail() {
-            // return email.match(emailRegex);
-        }
-
-        static validateImageUrl() {
-            // return imageUrl.match(imgURLPattern);
-        }
+    class Country {
+        static findOne() { }
     }
 
-    let data = require("../data/question-data")({ Question }, Validator);
+    class Validator {
+        static validateIsStringValid() { }
+        static validateStringLength() { }
+        static validateIfNumber() { }
+        static validateEmail() { }
+        static validateImageUrl() { }
+    }
+
+    let data = require("../../data/question-data")({ Question, Country }, Validator);
 
     describe("getQuestionById(id)", () => {
         let existingQuestionId = 1;
@@ -133,15 +125,27 @@ describe("Test question data", () => {
     });
 
     describe("Test createQuestion()", () => {
+        let countries = [{ name: "Peru" }];
 
         beforeEach(() => {
-            sinon.stub(Validator, "validateIsStringValid", (value) => {
-                if (value) {
-                    let valueToCheck = value.trim();
-                    return valueToCheck !== "";
-                }
+            sinon.stub(Validator, "validateIsStringValid", () => {
+                return true;
+            });
 
-                return false;
+            sinon.stub(Validator, "validateStringLength", () => {
+                return true;
+            });
+
+            sinon.stub(Validator, "validateIfNumber", () => {
+                return true;
+            });
+
+            sinon.stub(Validator, "validateEmail", () => {
+                return true;
+            });
+
+            sinon.stub(Validator, "validateImageUrl", () => {
+                return true;
             });
         });
 
@@ -149,72 +153,42 @@ describe("Test question data", () => {
             sinon.restore();
         });
 
-        it("Expect to throw then question title is empty", done => {
-            data.createQuestion("", [], "England")
-                .catch(err => {
-                    expect(err).to.be.equal("Question name fail");
+        it("Expect to save the question", done => {
+            sinon.stub(Country, "findOne", (query, cb) => {
+                let queryCountry = query.name;
+                let foundCountry = countries.find(country => country.name === queryCountry);
+                cb(null, foundCountry);
+            });
+
+            sinon.stub(Question.prototype, "save", cb => {
+                cb(null);
+            });
+
+            let name = "Test question";
+            data.createQuestion(name, [{ isCorrect: true }], "Peru")
+                .then(actualQuestion => {
+                    expect(actualQuestion.question).to.equal(name);
+                    done();
+                });
+        });
+
+        it("Expect to fail, when country is not found", done => {
+            sinon.stub(Country, "findOne", (query, cb) => {
+                let queryCountry = query.name;
+                let foundCountry = countries.find(country => country.name === queryCountry);
+                cb(null, foundCountry);
+            });
+
+            sinon.stub(Question.prototype, "save", cb => {
+                cb(null);
+            });
+
+            let name = "Test";
+            data.createQuestion(name, [{ isCorrect: true }], "England")
+                .then(err => {
+                    expect(err).to.be.equal("Country not found");
                     done();
                 });
         });
     });
-
-    // describe("Test createFraction()", () => {
-    //     afterEach(() => {
-    //         sinon.restore();
-    //     });
-
-    //     // it("Expect to save the fraction", done => {
-    //     //     sinon.stub(Fraction.prototype, "save", cb => {
-    //     //         cb(null);
-    //     //     });
-
-    //     //     let name = "John's group";
-    //     //     data.createFraction(name, "Good", [], [])
-    //     //         .then(actualFraction => {
-    //     //             expect(actualFraction.name).to.equal(name);
-    //     //             done();
-    //     //         });
-    //     // });
-
-    //     // it("Expect to fail, when name is empty", done => {
-    //     //     sinon.stub(Fraction.prototype, "save", cb => {
-    //     //         cb(null);
-    //     //     });
-
-    //     //     let name = "";
-    //     //     data.createFraction(name, "Good", [], [])
-    //     //         .catch(err => {
-    //     //             expect(err).not.to.be.null;
-    //     //             done();
-    //     //         });
-    //     // });
-
-    //     // it("Expect to fail, when alignment is empty", done => {
-    //     //     sinon.stub(Fraction.prototype, "save", cb => {
-    //     //         cb(null);
-    //     //     });
-
-    //     //     let name = "";
-    //     //     data.createFraction(name, "Good", [], [])
-    //     //         .catch(err => {
-    //     //             expect(err).not.to.be.null;
-    //     //             done();
-    //     //         });
-    //     // });
-
-    //     // it("Expect to fail, when alignment is invalid", done => {
-    //     //     // Good, Evil, Neutral
-    //     //     sinon.stub(Fraction.prototype, "save", cb => {
-    //     //         cb(null);
-    //     //     });
-
-    //     //     let name = "";
-    //     //     data.createFraction(name, "Good", [], [])
-    //     //         .catch(err => {
-    //     //             expect(err).not.to.be.null;
-    //     //             done();
-    //     //         });
-    //     // });
-
-    // });
 });

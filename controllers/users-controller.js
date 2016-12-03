@@ -38,32 +38,6 @@ module.exports = function(params) {
                     res.json(responseUsernames);
                 });
         },
-        addComment(req, res) {
-            let usernameToAddComment = req.params.username;
-            let commentToAdd = req.body.commentToAdd;
-            let reqUser = req.user;
-            if (!reqUser) {
-                return res.json({
-                    error: "UserNotAuthenticated",
-                    message: "Authenticate your username first"
-                });
-            }
-
-            let author = reqUser.username;
-
-            data.addComment(usernameToAddComment, commentToAdd, author)
-                .then((user) => {
-                    res.json({
-                        comments: user.comments,
-                        message: "Comment added successfuly"
-                    });
-                }, (err) => {
-                    res.json({
-                        error: err,
-                        message: "Comment is not added"
-                    });
-                });
-        },
         updateUserRole(req, res) {
             let username = req.params.username;
             let isAdmin = req.body.isAdmin;

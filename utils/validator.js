@@ -20,9 +20,9 @@ module.exports = {
         return typeof number === "number";
     },
     validateEmail(email) {
-        return email.match(emailRegex);
+        return emailRegex.test(email);
     },
     validateImageUrl(imageUrl) {
-        return imageUrl.match(imgURLPattern);
+        return imgURLPattern.test(imageUrl);
     }
 };

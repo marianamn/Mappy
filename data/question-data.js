@@ -71,8 +71,8 @@ module.exports = function (models, validator) {
                     if (resCountry) {
                         return resolve();
                     }
-
-                    return reject();
+                    
+                    return reject("Country not found");
                 });
             })
                 .then(() => {
@@ -90,7 +90,7 @@ module.exports = function (models, validator) {
                     return Promise.resolve(newQuestion);
                 })
                 .catch(err => {
-                    console.log(err);
+                    return err;
                 });
         }
     };
