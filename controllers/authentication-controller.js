@@ -84,7 +84,7 @@ module.exports = function (params) {
                 salt,
                 hashPass)
                 .then(() => {
-                    res.json({ "message": "You have been registered successfully" });
+                    res.status(201).json({ "message": "You have been registered successfully" });
                 })
                 .catch(err => {
                     res.json(err);
@@ -105,7 +105,7 @@ module.exports = function (params) {
                         return next(loginErr);
                     }
 
-                    return res.send({ success: true, message: "Successfully logged in" });
+                    return res.status(200).send({ success: true, message: "Successfully logged in" });
                 });
             })(req, res, next);
         },
@@ -113,16 +113,16 @@ module.exports = function (params) {
             data.createAnalytics(req.session);
             req.session.destroy();
             req.logout();
-            return res.redirect("/");
+            return res.status(200).redirect("/");
         },
         getRegisterForm(req, res) {
-            return res.render("authentication/register");
+            return res.status(200).render("authentication/register");
         },
         getLoginForm(req, res) {
-            return res.render("authentication/login");
+            return res.status(200).render("authentication/login");
         },
         unauthorized(req, res) {
-            return res.render("authentication/unauthorized", {
+            return res.status(200).render("authentication/unauthorized", {
                 user: req.user
             });
         }
