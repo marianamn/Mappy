@@ -7,17 +7,17 @@ block headScripts
     script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
 block content
     .container
-        .col-md-9.col-md-offset-1.add-spacing-before
+        .col-sm-9.add-spacing-before
             h3.text-center.add-spacing-after Analytics
 
             ul
-                table.table.table-striped.table-hover
+                table.table-striped .table-hover.table-responsive
                     thead
                         tr
                         th #
                         th User Id
                         th User-agent string
-                        th Land from
+                        th.table-col-width Land from
                         th Land time
                         th Has registered
                         th Login time
