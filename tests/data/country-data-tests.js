@@ -55,7 +55,58 @@ describe("Test country data", () => {
         euValue: 2
     };
 
-    let countries = [spain, switzerland];
+    let country3 = {
+        name: "A"
+    };
+
+    let country4 = {
+        name: "B"
+    };
+    let country5 = {
+        name: "C"
+    };
+    let country6 = {
+        name: "D"
+    };
+    let country7 = {
+        name: "E"
+    };
+    let country8 = {
+        name: "F"
+    };
+    let country9 = {
+        name: "G"
+    };
+    let country10 = {
+        name: "H"
+    };
+    let country11 = {
+        name: "I"
+    };
+    let country12 = {
+        name: "J"
+    };
+    let country13 = {
+        name: "K"
+    };
+    let country14 = {
+        name: "L"
+    };
+    let countries = [
+        spain,
+        switzerland,
+        country3,
+        country4,
+        country5,
+        country6,
+        country7,
+        country8,
+        country9,
+        country10,
+        country11,
+        country12,
+        country13,
+        country14];
 
     describe("getAllcountryNames()", () => {
         let countryNames = ["Albania", "Bulgaria"];
@@ -78,22 +129,36 @@ describe("Test country data", () => {
         });
     });
 
-    // describe("Test getAllCountries", () => {
-    //     beforeEach(() => {
-    //         sinon.stub(Country, "exec", cb => {
-    //             let foundCountries = countries.sort(c => c.name).limit(12);
-    //             cb(null, foundCountries);
-    //         });
+    describe("Test getAllCountries", () => {
+        let foundCountries = countries.sort(c => c.name).slice(0, 12);
+        beforeEach(() => {
+            sinon.stub(Country, "exec", cb => {
+                cb(null, foundCountries);
+            });
 
-    //         sinon.stub(Country, "count", ())
-    //     });
+            sinon.stub(Country, "count", cb => {
+                let count = countries.length;
+                cb(null, count);
+            });
+        });
 
-    //     afterEach(() => {
-    //         sinon.restore();
-    //     });
+        afterEach(() => {
+            sinon.restore();
+        });
 
-    //     it("Expect")
-    // });
+        it(
+            "Expect foundCountries to be 12 and all acountries count to be correct if no page and size params are passed",
+            done => {
+                let page = null;
+                let pageSize = null;
+                data.getAllCountries({ page, pageSize })
+                    .then(result => {
+                        expect(result.countries.length).to.be.equal(foundCountries.length);
+                        expect(result.count).to.be.equal(result.count);
+                        done();
+                    });
+            });
+    });
 
     describe("getCountryById()", () => {
         beforeEach(() => {
