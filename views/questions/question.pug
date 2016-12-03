@@ -8,24 +8,22 @@ block headScripts
     script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
 
 block content
-    .col-lg-12
-        .jumbotron.text-center
-            if question
+    .col-lg-12.text-center
+        if question
                 h3.question(id= question._id)= question.question
                 hr
                 
                 .row
                     ul#answers-list.text-center
                         each answer in question.answers
-                            p
-                            li.answers-item
-                                button#send-answer.btn.btn-success= answer.answer
+                            p.text-center
+                                li.answers-item
+                                    button#send-answer.btn.btn-success= answer.answer
 
-            else 
+        else 
                 h3 No questions for this country ..
         
         p.text-center
-            
             a.btn.btn-primary(href="/game/test-your-knowledge") Back to map 
         
         

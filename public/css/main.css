@@ -45,8 +45,9 @@ body {
 
 .country-info {
     width: 90%;
-    padding-left: 5%;
+    padding-left: 8%;
     margin: 0;
+    text-align: justify;
 }
 
 .country-info :first-letter {
@@ -79,11 +80,6 @@ body {
 
 .table-country-details {
     padding-bottom: 50px;
-}
-
-.country-info {
-    padding-top: 50px;
-    text-align: justify;
 }
 
 .home-img {
@@ -188,8 +184,8 @@ body {
     margin-right: 5px;
 }
 
-.chat-content{
-    width: 200px; 
+.chat-content {
+    width: 200px;
     height: 200px;
-    background-color:white;
+    background-color: white;
 }
