@@ -23,7 +23,7 @@ block content
                 h3.text-center Username: #{foundUser.username}
                 
                 
-                .row.profile-points    
+                .row.profile-info-center   
                     p Guess the country stars  &nbsp
                         - var n = 0;
                         span.rating
@@ -66,9 +66,9 @@ block content
                             .col-md-8
                                 input.form-control(id="email" value = foundUser.email type='text' name='email')
                     else
-                        div 
-                            span Email :
-                            span  #{foundUser.email}
+                        .color-change.profile-info-center 
+                            p Email :
+                                span  #{foundUser.email}
                     
                     if authorized
                         .form-group
@@ -76,9 +76,9 @@ block content
                             .col-md-8
                                 input.form-control(id="firstName" value=foundUser.firstName type='text' name='firstName')
                     else
-                        div 
-                            span First name :
-                            span  #{foundUser.firstName}
+                        .color-change.profile-info-center 
+                            p First name :
+                                span  #{foundUser.firstName}
                     
                     if authorized
                         .form-group
@@ -86,9 +86,9 @@ block content
                             .col-md-8
                                 input.form-control(id="lastName" value=foundUser.lastName type='text' name='lastName')
                     else
-                        div 
-                            span Last name :
-                            span  #{foundUser.lastName}
+                        .color-change.profile-info-center 
+                            p Last name :
+                                span  #{foundUser.lastName}
                     
                     - var notFbUser = authorized && !foundUser.facebookId;
                     if notFbUser 

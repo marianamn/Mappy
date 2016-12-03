@@ -1,7 +1,7 @@
 /* globals module */
 "use strict";
 
-module.exports = function ({ app, server, data }) {
+module.exports = function ({ server }) {
     const io = require("socket.io")(server);
 
     io.on("connection", (socket) => {
