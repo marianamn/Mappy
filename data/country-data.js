@@ -25,8 +25,8 @@ module.exports = function(models) {
                 new Promise((resolve, reject) => {
                     Country.find()
                         .sort({ name: "asc" })
-                        .limit(pageSize)
                         .skip((page - 1) * pageSize)
+                        .limit(pageSize)
                         .exec((err, countries) => {
                             if (err) {
                                 return reject(err);
