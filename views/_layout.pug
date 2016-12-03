@@ -9,6 +9,10 @@ head
         
     link(rel="stylesheet", href="/static/bower_components/bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet", href="/static/bower_components/bootstrap-theme-bootswatch-flatly/css/bootstrap.css")
+
+    link(rel="stylesheet", href="/static/bower_components/bootstrap-social/bootstrap-social.css")
+    link(rel="stylesheet", href="/static/bower_components/font-awesome/css/font-awesome.css")
+
     
     block styles
     link(rel="stylesheet", href="/static/css/main.css")
@@ -25,11 +29,18 @@ body
         +site-navigation
     #content
         block content
-    footer.text-center.panel-footer
-        h4 © League of the Five
-        p Telerik Academy 2016
-        div(class="fb-share-button" data-layout="button" data-size="small" data-mobile-iframe="true")
-        a(class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhilwynezlw.localtunnel.me%2F%23%2Fhome&amp;src=sdkpreparse") Share on facebook
+    footer.text-center
+        .panel-footer
+            h4 © League of the Five
+            p Telerik Academy 2016
+            div
+                p.home-btn
+                    a.btn.btn-social-icon.btn-lg.btn-github.pull-right(target="_blank" href="https://github.com/marianamn/Mappy")
+                        i.fa.fa-github 
+                p.home-btn.spacing-left
+                    a.btn.btn-social-icon.btn-lg.btn-facebook.pull-right.spacing-left(class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhilwynezlw.localtunnel.me%2F%23%2Fhome&amp;src=sdkpreparse")
+                        i.fa.fa-facebook 
+        
     script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js')  
     script(type='text/javascript', src='/static/js/main.js')
     script(type='text/javascript', src='/static/js/utils/validator.js')

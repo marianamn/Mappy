@@ -178,6 +178,7 @@ body {
     color: #ffffff;
     background-color: #1a242f;
     border-radius: 4px;
+    height: 100px;
 }
 
 .radio-label {
@@ -248,4 +249,17 @@ table {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+}
+
+.footer-main-styles {
+    float: left;
+}
+
+.home-btn {
+    margin-top: -50px;
+    padding-right: 10px;
+}
+
+.spacing-left {
+    margin-right: 10px;
 }
