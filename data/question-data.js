@@ -23,7 +23,7 @@ module.exports = function(models, validator) {
                         return reject(err);
                     }
 
-                    return resolve(question);
+                    return resolve(question || null);
                 });
             });
         },
