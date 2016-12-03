@@ -8,7 +8,7 @@ module.exports = function(params) {
                 .then(analytics => {
                     let user = req.user;
 
-                    res.render("analytics/all-analytics-data", {
+                    res.status(200).render("analytics/all-analytics-data", {
                         analytics,
                         user
                     });
@@ -28,7 +28,7 @@ module.exports = function(params) {
                     }
                     let user = req.user;
 
-                    res.render("analytics/detail-analytics", {
+                    res.status(200).render("analytics/detail-analytics", {
                         userAnalytics,
                         user
                     });

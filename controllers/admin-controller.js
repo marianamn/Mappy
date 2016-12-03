@@ -4,14 +4,14 @@ module.exports = function (params) {
     let { data, validator } = params;
     return {
         getPanel(req, res) {
-            res.render("admin/panel", {
+            res.status(200).render("admin/panel", {
                 user: req.user
             });
         },
         getCreateQuestionForm(req, res) {
             data.getAllCountryNames()
                 .then(countries => {
-                    res.render("admin/create-question", {
+                    res.status(200).render("admin/create-question", {
                         user: req.user,
                         countries
                     });

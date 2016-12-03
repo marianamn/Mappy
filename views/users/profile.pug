@@ -85,6 +85,14 @@ block content
                             label.col-md-2.control-label Last Name:           
                             .col-md-8
                                 input.form-control(id="lastName" value=foundUser.lastName type='text' name='lastName')
+                        .form-group
+                                label.col-md-2.control-label Image URL:
+                                .col-md-8
+                                    if(foundUser.profileImgURL)
+                                        input.form-control(id="profileImg", value= foundUser.profileImgURL, type='text', name='profileImageUrl')
+                                    else
+                                        input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
+                                        
                     else
                         .color-change.profile-info-center 
                             p Last name :
@@ -100,13 +108,6 @@ block content
                             label.col-md-2.control-label Confirm Password:           
                             .col-md-8
                                 input.form-control(id="confirmPassword" type='password' name='confirmPassword')
-                        .form-group
-                            label.col-md-2.control-label Image URL:
-                            .col-md-8
-                                if(foundUser.profileImgURL)
-                                    input.form-control(id="profileImg", value= foundUser.profileImgURL, type='text', name='profileImageUrl')
-                                else
-                                    input.form-control(id="defaultProfileImg" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROlGRdktKqjAEM9czQSiNjcH9bi_QHI21-nZKaa6mw_4dgbvoR" type='text' name='profileImageURL')
 
                     if authorized
                         .form-group

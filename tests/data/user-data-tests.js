@@ -13,6 +13,7 @@ describe("Test user data", () => {
 
     class User {
         constructor(properties) {
+            this.id = properties.id || 1;
             this.username = properties.username;
             this.firstName = properties.firstName;
             this.lastName = properties.lastName;
@@ -23,6 +24,8 @@ describe("Test user data", () => {
         }
 
         save() { }
+
+        static findOne() { }
     }
 
     class Validator {
@@ -344,5 +347,96 @@ describe("Test user data", () => {
             });
         });
     });
+
+    describe("updateUser()", () => {
+        let username = "testuser";
+        let firstName = "testFirstName";
+        let lastName = "testLastName";
+        let email = "testEmail";
+        let profileImgURL = "http://test";
+
+        let expectedUser = new User({
+            username,
+            firstName,
+            lastName,
+            email,
+            profileImgURL
+        });
+
+        describe("updateUser should change properties if user is found", () => {
+            beforeEach(() => {
+                sinon.stub(User.prototype, "save", cb => {
+                    cb(null, expectedUser);
+                });
+                sinon.stub(User, "findOne", (_, cb) => {
+                    cb(null, expectedUser);
+                });
+            });
+
+            afterEach(() => {
+                sinon.restore();
+            });
+
+            it("Expect profileImg to be changed", done => {
+                let expectedProfileImg = "http://changed";
+                data.updateUser({ profileImgURL: expectedProfileImg })
+                    .then(resUser => {
+                        expect(resUser.profileImgURL).to.be.equal(expectedProfileImg);
+                        done();
+                    });
+            });
+
+            it("Expect firstName to be changed", done => {
+                let expectedFirstName = "changedFirstname";
+                data.updateUser({ firstName: expectedFirstName })
+                    .then(resUser => {
+                        expect(resUser.firstName).to.be.equal(expectedFirstName);
+                        done();
+                    });
+            });
+
+            it("Expect lastname to be changed", done => {
+                let expectedLastName = "changedLastname";
+                data.updateUser({ lastName: expectedLastName })
+                    .then(resUser => {
+                        expect(resUser.lastName).to.be.equal(expectedLastName);
+                        done();
+                    });
+            });
+
+            it("Expect email to be changed", done => {
+                let expectedemail = "changedEmail";
+                data.updateUser({ email: expectedemail })
+                    .then(resUser => {
+                        expect(resUser.email).to.be.equal(expectedemail);
+                        done();
+                    });
+            });
+        });
+
+        describe("update user() should reject if user is not found", () => {
+            beforeEach(() => {
+                sinon.stub(User.prototype, "save", cb => {
+                    cb(null, expectedUser);
+                });
+                sinon.stub(User, "findOne", (_, cb) => {
+                    cb(null, null);
+                });
+            });
+
+            afterEach(() => {
+                sinon.restore();
+            });
+
+            it("Expect to reject if user is null", done => {
+                data.updateUser({ lastname: "test" })
+                    .catch(errMsg => {
+                        expect(errMsg).to.be.equal("User is not found");
+                        done();
+                    });
+            });
+        });
+    });
+
 
 });
