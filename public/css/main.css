@@ -215,3 +215,34 @@ table {
 .table-col-width {
     width: 30%;
 }
+
+.instructions-header{
+   padding-left: 4%
+}
+.game-img-globe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 13%; 
+}
+
+.guess-the-country{
+    padding-top: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%
+}
+
+.game-img-test{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 13%; 
+}
+
+.test-your-knowledge{
+    padding-top: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}

@@ -1,6 +1,6 @@
 /* globals module */
 
-module.exports = function(models, validator) {
+module.exports = function (models, validator) {
     let { Question, Country } = models;
 
     return {
@@ -64,12 +64,15 @@ module.exports = function(models, validator) {
             }
 
             return new Promise((resolve, reject) => {
-                Country.findOne({ name: country }, (err) => {
+                Country.findOne({ name: country }, (err, resCountry) => {
                     if (err) {
                         return reject(err);
                     }
+                    if (resCountry) {
+                        return resolve();
+                    }
 
-                    resolve();
+                    return reject();
                 });
             })
                 .then(() => {
