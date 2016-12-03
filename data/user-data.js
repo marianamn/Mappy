@@ -228,28 +228,6 @@ module.exports = function (models, validator) {
                 });
             });
         },
-        // If chat is not implemented validate method
-        addComment(usernameToAdd, commentContent, author) {
-            let comment = {
-                content: commentContent,
-                author
-            };
-
-            return new
-                Promise((resolve, reject) => {
-                    User.findOne({ username: usernameToAdd }, (err, user) => {
-                        if (err) {
-                            return reject(err);
-                        }
-
-                        return resolve(user);
-                    });
-                })
-                .then((user) => {
-                    user.comments.push(comment);
-                    return dataUtils.save(user);
-                });
-        },
         updateUserRole(username, isAdmin) {
             return new
                 Promise((resolve, reject) => {
