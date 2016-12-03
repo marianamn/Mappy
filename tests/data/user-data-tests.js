@@ -230,4 +230,119 @@ describe("Test user data", () => {
         });
     });
 
+    describe("createFacebookUser()", () => {
+        let username = "testuser";
+        let firstName = "testFirstName";
+        let lastName = "testLastName";
+        let profileImgURL = "http://test";
+        let facebookId = "aksjhdaskhdasjk";
+
+        let expectedFbUser = new User({
+            username,
+            firstName,
+            lastName,
+            profileImgURL,
+            facebookId
+        });
+        beforeEach(() => {
+            sinon.stub(User.prototype, "save", cb => {
+                cb(null, expectedFbUser);
+            });
+        });
+
+        describe("createFacebookUser() with valid properties", () => {
+            beforeEach(() => {
+                sinon.stub(Validator, "validateIsStringValid", () => {
+                    return true;
+                });
+                sinon.stub(Validator, "validateStringLength", () => {
+                    return true;
+                });
+                sinon.stub(Validator, "validateImageUrl", () => {
+                    return true;
+                });
+            });
+
+            afterEach(() => {
+                sinon.restore();
+            });
+
+            it("Expect to return correct user when all properties are valid", done => {
+                data.createFacebookUser(username, firstName, lastName, profileImgURL, facebookId)
+                    .then((resUser) => {
+                        expect(resUser).to.be.eql(expectedFbUser);
+                        done();
+                    });
+            });
+
+            it("Expect to returned user not to be null", done => {
+                data.createFacebookUser(username, firstName, lastName, profileImgURL, facebookId)
+                    .then((resUser) => {
+                        expect(resUser).not.to.be.eql(null);
+                        done();
+                    });
+            });
+        });
+
+        describe("createFacebookUser() with some invalid properties", () => {
+            afterEach(() => {
+                sinon.restore();
+            });
+
+            it("Expect to reject if some of properties is invalid string", done => {
+                sinon.stub(Validator, "validateIsStringValid", () => {
+                    return false;
+                });
+                sinon.stub(Validator, "validateStringLength", () => {
+                    return true;
+                });
+                sinon.stub(Validator, "validateImageUrl", () => {
+                    return true;
+                });
+
+                data.createFacebookUser(username, firstName, lastName, profileImgURL, facebookId)
+                    .catch((errMsg) => {
+                        expect(errMsg).not.to.be.equal(null);
+                        done();
+                    });
+            });
+
+            it("Expect to reject if some of properties is with invalid string length", done => {
+                sinon.stub(Validator, "validateIsStringValid", () => {
+                    return true;
+                });
+                sinon.stub(Validator, "validateStringLength", () => {
+                    return false;
+                });
+                sinon.stub(Validator, "validateImageUrl", () => {
+                    return true;
+                });
+
+                data.createFacebookUser(username, firstName, lastName, profileImgURL, facebookId)
+                    .catch((errMsg) => {
+                        expect(errMsg).not.to.be.equal(null);
+                        done();
+                    });
+            });
+
+            it("Expect to reject if profileImg is not valid", done => {
+                sinon.stub(Validator, "validateIsStringValid", () => {
+                    return true;
+                });
+                sinon.stub(Validator, "validateStringLength", () => {
+                    return true;
+                });
+                sinon.stub(Validator, "validateImageUrl", () => {
+                    return false;
+                });
+
+                data.createFacebookUser(username, firstName, lastName, profileImgURL, facebookId)
+                    .catch((errMsg) => {
+                        expect(errMsg).not.to.be.equal(null);
+                        done();
+                    });
+            });
+        });
+    });
+
 });

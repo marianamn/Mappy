@@ -4,10 +4,6 @@ const dataUtils = require("./utils/data-utils");
 const encrypt = require("../utils/encryption");
 const TOP_USERS = 10;
 
-function validateUser({ validator, username, firstName, lastName, profileImgURL }) {
-
-}
-
 module.exports = function (models, validator) {
     let { User } = models;
 
@@ -82,22 +78,48 @@ module.exports = function (models, validator) {
                 });
         },
         createFacebookUser(username, firstName, lastName, profileImgURL, facebookId) {
-            validateUser({ validator, username, firstName, lastName, profileImgURL });
-
-            if (!validator.validateIsStringValid(facebookId)) {
-                return Promise.reject("Facebook id fail");
-            }
-
-            let user = new User({
-                User,
-                username,
-                firstName,
-                lastName,
-                profileImgURL,
-                facebookId
-            });
-
             return new Promise((resolve, reject) => {
+                if (!validator.validateStringLength(username, 3, 50)) {
+                    return reject("Error: Username must be between 3 and 50 symbols");
+                }
+
+                if (!validator.validateIsStringValid(username)) {
+                    return reject("Username fail");
+                }
+
+                if (!validator.validateStringLength(firstName, 3, 50)) {
+                    return reject("Error: First name must be between 3 and 50 symbols");
+                }
+
+                if (!validator.validateIsStringValid(firstName)) {
+                    return reject("First name fail");
+                }
+
+                if (!validator.validateStringLength(lastName, 3, 50)) {
+                    return reject("Error: Last name must be between 3 and 50 symbols");
+                }
+
+                if (!validator.validateIsStringValid(lastName)) {
+                    return reject("Last name fail");
+                }
+
+                if (profileImgURL && !validator.validateImageUrl(profileImgURL)) {
+                    return reject("Invalid image url");
+                }
+
+                if (!validator.validateIsStringValid(facebookId)) {
+                    return reject("Facebook id fail");
+                }
+
+                let user = new User({
+                    User,
+                    username,
+                    firstName,
+                    lastName,
+                    profileImgURL,
+                    facebookId
+                });
+
                 user.save(err => {
                     if (err) {
                         return reject(err);
