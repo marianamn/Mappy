@@ -56,7 +56,7 @@ module.exports = function(models) {
                         return reject(err);
                     }
 
-                    return resolve(country);
+                    return resolve(country || null);
                 });
             });
         },
@@ -67,7 +67,7 @@ module.exports = function(models) {
                         return reject(err);
                     }
 
-                    return resolve(country);
+                    return resolve(country || null);
                 });
             });
         },

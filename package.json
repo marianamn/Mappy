@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "development": "./node_modules/.bin/nodemon .",
-    "test": "./node_modules/.bin/mocha tests",
+    "test": "./node_modules/.bin/mocha tests tests/**/*.js",
     "postinstall": "./node_modules/.bin/bower install"
   },
   "author": "League of the Five",
