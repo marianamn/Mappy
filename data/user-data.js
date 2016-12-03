@@ -142,6 +142,10 @@ module.exports = function (models, validator) {
                         return reject(err);
                     }
 
+                    if (!user) {
+                        return reject("User is not found");
+                    }
+
                     return resolve(user);
                 });
             }).then(user => {
