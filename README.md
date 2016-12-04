@@ -85,9 +85,9 @@ Mappy is an application which tests geography knowledge via 2 types of games:
 - Git source code link
 - Watch project youTube video link
  
-###Unit tests (72 tests):###
+###Unit tests (73 tests):###
 
-- Test analytics data model - **3 tests**
+- Test analytics data model - **4 tests**
 - Test authentication data - **2 tests**
 - Test chat data - **2 tests**
 - Test country data - **7 tests**
