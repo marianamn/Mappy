@@ -15,8 +15,9 @@ module.exports = function(connectionString, validator) {
     let Question = require("../models/question-model");
     let Analytics = require("../models/analytics-model");
     let Chat = require("../models/chat-model");
+    let MoreGames = require("../models/more-games");
 
-    let models = { User, Country, Question, Chat, Analytics };
+    let models = { User, Country, Question, Chat, Analytics, MoreGames };
 
     let data = {};
 
