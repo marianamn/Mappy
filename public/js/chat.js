@@ -1,4 +1,6 @@
-/* globals io $ requester */
+/* globals io $ requester document */
+let box = document.getElementById("message-container");
+box.scrollTop = box.scrollHeight;
 
 function formatDate(date) {
     let hours = date.getHours();
@@ -21,7 +23,7 @@ $("body").on("click", "#sendMsg", () => {
         answer,
         datetime
     };
-    var url = "/api/chat";
+    let url = "/api/chat";
     requester.postJSON(url, message)
         .then((chatAnswer) => {
             socket.emit("chat message", chatAnswer);
