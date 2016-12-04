@@ -7,7 +7,7 @@ const chaiHttp = require("chai-http");
 chai.use(chaiHttp);
 let expect = chai.expect;
 
-describe("Test home router", () => {
+describe("Test comunication router", () => {
     let sinon;
 
     let controllers = {

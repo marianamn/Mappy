@@ -7,19 +7,19 @@ const chaiHttp = require("chai-http");
 chai.use(chaiHttp);
 let expect = chai.expect;
 
-describe("Test fractions router", () => {
+describe("Test admin router", () => {
     let sinon;
 
     let controllers = {
-        getPanel: () => { },
-        getCreateQuestionForm: () => { },
-        getAllAnalytics: () => { },
-        getAllAnalyticsPerUser: () => { }
+        getPanel: () => {},
+        getCreateQuestionForm: () => {},
+        getAllAnalytics: () => {},
+        getAllAnalyticsPerUser: () => {}
     };
 
     let middlewares = {
-        isAdmin: () => { },
-        isAuthenticated: () => { }
+        isAdmin: () => {},
+        isAuthenticated: () => {}
     };
 
     beforeEach(() => {
