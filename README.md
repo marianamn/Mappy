@@ -31,6 +31,7 @@ Mappy is an application which tests geography knowledge via 2 types of games:
 - **/countries** - lists all European countries  flags list
 - **/countries?page=pages** - shows the next pageof countries
 - **/countries/:id** - shows country detailed information
+- **more-games** - related games to visit
 
 ###Login/Redister:###
 
@@ -82,11 +83,15 @@ Mappy is an application which tests geography knowledge via 2 types of games:
 - Git source code link
 - Watch project youTube video link
  
-###Unit tests (48 tests):###
+###Unit tests (71 tests):###
 
+- Test analytics data model - **2 tests**
 - Test authentication data - **2 tests**
 - Test chat data - **2 tests**
 - Test country data - **7 tests**
 - Test question data - **6 tests**
-- Test user data - **18 tests**
+- Test user data - **19 tests**
 - Test validator data - **13 tests**
+- Test admin router - **12 tests**
+- Test home router - **2 tests**
+- Test comunication router - **2 tests**

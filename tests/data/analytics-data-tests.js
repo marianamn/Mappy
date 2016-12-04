@@ -26,6 +26,7 @@ describe("Test analytics data module", () => {
 
         save() {}
 
+        static find() {}
         static findOne() {}
         static findById() {}
     }
@@ -101,4 +102,32 @@ describe("Test analytics data module", () => {
         });
     });
 
+    describe("getAllAnalyticsData()", () => {
+
+        let expected1 = {
+            id: 1
+        };
+
+        let expected2 = {
+            id: 2
+        };
+
+        let allanalytics = [expected1, expected2];
+
+        beforeEach(() => {
+            sinon.stub(Analytics, "find").yields(null, allanalytics);
+        });
+
+        afterEach(() => {
+            sinon.restore();
+        });
+
+        it("Expect found analytics data to have length 2", done => {
+            data.getAllAnalyticsData()
+                .then(result => {
+                    expect(result.length).to.be.equal(allanalytics.length);
+                    done();
+                });
+        });
+    });
 });
