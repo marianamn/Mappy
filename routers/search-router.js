@@ -2,14 +2,13 @@
 
 const express = require("express");
 let Router = express.Router;
-let analytics = require("../middlewares/analytics");
 
-module.exports = function({ app }) {
+module.exports = function({ app, middlewares }) {
 
     let router = new Router();
 
     router
-        .get("/", analytics, (req, res) => {
+        .get("/", middlewares.analytics, (req, res) => {
             let username = req.query.username;
             let redirectUrl = `/users/${username}`;
             res.redirect(redirectUrl);

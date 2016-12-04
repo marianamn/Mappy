@@ -3,18 +3,14 @@
 const express = require("express");
 let Router = express.Router;
 
-let isAdmin = require("../middlewares/is-user-admin");
-let isAuthenticated = require("../middlewares/is-user-authenticated");
-
-module.exports = function({ app, controllers }) {
-
+module.exports = function({ app, controllers, middlewares }) {
     let router = new Router();
 
     router
-        .get("/panel", isAuthenticated, isAdmin, controllers.getPanel)
-        .get("/panel/createQuestion", isAuthenticated, isAdmin, controllers.getCreateQuestionForm)
-        .get("/panel/analytics", isAuthenticated, controllers.getAllAnalytics)
-        .get("/panel/analytics/user/:dataId", isAuthenticated, controllers.getAllAnalyticsPerUser);
+        .get("/panel", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getPanel)
+        .get("/panel/createQuestion", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getCreateQuestionForm)
+        .get("/panel/analytics", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getAllAnalytics)
+        .get("/panel/analytics/user/:dataId", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getAllAnalyticsPerUser);
     app.use("/admin", router);
 
     return router;

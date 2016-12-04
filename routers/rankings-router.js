@@ -2,15 +2,14 @@
 
 const express = require("express");
 let Router = express.Router;
-let analytics = require("../middlewares/analytics");
 
-module.exports = function({ app, controllers }) {
+module.exports = function({ app, controllers, middlewares }) {
     let router = new Router();
 
     router
-        .get("/guess-the-country-score", analytics, controllers.guessTheCountryScoreRanking)
-        .get("/test-your-knowledg-score", analytics, controllers.testYourKnolegeScoreRanking)
-        .get("/", analytics, controllers.totalRanking);
+        .get("/guess-the-country-score", middlewares.analytics, controllers.guessTheCountryScoreRanking)
+        .get("/test-your-knowledg-score", middlewares.analytics, controllers.testYourKnolegeScoreRanking)
+        .get("/", middlewares.analytics, controllers.totalRanking);
 
     app.use("/rankings", router);
 

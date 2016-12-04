@@ -2,14 +2,13 @@
 
 const express = require("express");
 let Router = express.Router;
-let visitedPages = require("../middlewares/analytics");
 
-module.exports = function({ app, controllers }) {
+module.exports = function({ app, controllers, middlewares }) {
     let router = new Router();
 
     router
-        .get("/", visitedPages, controllers.home)
-        .get("/terms", visitedPages, (req, res) => {
+        .get("/", middlewares.analytics, controllers.home)
+        .get("/terms", middlewares.analytics, (req, res) => {
             res.render("terms-of-use/terms-of-use", {
                 user: req.user
             });

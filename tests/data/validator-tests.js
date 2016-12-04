@@ -3,7 +3,7 @@
 const chai = require("chai");
 let expect = chai.expect;
 
-describe("Test chat data", () => {
+describe("Test validator data", () => {
     let validator = require("../../utils/validator");
 
     describe("validateIsStringValid()", () => {

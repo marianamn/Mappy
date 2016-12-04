@@ -3,14 +3,11 @@
 const express = require("express");
 let Router = express.Router;
 
-let isAuthenticated = require("../middlewares/is-user-authenticated");
-let analytics = require("../middlewares/analytics");
-
-module.exports = function({ app, controllers }) {
+module.exports = function({ app, controllers, middlewares }) {
     let router = new Router();
 
     router
-        .get("/chat", analytics, isAuthenticated, controllers.getChat);
+        .get("/chat", middlewares.analytics, middlewares.isAuthenticated, controllers.getChat);
 
     app.use("/communication", router);
 
