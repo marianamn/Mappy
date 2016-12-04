@@ -7,7 +7,7 @@ module.exports = function ({ app, controllers, middlewares }) {
     let router = new Router();
 
     router
-        .get("/users", middlewares.isAuthenticated, controllers.getAllUsernames)
+        .get("/users", controllers.getAllUsernames)
         .get("/countries", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getAllCountriesNames)
         .post("/register", middlewares.analytics, controllers.register)
         .post("/createQuestion", middlewares.isAuthenticated, middlewares.isAdmin, controllers.createQuestion)
