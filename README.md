@@ -9,7 +9,7 @@ Team Leage of the Five
 ###Team members usernames:###
 -   Natali_Adamova
 -   marianamn
--   Wazer
+-   Warez
 -   nProdanov
 -   vaspet
 
