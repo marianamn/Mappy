@@ -64,7 +64,5 @@ module.exports = function(req, res, next) {
 
     addPageAfterLogin(req);
 
-    // console.log(req.session);
-
     return next();
 };

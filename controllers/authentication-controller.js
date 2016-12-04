@@ -44,7 +44,7 @@ function validateUser({ validator, username, firstName, lastName, profileImgURL 
 
 const passport = require("passport");
 
-module.exports = function (params) {
+module.exports = function(params) {
     let { data, validator } = params;
     return {
         register(req, res) {
@@ -76,13 +76,13 @@ module.exports = function (params) {
             let hashPass = data.encryption.generateHashedPassword(salt, password);
 
             data.createUser(
-                username,
-                firstName,
-                lastName,
-                email,
-                profileImgURL,
-                salt,
-                hashPass)
+                    username,
+                    firstName,
+                    lastName,
+                    email,
+                    profileImgURL,
+                    salt,
+                    hashPass)
                 .then(() => {
                     res.status(201).json({ "message": "You have been registered successfully" });
                 })
@@ -110,7 +110,18 @@ module.exports = function (params) {
             })(req, res, next);
         },
         logout(req, res) {
-            data.createAnalytics(req.session);
+
+            let userAgent = req.session.userAgent;
+            let arriveTimeStamp = req.session.arriveTimeStamp;
+            let cameFrom = req.session.cameFrom;
+            let pagesBeforeLogin = req.session.pagesBeforeLogin;
+            let userId = req.session.passport.user;
+            let loginTimeStamp = req.session.loginTimeStamp;
+            let pagesAfterLogin = req.session.pagesAfterLogin;
+            let hasRegistered = req.session.hasRegistered;
+            let registeredTimeStamp = req.session.registeredTimeStamp;
+
+            data.createAnalytics(userAgent, arriveTimeStamp, cameFrom, pagesBeforeLogin, userId, loginTimeStamp, pagesAfterLogin, hasRegistered, registeredTimeStamp);
             req.session.destroy();
             req.logout();
             return res.status(200).redirect("/");
