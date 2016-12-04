@@ -1,19 +1,21 @@
 extends ../_layout
 block styles
-    link(rel='stylesheet', type='text/css', href='../../static/includes/style.css', media='all')
-    link(rel='stylesheet', type='text/css', href='../../static/cssmap-europe/cssmap-europe.css', media='screen')
-    link(rel='stylesheet', type='text/css', href='../../static/css/main.css', media='screen')
+    link(rel='stylesheet', type='text/css', href='/static/includes/style.css', media='all')
+    link(rel='stylesheet', type='text/css', href='/static/cssmap-europe/cssmap-europe.css', media='screen')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css', media='screen')
 
 block content
     - var requiredCountryName = requiredCountryNameQuestion; 
     - var allCountries = euValues;
     - var correct = isCorrect;
-    - var incorrect = isIncorrect;
 
-    if correct
+    if firstTime
+        .answer-wrap
+            .fade-in-out.correct Select the country
+    else if correct
         .answer-wrap
             .fade-in-out.correct Correct
-    if incorrect
+    else 
         .answer-wrap
             .fade-in-out.incorrect Incorrect
     
@@ -45,6 +47,6 @@ block content
     footer.page-footer
         .wrapper
         
-    script(type='text/javascript', src='../../static/bower_components/jquery/dist/jquery.js')
-    script(type='text/javascript', src='../../static/js/jquery.cssmap.min.js') 
-    script(type='text/javascript', src='../../static/js/script.js')
+    script(type='text/javascript', src='/static/bower_components/jquery/dist/jquery.js')
+    script(type='text/javascript', src='/static/js/jquery.cssmap.min.js') 
+    script(type='text/javascript', src='/static/js/script.js')
