@@ -3,8 +3,8 @@ extends ../_layout
 block content
     .container
         ul
-         each game in model
+         each game in result
             li
                 p=game.name
-                p=game.gameUrl
-                p=game.gameImgUrl
+                img(src= game.gameUrl, class="more-game-img") 
+                img(src= game.gameImgUrl)
