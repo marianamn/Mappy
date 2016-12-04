@@ -6,14 +6,12 @@ module.exports = function(models) {
     return {
         createAnalytics(sessionData) {
             return new Promise((resolve, reject) => {
-                let currentUserId = sessionData.passport.user;
-
                 let newAnalytics = new Analytics({
                     userAgent: sessionData.userAgent,
                     arriveTimeStamp: sessionData.arriveTimeStamp,
                     cameFrom: sessionData.cameFrom,
                     pagesBeforeLogin: sessionData.pagesBeforeLogin,
-                    userId: currentUserId,
+                    userId: sessionData.passport.user,
                     loginTimeStamp: sessionData.loginTimeStamp,
                     pagesAfterLogin: sessionData.pagesAfterLogin,
                     hasRegistered: sessionData.hasRegistered,

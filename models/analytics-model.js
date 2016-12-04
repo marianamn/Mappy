@@ -3,31 +3,17 @@
 const modelRegistrator = require("./utils/model-registrator");
 
 module.exports = modelRegistrator.register("Analytics", {
-    userAgent: {
-        type: String
-    },
-    arriveTimeStamp: {
-        type: String
-    },
-    cameFrom: {
-        type: String
-    },
+    userAgent: String,
+    arriveTimeStamp: String,
+    cameFrom: String,
     pagesBeforeLogin: [{
         type: String
     }],
-    userId: {
-        type: String
-    },
-    loginTimeStamp: {
-        type: String
-    },
+    userId: String,
+    loginTimeStamp: String,
     pagesAfterLogin: [{
         type: String
     }],
-    hasRegistered: {
-        type: Boolean
-    },
-    registeredTimeStamp: {
-        type: String
-    }
+    hasRegistered: Boolean,
+    registeredTimeStamp: String
 });
