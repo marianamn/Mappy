@@ -1,7 +1,7 @@
 /* globals module */
 
 module.exports = function(params) {
-    let { data, validator } = params;
+    let { data } = params;
 
     return {
         allGames(req, res) {
