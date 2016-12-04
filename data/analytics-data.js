@@ -6,12 +6,14 @@ module.exports = function(models) {
     return {
         createAnalytics(sessionData) {
             return new Promise((resolve, reject) => {
+                let currentUserId = sessionData.passport.user;
+
                 let newAnalytics = new Analytics({
                     userAgent: sessionData.userAgent,
                     arriveTimeStamp: sessionData.arriveTimeStamp,
                     cameFrom: sessionData.cameFrom,
                     pagesBeforeLogin: sessionData.pagesBeforeLogin,
-                    userId: sessionData.passport.user,
+                    userId: currentUserId,
                     loginTimeStamp: sessionData.loginTimeStamp,
                     pagesAfterLogin: sessionData.pagesAfterLogin,
                     hasRegistered: sessionData.hasRegistered,
@@ -41,7 +43,7 @@ module.exports = function(models) {
         getAnalyticsById(dataId) {
             let _id = dataId;
             return new Promise((resolve, reject) => {
-                Analytics.findOne({ _id }, (err, userAnalytics) => {
+                Analytics.findById({ _id }, (err, userAnalytics) => {
                     if (err) {
                         return reject(err);
                     }
