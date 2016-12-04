@@ -1,0 +1,23 @@
+{
+	name: "World Geography Games",
+        gameUrl: "http://world-geography-games.com/",
+        gameImgUrl: "https://contentmapas.didactalia.net/imagenes/Documentos/imgsem/e4/e472/e472f961-f75b-46ee-a45a-5c2ee6da69da/492a6025-0cbe-48e5-a095-bac5bc914ca8.jpg"
+}
+
+{
+	name: "National Geographic KidsGames",
+        gameUrl: "http://kids.nationalgeographic.com/games/",
+        gameImgUrl: "http://i.usatoday.net/tech/_photos/2012/01/15/Nat-Geo-game-lets-families-learn-together-HAR0GTN-x-large.jpg"
+}
+   
+{
+	name: "KidsGeo.com",
+        gameUrl: "http://www.kidsgeo.com/geography-games/",
+        gameImgUrl: "http://ssbankscmms.weebly.com/uploads/3/7/2/0/37209547/750075.jpg?254"
+}
+
+{
+	name: "Learning games for kids",
+        gameUrl: "http://www.learninggamesforkids.com/geography_games.html",
+        gameImgUrl: "http://www.learninggamesforkids.com/wp-content/themes/lgfkresponsive/images/LGFK_Logo2.jpg"
+}
