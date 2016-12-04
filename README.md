@@ -29,13 +29,13 @@ Mappy is an application which tests geography knowledge via 2 types of games:
 - **/rankings/guess-the-country-score** - shows Guess the country game score of the Top 10 players
 - **/rankings/test-your-knowledg-score** - shows Test your knowledg game score of the Top 10 players
 - **/countries** - lists all European countries  flags list
-- **/countries?page=pages** - shows the next pageof countries
+- **/countries?page=pages** - shows the next page of countries
 - **/countries/:id** - shows country detailed information
-- **more-games** - related games to visit
+- **/more-games** - related games to visit
 
 ###Login/Redister:###
 
-- **/auth/register** - registration form
+- **/auth/register** - Registration form
 - **/auth/login** - LogIn form
 
 ###Private (authenticated) dynamic web pages:###
