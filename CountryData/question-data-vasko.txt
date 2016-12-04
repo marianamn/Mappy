@@ -1,0 +1,249 @@
+{
+    "question": "What is the capital of Bosnia and Herzegovina?",
+    "answers": [{
+            "answer": "Sarajevo",
+            "isCorrect": true
+        },
+        {
+            "answer": "Braila",
+            "isCorrect": false
+        },
+        {
+            "answer": "Minsk",
+            "isCorrect": false
+        },
+        {
+            "answer": "Zagreb",
+            "isCorrect": false
+        }
+    ],
+    "country": "Bosnia and Herzegovina"
+} {
+    "question": "What is the official currency of Bosnia and Herzegovina?",
+    "answers": [{
+            "answer": "Convertible mark",
+            "isCorrect": true
+        },
+        {
+            "answer": "Lei",
+            "isCorrect": false
+        },
+        {
+            "answer": "Yen",
+            "isCorrect": false
+        },
+        {
+            "answer": "Euro",
+            "isCorrect": false
+        }
+    ],
+    "country": "Bosnia and Herzegovina"
+} {
+    "question": "Is Bosnia and Herzegovina on the Balkan Peninsula?",
+    "answers": [{
+            "answer": "Yes",
+            "isCorrect": true
+        },
+        {
+            "answer": "No",
+            "isCorrect": false
+        }
+    ],
+    "country": "Bosnia and Herzegovina"
+} {
+    "question": "Bosnia and Herzegovina borders with",
+    "answers": [{
+            "answer": " Croatia, Serbia and Montenegro",
+            "isCorrect": true
+        },
+        {
+            "answer": "Serbia, Albania and Macedonia",
+            "isCorrect": false
+        },
+        {
+            "answer": "Romania, Albania and Moldova",
+            "isCorrect": false
+        },
+        {
+            "answer": "Slovakia, Serbia and Slovenia",
+            "isCorrect": false
+        }
+    ],
+    "country": "Bosnia and Herzegovina"
+} {
+    "question": "When did Byzantine Empire conquer Bulgaria?",
+    "answers": [{
+            "answer": "1018",
+            "isCorrect": true
+        },
+        {
+            "answer": "1363",
+            "isCorrect": false
+        },
+        {
+            "answer": "927",
+            "isCorrect": false
+        },
+        {
+            "answer": "885",
+            "isCorrect": false
+        }
+    ],
+    "country": "Bulgaria"
+} {
+    "question": "Which treaty is celebrated by Bulgaria as its Independence Day?",
+    "answers": [{
+            "answer": "Treaty of San Stefano",
+            "isCorrect": true
+        },
+        {
+            "answer": "Treaty of Berlin",
+            "isCorrect": false
+        },
+        {
+            "answer": "Treaty of Versailles",
+            "isCorrect": false
+        },
+        {
+            "answer": "Treaty of Rome",
+            "isCorrect": false
+        }
+    ],
+    "country": "Bulgaria"
+} {
+    "question": "Bulgaria borderes with...",
+    "answers": [{
+            "answer": "Romania, Serbia, Turkey, and Greece",
+            "isCorrect": true
+        },
+        {
+            "answer": "Macedonia, Romania,Serbia, and Albania",
+            "isCorrect": false
+        },
+        {
+            "answer": "Greece, Macedonia, Romania, and Italy",
+            "isCorrect": false
+        },
+        {
+            "answer": "Serbia, Turkey, Greece, and Italy",
+            "isCorrect": false
+        }
+    ],
+    "country": "Bulgaria"
+} {
+    "question": "What is the capital of Bulgaria?",
+    "answers": [{
+            "answer": "Sofia",
+            "isCorrect": true
+        },
+        {
+            "answer": "Plovdiv",
+            "isCorrect": false
+        },
+        {
+            "answer": "Nova Zagora",
+            "isCorrect": false
+        },
+        {
+            "answer": "Pernik",
+            "isCorrect": false
+        }
+    ],
+    "country": "Bulgaria"
+} {
+    "question": "Bulgaria's writing is based on the ...",
+    "answers": [{
+            "answer": "Cyrillic alphabet",
+            "isCorrect": true
+        },
+        {
+            "answer": "Latin alphabet",
+            "isCorrect": false
+        },
+        {
+            "answer": "Chinese characters",
+            "isCorrect": false
+        },
+        {
+            "answer": "Runes",
+            "isCorrect": false
+        }
+    ],
+    "country": "Bulgaria"
+} {
+    "question": "What is the capital of Croatia?",
+    "answers": [{
+            "answer": "Zagreb",
+            "isCorrect": true
+        },
+        {
+            "answer": "Bratislava",
+            "isCorrect": false
+        },
+        {
+            "answer": "Bugapest",
+            "isCorrect": false
+        },
+        {
+            "answer": "Belgium",
+            "isCorrect": false
+        }
+    ],
+    "country": "Croatia"
+} {
+    "question": "Which of the following Croatian mountains is the highest?",
+    "answers": [{
+            "answer": "Dinara",
+            "isCorrect": true
+        },
+        {
+            "answer": "Vaganski Vrh",
+            "isCorrect": false
+        },
+        {
+            "answer": "Biokovo",
+            "isCorrect": false
+        }
+    ],
+    "country": "Croatia"
+} {
+    "question": "The Croatian currency is called ...",
+    "answers": [{
+            "answer": "Kuna",
+            "isCorrect": true
+        },
+        {
+            "answer": "Krona",
+            "isCorrect": false
+        },
+        {
+            "answer": "Tolar",
+            "isCorrect": false
+        },
+        {
+            "answer": "Kip",
+            "isCorrect": false
+        }
+    ],
+    "country": "Croatia"
+} {
+    "question": "Where is Croatia located?",
+    "answers": [{
+            "answer": "Southeastern Europe",
+            "isCorrect": true
+        },
+        {
+            "answer": "Northeastern Europe",
+            "isCorrect": false
+        },
+        {
+            "answer": "Central Europe",
+            "isCorrect": false
+        },
+        {
+            "answer": "Southwestern Europe",
+            "isCorrect": false
+        }
+    ],
+    "country": "Croatia"
+}
