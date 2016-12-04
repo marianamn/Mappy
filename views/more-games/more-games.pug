@@ -1,4 +1,10 @@
 extends ../_layout
 
 block content
-    p It works!
+    .container
+        ul
+         each game in model
+            li
+                p=game.name
+                p=game.gameUrl
+                p=game.gameImgUrl
