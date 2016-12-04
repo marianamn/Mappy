@@ -3,22 +3,18 @@
 const express = require("express");
 let Router = express.Router;
 
-let isAdmin = require("../middlewares/is-user-admin");
-let isAuthenticated = require("../middlewares/is-user-authenticated");
-let analytics = require("../middlewares/analytics");
-
-module.exports = function({ app, controllers }) {
+module.exports = function({ app, controllers, middlewares }) {
     let router = new Router();
 
     router
         .get("/users", controllers.getAllUsernames)
-        .get("/countries", isAuthenticated, isAdmin, controllers.getAllCountriesNames)
-        .post("/register", analytics, controllers.register)
-        .post("/createQuestion", isAuthenticated, isAdmin, controllers.createQuestion)
-        .post("/evaluate", isAuthenticated, controllers.evaluateQuestion)
-        .post("/chat", analytics, isAuthenticated, controllers.createNewChatAnswer)
-        .put("/profile", analytics, isAuthenticated, controllers.updateProfile)
-        .put("/users/:username", analytics, isAuthenticated, isAdmin, controllers.updateUserRole);
+        .get("/countries", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getAllCountriesNames)
+        .post("/register", middlewares.analytics, controllers.register)
+        .post("/createQuestion", middlewares.isAuthenticated, middlewares.isAdmin, controllers.createQuestion)
+        .post("/evaluate", middlewares.isAuthenticated, controllers.evaluateQuestion)
+        .post("/chat", middlewares.analytics, middlewares.isAuthenticated, controllers.createNewChatAnswer)
+        .put("/profile", middlewares.analytics, middlewares.isAuthenticated, controllers.updateProfile)
+        .put("/users/:username", middlewares.analytics, middlewares.isAuthenticated, middlewares.isAdmin, controllers.updateUserRole);
 
     app.use("/api", router);
 

@@ -3,14 +3,13 @@
 const express = require("express");
 
 let Router = express.Router;
-let analytics = require("../middlewares/analytics");
 
-module.exports = function({ app, controllers }) {
+module.exports = function({ app, controllers, middlewares }) {
     let router = new Router();
 
     router
-        .get("/", analytics, controllers.allCountries)
-        .get("/:id", analytics, controllers.countryDetails);
+        .get("/", middlewares.analytics, controllers.allCountries)
+        .get("/:id", middlewares.analytics, controllers.countryDetails);
 
     app.use("/countries", router);
 

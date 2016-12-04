@@ -10,32 +10,31 @@ let expect = chai.expect;
 describe("Test fractions router", () => {
     let sinon;
 
-    let controller = {
-        getPanel: (req, res) => { },
-        getCreateQuestionForm: (req, res) => { },
-        getAllAnalytics: (req, res) => { },
-        getAllAnalyticsPerUser: (req, res) => { }
-    };
-
-    let sampleUser = {
-        username: "John",
-        isAdmin: true
-    };
-
     let controllers = {
-        getPanel: controller.getPanel,
-        getCreateQuestionForm: controller.getCreateQuestionForm,
-        getAllAnalytics: controller.getAllAnalytics,
-        getAllAnalyticsPerUser: controller.getAllAnalyticsPerUser
+        getPanel: () => { },
+        getCreateQuestionForm: () => { },
+        getAllAnalytics: () => { },
+        getAllAnalyticsPerUser: () => { }
+    };
+
+    let middlewares = {
+        isAdmin: () => {},
+        isAuthenticated: () => {}
     };
 
     beforeEach(() => {
         sinon = sinonModule.sandbox.create();
 
-        sinon.stub(controller, "getPanel", (req, res) => {
-            res.status(200).render("admin/panel", {
-                user: sampleUser
-            });
+        sinon.stub(controllers, "getPanel", (req, res) => {
+            res.status(200).end();
+        });
+
+        sinon.stub(middlewares, "isAdmin", (req, res, next) => {
+            return next();
+        });
+
+        sinon.stub(middlewares, "isAuthenticated", (req, res, next) => {
+            return next();
         });
     });
 
@@ -45,9 +44,9 @@ describe("Test fractions router", () => {
 
     describe("GET /panel", () => {
         it("expect to admin getPanel to respond with 200 OK", done => {
-            let appConfig = require("../../config/application")({ data: {} });
-            let app = appConfig.app;
-            require("../../routers/admin-router")({ app, controllers });
+            let { app } = require("../../config/application")({ data: {} });
+            require("../../routers/admin-router")({ app, controllers, middlewares });
+
             chai.request(app)
                 .get("/admin/panel")
                 .end((req, res) => {

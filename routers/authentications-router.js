@@ -5,23 +5,20 @@ const express = require("express"),
 
 let Router = express.Router;
 
-let isAuthenticated = require("../middlewares/is-user-authenticated");
-let analytics = require("../middlewares/analytics");
-
-module.exports = function ({ app, controllers }) {
+module.exports = function ({ app, controllers, middlewares }) {
     let router = new Router();
 
     router
         .get("/register", controllers.getRegisterForm)
-        .get("/login", analytics, controllers.getLoginForm)
-        .get("/facebook", analytics, passport.authenticate("facebook"))
-        .get("/unauthorized", analytics, controllers.unauthorized)
+        .get("/login", middlewares.analytics, controllers.getLoginForm)
+        .get("/facebook", middlewares.analytics, passport.authenticate("facebook"))
+        .get("/unauthorized", middlewares.analytics, controllers.unauthorized)
         .get("/facebook/callback", passport.authenticate("facebook", { scope: "email", failureRedirect: "/auth/login" }),
         (req, res) => {
             res.redirect("/");
         })
-        .post("/login", analytics, controllers.login)
-        .post("/logout", analytics, isAuthenticated, controllers.logout);
+        .post("/login", middlewares.analytics, controllers.login)
+        .post("/logout", middlewares.analytics, middlewares.isAuthenticated, controllers.logout);
 
     app.use("/auth", router);
 

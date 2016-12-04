@@ -3,15 +3,13 @@
 const express = require("express");
 
 let Router = express.Router;
-let isAuthenticated = require("../middlewares/is-user-authenticated");
-let analytics = require("../middlewares/analytics");
 
-module.exports = function({ app, controllers }) {
+module.exports = function({ app, controllers, middlewares }) {
     let router = new Router();
 
     router
-        .get("/guess-the-country", analytics, isAuthenticated, controllers.getRandomCountryQuestion)
-        .get("/guess-the-country/:requiredCountryName/:selectedCountryEuValue", analytics, isAuthenticated, controllers.evaluateGuessTheCountryAnswer);
+        .get("/guess-the-country", middlewares.analytics, middlewares.isAuthenticated, controllers.getRandomCountryQuestion)
+        .get("/guess-the-country/:requiredCountryName/:selectedCountryEuValue", middlewares.analytics, middlewares.isAuthenticated, controllers.evaluateGuessTheCountryAnswer);
 
     app.use("/game", router);
 
