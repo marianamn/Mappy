@@ -129,5 +129,14 @@ describe("Test analytics data module", () => {
                     done();
                 });
         });
+
+        it("Expect found analytics data to have accurate entries", done => {
+            data.getAllAnalyticsData()
+                .then(result => {
+                    expect(result[0]).to.be.equal(allanalytics[0]);
+                    expect(result[1]).to.be.equal(allanalytics[1]);
+                    done();
+                });
+        });
     });
 });
