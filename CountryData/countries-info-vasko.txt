@@ -1,0 +1,39 @@
+{
+    "name": "Bosnia and Herzegovina",
+    "countryImgUrl": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina#/media/File:Marijin_dvor,_Sarajevo_panorama_2010.jpg",
+    "flagUrl": "http://www.comprarbanderas.es/images/banderas/400/1387-bosnia-y-herzegovina_400px.jpg",
+    "capital": "Sarajevo",
+    "currency": "Convertible mark",
+    "population": 3907074,
+    "area": 51197,
+    "populationDensity": 76,
+    "latitude": "43°52'N",
+    "longitude": "18°26'E",
+    "countryInformation": "Bosnia and Herzegovina , is a country in Southeastern Europe located on the Balkan Peninsula. Sarajevo is the capital and largest city. Bordered by Croatia to the north, west, and south; Serbia to the east; Montenegro to the southeast; and the Adriatic Sea to the south, with a coastline about 20 kilometres (12 miles) long surrounding the city of Neum. In the central and eastern interior of the country the geography is mountainous, in the northwest it is moderately hilly, and the northeast is predominantly flatland. The inland is a geographically larger region and has a moderate continental climate, with hot summers and cold and snowy winters. The southern tip of the country has a Mediterranean climate and plain topography. Bosnia and Herzegovina is a region that traces permanent human settlement back to the Neolithic age, during and after which it was populated by several Illyrian and Celtic civilizations. Culturally, politically, and socially, the country has a rich history, having been first settled by the Slavic peoples that populate the area today from the 6th through to the 9th centuries AD. In the 12th century the Banate of Bosnia was established, which evolved into the Kingdom of Bosnia in the 14th century, after which it was annexed into the Ottoman Empire, under whose rule it would remain from the mid-15th to the late 19th centuries. The Ottomans brought Islam to the region, and altered much of the cultural and social outlook of the country. This was followed by annexation into the Austro-Hungarian Monarchy, which lasted up until World War I. In the interwar period, Bosnia was part of the Kingdom of Yugoslavia and after World War II, the country was granted full republic status in the newly formed Socialist Federal Republic of Yugoslavia. Following the dissolution of Yugoslavia, the country proclaimed independence in 1992, which was followed by the Bosnian War, lasting until late 1995."
+} 
+{
+    "name": "Bulgaria",
+    "countryImgUrl": "https://zikata.files.wordpress.com/2010/11/rose-festival-in-kazanlak-bulgaria.jpg",
+    "flagUrl": "http://vestnikpriatel.com/wp-content/uploads/2013/02/Bulgaria.jpg",
+    "capital": "Sofia",
+    "currency": "Bulgarian lev",
+    "population": 7725965,
+    "area": 110912,
+    "populationDensity": 70,
+    "latitude": "42°45'N",
+    "longitude": "23°20'E",
+    "countryInformation": "Bulgaria, officially the Republic of Bulgaria (Bulgarian: Република България, tr. Republika Bǎlgariya, pronounced rɛˈpublikɐ bɐɫˈɡarijɐ]), is a country in southeastern Europe. It is bordered by Romania to the north, Serbia and Macedonia to the west, Greece and Turkey to the south, and the Black Sea to the east. With a territory of 110,994 square kilometres (42,855 sq mi), Bulgaria is Europe's 16th-largest country.Organised prehistoric cultures began developing on current Bulgarian lands during the Neolithic period. Its ancient history saw the presence of the Thracians, Greeks and Romans. The emergence of a unified Bulgarian state dates back to the establishment of the First Bulgarian Empire in 681 AD, which dominated most of the Balkans and functioned as a cultural hub for Slavs during the Middle Ages. With the downfall of the Second Bulgarian Empire in 1396, its territories came under Ottoman rule for nearly five centuries. The Russo-Turkish War of 1877–78 led to the formation of the Third Bulgarian State. The following years saw several conflicts with its neighbours, which prompted Bulgaria to align with Germany in both world wars. In 1946 it became a one-party socialist state as part of the Soviet-led Eastern Bloc. In December 1989 the ruling Communist Party allowed multi-party elections, which subsequently led to Bulgaria's transition into a democracy and a market-based economy.Bulgaria's population of 7.4 million people is predominantly urbanised and mainly concentrated in the administrative centres of its 28 provinces. Most commercial and cultural activities are centred on the capital and largest city, Sofia. The strongest sectors of the economy are heavy industry, power engineering, and agriculture, all of which rely on local natural resources. The country's current political structure dates to the adoption of a democratic constitution in 1991. Bulgaria is a unitary parliamentary republic with a high degree of political, administrative, and economic centralisation. It is a member of the European Union, NATO, and the Council of Europe; a founding state of the Organization for Security and Co-operation in Europe (OSCE); and has taken a seat at the UN Security Council three times."
+} 
+{
+    "name": "Croatia",
+    "countryImgUrl": "https://en.wikipedia.org/wiki/Croatia#/media/File:Dubrovnik_-_Flickr_-_jns001_(21).jpg",
+    "flagUrl": "https://en.wikipedia.org/wiki/Flag_of_Croatia#/media/File:Flag_of_Croatia.svg",
+    "capital": "Zagreb",
+    "currency": "Croatian kuna",
+    "population": 4551338,
+    "area": 56538,
+    "populationDensity": 81,
+    "latitude": "45°50'N",
+    "longitude": "15°58'E",
+    "countryInformation": "Croatia, officially the Republic of Croatia (Croatian: Republika Hrvatska, About this sound listen (help·info)), is a sovereign state between Central Europe, Southeast Europe, and the Mediterranean. Its capital city is Zagreb, which forms one of the country's primary subdivisions, along with its twenty counties. Croatia covers 56,594 square kilometres (21,851 square miles) and has diverse, mostly continental and Mediterranean climates. Croatia's Adriatic Sea coast contains more than a thousand islands. The country's population is 4.28 million, most of whom are Croats, with the most common religious denomination being Roman Catholicism. The Croats arrived in the area of present-day Croatia during the early part of the 7th century AD. They organised the state into two duchies by the 9th century. Tomislav became the first king by 925, elevating Croatia to the status of a kingdom. The Kingdom of Croatia retained its sovereignty for nearly two centuries, reaching its peak during the rule of Kings Petar Krešimir IV and Dmitar Zvonimir. Croatia entered a personal union with Hungary in 1102. In 1527, faced with Ottoman conquest, the Croatian Parliament elected Ferdinand I of the House of Habsburg to the Croatian throne. In 1918, after World War I, Croatia was included in the unrecognized State of Slovenes, Croats and Serbs which seceded from Austria-Hungary and merged into the Kingdom of Yugoslavia. The fascist Croatian puppet state backed by Fascist Italy and Nazi Germany existed during World War II. After the war, Croatia became a founding member and a federal constituent of the Socialist Federal Republic of Yugoslavia, a constitutionally socialist state. On 25 June 1991 Croatia declared independence, which came wholly into effect on 8 October of the same year. The Croatian War of Independence was fought successfully during the four years following the declaration."
+}
