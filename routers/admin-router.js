@@ -9,8 +9,8 @@ module.exports = function({ app, controllers, middlewares }) {
     router
         .get("/panel", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getPanel)
         .get("/panel/createQuestion", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getCreateQuestionForm)
-        .get("/panel/analytics", middlewares.isAuthenticated, controllers.getAllAnalytics)
-        .get("/panel/analytics/user/:dataId", middlewares.isAuthenticated, controllers.getAllAnalyticsPerUser);
+        .get("/panel/analytics", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getAllAnalytics)
+        .get("/panel/analytics/user/:dataId", middlewares.isAuthenticated, middlewares.isAdmin, controllers.getAllAnalyticsPerUser);
     app.use("/admin", router);
 
     return router;
