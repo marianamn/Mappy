@@ -13,10 +13,10 @@ module.exports = function ({ app, controllers, middlewares }) {
         .get("/login", middlewares.analytics, controllers.getLoginForm)
         .get("/facebook", middlewares.analytics, passport.authenticate("facebook"))
         .get("/unauthorized", middlewares.analytics, controllers.unauthorized)
-        // .get("/facebook/callback", passport.authenticate("facebook", { scope: "email", failureRedirect: "/auth/login" }),
-        // (req, res) => {
-        //     res.redirect("/");
-        // })
+        .get("/facebook/callback", passport.authenticate("facebook", { scope: "email", failureRedirect: "/auth/login" }),
+        (req, res) => {
+            res.redirect("/");
+        })
         .post("/login", middlewares.analytics, controllers.login)
         .post("/logout", middlewares.analytics, middlewares.isAuthenticated, controllers.logout);
 
