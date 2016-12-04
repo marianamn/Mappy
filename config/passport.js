@@ -2,7 +2,8 @@
 
 const passport = require("passport"),
     LocalStrategy = require("passport-local").Strategy,
-    FacebookStrategy = require("passport-facebook").Strategy;
+    FacebookStrategy = require("passport-facebook").Strategy,
+    config = require("./index");
 
 module.exports = function({ app, data }) {
     app.use(passport.initialize());
@@ -29,7 +30,7 @@ module.exports = function({ app, data }) {
     passport.use(new FacebookStrategy({
         clientID: 343650825996679,
         clientSecret: "f1bed70cad9816e1e638f77b316ccc85",
-        callbackURL: "http://localhost:3001/auth/facebook/callback",
+        callbackURL: `${config.rootUrl}/auth/facebook/callback`,
         profileFields: ["id", "displayName", "picture.type(large)", "email", "gender", "profileUrl"]
     },
         (accessToken, refreshToken, profile, done) => {
