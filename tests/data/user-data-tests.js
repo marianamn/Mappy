@@ -527,83 +527,6 @@ describe("Test user data", () => {
         });
     });
 
-    // describe("updateUserAndPassword", () => {
-    //     let username = "testuser";
-    //     let firstName = "testFirstName";
-    //     let lastName = "testLastName";
-    //     let email = "testEmail";
-    //     let profileImgURL = "http://test";
-    //     let hashPass = "testHashPass";
-
-    //     let expectedUser = new User({
-    //         username,
-    //         firstName,
-    //         lastName,
-    //         email,
-    //         profileImgURL,
-    //         hashPass
-    //     });
-
-    //     beforeEach(() => {
-    //         sinon.stub(User.prototype, "save", cb => {
-    //             cb(null, expectedUser);
-    //         });
-    //         sinon.stub(User, "findOne", (_, cb) => {
-    //             cb(null, expectedUser);
-    //         });
-    //     });
-
-    //     afterEach(() => {
-    //         sinon.restore();
-    //     });
-
-    //     it("Expect profileImg to be changed", done => {
-    //         let expectedProfileImg = "http://changed";
-    //         data.updateUserAndPassword({ profileImgURL: expectedProfileImg })
-    //             .then(resUser => {
-    //                 expect(resUser.profileImgURL).to.be.equal(expectedProfileImg);
-    //                 done();
-    //             });
-    //     });
-
-    //     it("Expect firstName to be changed", done => {
-    //         let expectedFirstName = "changedFirstname";
-    //         data.updateUserAndPassword({ firstName: expectedFirstName })
-    //             .then(resUser => {
-    //                 expect(resUser.firstName).to.be.equal(expectedFirstName);
-    //                 done();
-    //             });
-    //     });
-
-    //     it("Expect lastname to be changed", done => {
-    //         let expectedLastName = "changedLastname";
-    //         data.updateUserAndPassword({ lastName: expectedLastName })
-    //             .then(resUser => {
-    //                 expect(resUser.lastName).to.be.equal(expectedLastName);
-    //                 done();
-    //             });
-    //     });
-
-    //     it("Expect email to be changed", done => {
-    //         let expectedemail = "changedEmail";
-    //         data.updateUserAndPassword({ email: expectedemail })
-    //             .then(resUser => {
-    //                 expect(resUser.email).to.be.equal(expectedemail);
-    //                 done();
-    //             });
-    //     });
-
-    //     it("Expect password to be changed", done => {
-    //         let password = "changedPasswored";
-    //         let expectedPassHash = encrypt.generateHashedPassword(expectedUser.salt, password);
-    //         data.updateUserAndPassword({ hashPass: expectedPassHash })
-    //             .then(resUser => {
-    //                 expect(resUser.hashPass).to.be.equal(expectedPassHash);
-    //                 done();
-    //             });
-    //     });
-    // });
-
     describe("getUserById", () => {
         let username = "testuser1";
         let firstName = "testFirstName1";
@@ -657,16 +580,5 @@ describe("Test user data", () => {
                     done();
                 });
         });
-
-        // it("Expect to return null if no user with passed id", done => {
-        //     let nonExistingId = 10;
-
-        //     data.getUserById(nonExistingId)
-        //         .then(resUser => {
-        //             console.log(resUser);
-        //             expect(resUser).to.equal(null);
-        //             done();
-        //         });
-        // });
     });
 });
