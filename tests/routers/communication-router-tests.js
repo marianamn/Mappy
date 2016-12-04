@@ -11,13 +11,13 @@ describe("Test comunication router", () => {
     let sinon;
 
     let controllers = {
-        home: () => { }
+        home: () => {}
     };
 
     let middlewares = {
-        analytics: () => { },
-        isAdmin: () => { },
-        isAuthenticated: () => { }
+        analytics: () => {},
+        isAdmin: () => {},
+        isAuthenticated: () => {}
     };
 
     beforeEach(() => {
