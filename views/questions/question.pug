@@ -4,7 +4,6 @@ block styles
     link(rel="stylesheet", href="/static/bower_components/toastr/toastr.css")
 
 block headScripts
-    script(type='text/javascript', src='/static/js/question-handler.js')
     script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
 
 block content
@@ -24,6 +23,7 @@ block content
                 h3 No questions for this country ..
         
         p.text-center
-            a.btn.btn-primary(href="/game/test-your-knowledge") Back to map 
+            a.btn.btn-primary(href="/game/test-your-knowledge") Back to map
+    script(type='text/javascript', src='/static/js/question-handler.js') 
         
         

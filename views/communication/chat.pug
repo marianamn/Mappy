@@ -5,7 +5,6 @@ block styles
 
 block headScripts
     script(src="/socket.io/socket.io.js")
-    script(type="text/javascript", src="/static/js/chat.js")
 
 block content
     #main-chat.container
@@ -24,3 +23,4 @@ block content
                             input.form-control(id="m" type='text')
                             span.input-group-btn
                                 button.btn.btn-success(id="sendMsg" type='button') Send
+    script(type="text/javascript", src="/static/js/chat.js")
