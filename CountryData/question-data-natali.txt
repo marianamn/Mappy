@@ -1,0 +1,805 @@
+{
+	"question" : "Where is the Hermitage - one of the largest and oldest museums in the world?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Ekaterynburg",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Moscow",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Saint Petersburg",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Samara",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Russia",
+}
+
+{
+	"question" : "What is the currency of Russia?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Ruble",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Hryvnia",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Dynar",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Leu",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Russia"
+}
+
+{
+	"question": "How many time zones are there in Russia?",
+    	"answers": [{
+            "answer": "Eleven",
+            "isCorrect": true
+        },
+        {
+            "answer": "Six",
+            "isCorrect": false
+        },
+        {
+            "answer": "Seven",
+            "isCorrect": false
+        },
+        {
+            "answer": "Nine",
+            "isCorrect": false
+        }
+    ],
+    "country": "Russia"
+}
+
+{
+	"question" : "What is the Polish phrase for goodbye?",
+    	"answers" : [ 
+        	{
+            	"answer" : "nasvidenje",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "do widzenia",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : " tak",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "czesc",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Poland"
+}
+
+{
+	"question" : "What is the capital of Poland?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Gdansk",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Vilnues",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Warsaw",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Wroclaw",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Poland"
+}
+
+{
+	"question" : "What is the official currency of Poland?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Peso",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Zloty",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "Euro",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Dinar",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Poland"
+}
+
+{
+	"question" : "With a population of over 38.5 million people, Poland is the .... most populous country in Europe",
+    	"answers" : [ 
+        	{
+            	"answer" : "3rd",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "8th",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "7th",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "11th",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Poland"
+}
+
+{
+	"question" : "How do you say “thank you” in Portuguese?",
+    	"answers" : [ 
+        	{
+            	"answer" : "por favor",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "obrigada",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "adeus",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "gracias",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Portugal"
+}
+
+{
+	"question" : "What is the name of the European peninsula on which Portugal's mainland is located?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Jutland Peninsula",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Balkan Peninsula",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Apennine",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Iberian Peninsula",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Portugal"
+}
+
+{
+	"question" : "What is the capital and largest city of Portugal?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Porto",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Leiria",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Vila Real",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Lisbon",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Portugal"
+}
+
+{
+	"question" : "Which of the following rivers does not flow in Portugal?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Tiber",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Minho",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Douro",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Tejo",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Portugal"
+}
+
+
+{
+	"question" : "What is the name of the capital and largest city of Norway?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Bergen",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Helsinki",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Oslo",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Reykjavik",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Norway"
+}
+
+{
+	"question" : "Which two natural elements were discovered in waters near Norway?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Diamonds and Gold",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Oil and Gas",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "Coal and Iron",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Marbel and Granite",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Norway"
+}
+
+{
+	"question" : "The four cities listed are among the northernmost in the world. Which of them is in Norway?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Murmansk",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Trondheim",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "Oulo",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Reykjavik",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Norway"
+}
+
+{
+	"question" : "What is the name of the country Norway gained its final independence from in 1905?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Denmark",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Finland",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Iceland",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Sweden",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Norway"
+}
+
+
+{
+	"question" : "Which sea does Romania border?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Ionian Sea",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Aegean Sea‎",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Black Sea",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Marmara Sea",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Romania"
+}
+
+{
+	"question" : "Which mountains runs through the center of Romania?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Balkan",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Carpathian",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "Central Eastern Alps",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Apennine",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Romania"
+}
+
+{
+	"question" : "What is the approximate population of Bucharest?",
+    	"answers" : [ 
+        	{
+            	"answer" : "1.2 million",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "2.3 million",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "1.7 million",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "1.9 million",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Romania"
+}
+
+{
+	"question" : "What is the largest religious denomination in Romania?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Protestant",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Ortodoxism",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "Catholicism",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Evangelism",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Romania"
+}
+
+{
+	"question" : "What is the meaning of the capital name Belgrade (in Serbian Beograd)?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Big city",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "White city",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "Beautiful city",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Brave city",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Serbia"
+}
+
+{
+	"question" : "Which of the following states was not part of the former Yugoslavia?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Macedonia",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Croatia",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Slovenia",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Bulgaria",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Serbia"
+}
+
+{
+	"question" : "What is Fruška Gora?",
+    	"answers" : [ 
+        	{
+            	"answer" : "mountain lake",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "the Parliament of Serbia",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "mountain range",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "popular cuisine",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Serbia"
+}
+
+{
+	"question" : "What river runs through Belgrade?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Danube",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Tisa",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Drina",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Timok",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Serbia"
+}
+
+{
+	"question" : "Which countries border Slovakia?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Austria, Czech Republic, and Russia",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Czech Republic, Russia, and Poland",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Hungary, Poland, and Ukraine",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Austria, Poland, Ukraine, and Hungary",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Slovakia"
+}
+
+{
+	"question" : "Which is the capital of Slovakia?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Nitra",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Bratislava",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "Presov",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Zilina",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Slovakia"
+}
+
+{
+	"question" : "Which is the official language of Slovakia?",
+    	"answers" : [ 
+        	{
+            	"answer" : "French",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Serbian",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Slovak",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Macedonian",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Slovakia"
+}
+
+{
+	"question" : "High Tatras is the highest range of which European mountain system?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Carpathians",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Kopaonik",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Dinaric Alps",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Stara Planina",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Slovakia"
+}
+
+{
+	"question" : "For which flower is the Netherlands particularly famous?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Roses",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Hyacinth",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Sunflowers",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Tulips",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Netherlands"
+}
+
+{
+	"question" : "Which is the official language of the Netherlands?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Dutch",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "French",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "German",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Flemish",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Netherlands"
+}
+
+{
+	"question" : "Which is the capital of the Netherlands?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Rotterdam",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Amsterdam",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "Utretch",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Eindhoven",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Netherlands"
+}
+
+{
+	"question" : "Which is the biggest port in Netherlands and Europe?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Rotterdam",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Antwerp",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Hamburg",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Le Havre",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Netherlands"
+}
+
+{
+	"question" : "Which sea borders Montenegro?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Tyrrhenian Sea",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Adriatic Sea",
+            	"isCorrect" : true
+		}, 
+        	{
+            	"answer" : "Ionian Sea",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Aegean Sea",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Montenegro"
+}
+
+{
+	"question" : "Which is the capital of the Montenegro?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Cetinje",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Bijelo Polje",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Herceg Novi",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Podgorica",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Montenegro"
+}
+
+{
+	"question" : "Which of the following states does not have common borders with Montenegro?",
+    	"answers" : [ 
+        	{
+            	"answer" : "Greece",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Bosna and Herzegovina",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Croatia",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Serbia",
+            	"isCorrect" : true
+        	}
+    	],
+    	"country" : "Montenegro"
+}
+
+{
+	"question" : "The currency used in Montengro is ...",
+    	"answers" : [ 
+        	{
+            	"answer" : "Deutsche Mark",
+            	"isCorrect" : false
+        	}, 
+        	{
+            	"answer" : "Serbian Dinar",
+            	"isCorrect" : false
+		}, 
+        	{
+            	"answer" : "Euro",
+            	"isCorrect" : true
+        	}, 
+        	{
+            	"answer" : "Montenegrin Dinar",
+            	"isCorrect" : false
+        	}
+    	],
+    	"country" : "Montenegro"
+}
