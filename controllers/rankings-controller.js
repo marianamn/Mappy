@@ -11,7 +11,7 @@ module.exports = function(params) {
                         return (parseFloat(b.guessTheCountryScore) + parseFloat(b.testYourKnowledgeScore)) - (parseFloat(a.guessTheCountryScore) + parseFloat(a.testYourKnowledgeScore));
                     });
 
-                    let topTen = sortedUsers.limit(TOP_USERS);
+                    let topTen = sortedUsers.slice(0, TOP_USERS);
                     let user = req.user;
                     res.render("rankings/ranking", {
                         result: topTen,
@@ -25,7 +25,7 @@ module.exports = function(params) {
                     let sortedUsers = users.sort((a, b) => {
                         return parseFloat(b.guessTheCountryScore) - parseFloat(a.guessTheCountryScore);
                     });
-                    let topTen = sortedUsers.limit(TOP_USERS);
+                    let topTen = sortedUsers.slice(0, TOP_USERS);
                     let user = req.user;
                     res.render("rankings/guess-the-country-score", {
                         result: topTen,
@@ -39,7 +39,7 @@ module.exports = function(params) {
                     let sortedUsers = users.sort((a, b) => {
                         return parseFloat(b.testYourKnowledgeScore) - parseFloat(a.testYourKnowledgeScore);
                     });
-                    let topTen = sortedUsers.limit(TOP_USERS);
+                    let topTen = sortedUsers.slice(0, TOP_USERS);
                     let user = req.user;
                     res.render("rankings/test-your-knowledg-score", {
                         result: topTen,
