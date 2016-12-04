@@ -6,7 +6,7 @@ const TOP_USERS = 10;
 
 const CORRECT_SCORE_TYPES = ["guessTheCountryScore", "testYourKnowledgeScore"];
 
-module.exports = function (models, validator) {
+module.exports = function(models, validator) {
     let { User } = models;
 
     return {
@@ -18,66 +18,66 @@ module.exports = function (models, validator) {
             salt,
             hashPass) {
             return new
-                Promise((resolve, reject) => {
-                    if (!validator.validateStringLength(username, 3, 50)) {
-                        return reject("Error: Username must be between 3 and 50 symbols");
-                    }
+            Promise((resolve, reject) => {
+                if (!validator.validateStringLength(username, 3, 50)) {
+                    return reject("Error: Username must be between 3 and 50 symbols");
+                }
 
-                    if (!validator.validateIsStringValid(username)) {
-                        return reject("Username fail");
-                    }
+                if (!validator.validateIsStringValid(username)) {
+                    return reject("Username fail");
+                }
 
-                    if (!validator.validateStringLength(firstName, 3, 50)) {
-                        return reject("Error: First name must be between 3 and 50 symbols");
-                    }
+                if (!validator.validateStringLength(firstName, 3, 50)) {
+                    return reject("Error: First name must be between 3 and 50 symbols");
+                }
 
-                    if (!validator.validateIsStringValid(firstName)) {
-                        return reject("First name fail");
-                    }
+                if (!validator.validateIsStringValid(firstName)) {
+                    return reject("First name fail");
+                }
 
-                    if (!validator.validateStringLength(lastName, 3, 50)) {
-                        return reject("Error: Last name must be between 3 and 50 symbols");
-                    }
+                if (!validator.validateStringLength(lastName, 3, 50)) {
+                    return reject("Error: Last name must be between 3 and 50 symbols");
+                }
 
-                    if (!validator.validateIsStringValid(lastName)) {
-                        return reject("Last name fail");
-                    }
+                if (!validator.validateIsStringValid(lastName)) {
+                    return reject("Last name fail");
+                }
 
-                    if (profileImgURL && !validator.validateImageUrl(profileImgURL)) {
-                        return reject("Invalid image url");
-                    }
+                if (profileImgURL && !validator.validateImageUrl(profileImgURL)) {
+                    return reject("Invalid image url");
+                }
 
-                    if (!validator.validateEmail(email)) {
-                        return reject("Email fail");
-                    }
+                if (!validator.validateEmail(email)) {
+                    return reject("Email fail");
+                }
 
-                    if (!salt) {
-                        return reject("Salt must exists");
-                    }
+                if (!salt) {
+                    return reject("Salt must exists");
+                }
 
-                    if (!hashPass) {
-                        return reject("Hash pass must exists");
-                    }
+                if (!hashPass) {
+                    return reject("Hash pass must exists");
+                }
 
-                    let user = new User({
-                        User,
-                        username,
-                        firstName,
-                        lastName,
-                        email,
-                        profileImgURL,
-                        salt,
-                        hashPass
-                    });
-
-                    user.save(err => {
-                        if (err) {
-                            return reject(err);
-                        }
-
-                        return resolve(user);
-                    });
+                let user = new User({
+                    User,
+                    username,
+                    firstName,
+                    lastName,
+                    email,
+                    profileImgURL,
+                    salt,
+                    hashPass
                 });
+
+                user.save(err => {
+                    if (err) {
+                        return reject(err);
+                    }
+
+                    return resolve(user);
+                });
+            });
         },
         createFacebookUser(username, firstName, lastName, profileImgURL, facebookId) {
             return new Promise((resolve, reject) => {
@@ -217,6 +217,10 @@ module.exports = function (models, validator) {
                         return reject(err);
                     }
 
+                    // if (!user) {
+                    //     return reject("User not found");
+                    // }
+
                     return resolve(user);
                 });
             });
@@ -269,7 +273,7 @@ module.exports = function (models, validator) {
         },
         updateUserRole(username, isAdmin) {
             return new
-                Promise((resolve, reject) => {
+            Promise((resolve, reject) => {
                     User.findOne({ username }, (err, user) => {
                         if (err) {
                             return reject(err);
