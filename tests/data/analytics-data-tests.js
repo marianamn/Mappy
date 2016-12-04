@@ -13,16 +13,25 @@ describe("Test analytics data module", () => {
 
     class Analytics {
         constructor(properties) {
-            // this.id = properties.id || 1;
-            this.userAgent = properties.userAgent;
-            this.arriveTimeStamp = properties.arriveTimeStamp;
-            this.cameFrom = properties.cameFrom;
-            this.pagesBeforeLogin = properties.pagesBeforeLogin;
-            this.userId = properties.passport.user || 0;
-            this.loginTimeStamp = properties.loginTimeStamp;
-            this.pagesAfterLogin = properties.pagesAfterLogin;
-            this.hasRegistered = properties.hasRegistered;
-            this.registeredTimeStamp = properties.registeredTimeStamp;
+            let userAgent = properties.userAgent;
+            let arrived = properties.arriveTimeStamp;
+            let cameFrom = properties.cameFrom;
+            let pagesBeforeLogin = properties.pagesBeforeLogin;
+            let user = properties.passport.user;
+            let loginTime = properties.loginTimeStamp;
+            let pagesAfterLogin = properties.pagesAfterLogin;
+            let hasRegistered = properties.hasRegistered;
+            let registeredTime = properties.registeredTimeStamp;
+
+            this.userAgent = userAgent;
+            this.arriveTimeStamp = arrived;
+            this.cameFrom = cameFrom;
+            this.pagesBeforeLogin = pagesBeforeLogin;
+            this.userId = user;
+            this.loginTimeStamp = loginTime;
+            this.pagesAfterLogin = pagesAfterLogin;
+            this.hasRegistered = hasRegistered;
+            this.registeredTimeStamp = registeredTime;
         }
 
         save() {}
@@ -49,7 +58,6 @@ describe("Test analytics data module", () => {
         };
 
         let expectedAnalytics = new Analytics(testSessionData);
-        console.log(expectedAnalytics);
 
         beforeEach(() => {
             sinon.stub(Analytics.prototype, "save", cb => {
