@@ -45,6 +45,8 @@ Mappy is an application which tests geography knowledge via 2 types of games:
 - **game/test-your-knowledge/country** - shows the question for the selected country
 - **/users/username** - shows the profile information for the selected user
 - **/communication/chat** - shows the chat page
+- **/rankings/guess-the-country-score** - shows Guess the country game score of the Top 10 players with active username link
+- **/rankings/test-your-knowledg-score** - shows Test your knowledg game score of the Top 10 players with active username link
 
 ###Admin dynamic web pages:###
 
@@ -83,9 +85,9 @@ Mappy is an application which tests geography knowledge via 2 types of games:
 - Git source code link
 - Watch project youTube video link
  
-###Unit tests (71 tests):###
+###Unit tests (72 tests):###
 
-- Test analytics data model - **2 tests**
+- Test analytics data model - **3 tests**
 - Test authentication data - **2 tests**
 - Test chat data - **2 tests**
 - Test country data - **7 tests**
