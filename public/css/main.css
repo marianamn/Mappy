@@ -263,3 +263,12 @@ table {
 .spacing-left {
     margin-right: 10px;
 }
+
+.more-game-img {
+    width: 400px;
+    height: 250px;
+}
+
+.more-games-name {
+    font-size: 24px;
+}

@@ -2,9 +2,10 @@ extends ../_layout
 
 block content
     .container
-        ul
-         each game in result
-            li
-                p=game.name
-                img(src= game.gameUrl, class="more-game-img") 
-                img(src= game.gameImgUrl)
+        .row.add-spacing-before.text-center
+            each game in result
+                .col-lg-6  
+                    div.add-spacing-after
+                        p.more-games-name
+                            a(href="" + game.gameUrl)=game.name
+                        img(src= game.gameImgUrl class="more-game-img")

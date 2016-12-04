@@ -13,11 +13,11 @@
 {
 	name: "KidsGeo.com",
         gameUrl: "http://www.kidsgeo.com/geography-games/",
-        gameImgUrl: "http://ssbankscmms.weebly.com/uploads/3/7/2/0/37209547/750075.jpg?254"
+        gameImgUrl: "https://s-media-cache-ak0.pinimg.com/564x/a7/3a/b7/a73ab745a67a6adf45fa5f937aa7b566.jpg"
 }
 
 {
 	name: "Learning games for kids",
         gameUrl: "http://www.learninggamesforkids.com/geography_games.html",
-        gameImgUrl: "http://www.learninggamesforkids.com/wp-content/themes/lgfkresponsive/images/LGFK_Logo2.jpg"
+        gameImgUrl: "http://i2.wp.com/kidworldcitizen.org/wp-content/uploads/2013/08/81313Map_Games_for_kids_Geography.jpg?resize=500%2C375"
 }
