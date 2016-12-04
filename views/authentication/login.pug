@@ -5,7 +5,6 @@ block styles
 
 block headScripts
     script(type='text/javascript', src='/static/js/utils/validator.js')
-    script(type='text/javascript', src='/static/js/login.js')
     script(type='text/javascript', src='/static/bower_components/toastr/toastr.js')
 
 block content
@@ -27,3 +26,5 @@ block content
                             col-md-10.col-md-offset-2
                                 button.btn.btn-success(id="btn-login" type="submit") Login
                                 a.btn.btn-primary(href="/auth/facebook") Login with Facebook
+    script(type='text/javascript', src='/static/js/login.js')
+    
