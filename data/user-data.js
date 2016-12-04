@@ -2,7 +2,6 @@
 
 const dataUtils = require("./utils/data-utils");
 const encrypt = require("../utils/encryption");
-const TOP_USERS = 10;
 
 const CORRECT_SCORE_TYPES = ["guessTheCountryScore", "testYourKnowledgeScore"];
 
@@ -250,7 +249,6 @@ module.exports = function(models, validator) {
         getAllUsers() {
             return new Promise((resolve, reject) => {
                 User.find()
-                    .limit(TOP_USERS)
                     .exec({}, (err, users) => {
                         if (err) {
                             return reject(err);
