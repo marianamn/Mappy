@@ -4,18 +4,19 @@ module.exports = function(models) {
     let { Analytics } = models;
 
     return {
-        createAnalytics(sessionData) {
+        createAnalytics(userAgent, arriveTimeStamp, cameFrom, pagesBeforeLogin, userId, loginTimeStamp, pagesAfterLogin, hasRegistered, registeredTimeStamp) {
             return new Promise((resolve, reject) => {
+
                 let newAnalytics = new Analytics({
-                    userAgent: sessionData.userAgent,
-                    arriveTimeStamp: sessionData.arriveTimeStamp,
-                    cameFrom: sessionData.cameFrom,
-                    pagesBeforeLogin: sessionData.pagesBeforeLogin,
-                    userId: sessionData.passport.user,
-                    loginTimeStamp: sessionData.loginTimeStamp,
-                    pagesAfterLogin: sessionData.pagesAfterLogin,
-                    hasRegistered: sessionData.hasRegistered,
-                    registeredTimeStamp: sessionData.registeredTimeStamp
+                    userAgent,
+                    arriveTimeStamp,
+                    cameFrom,
+                    pagesBeforeLogin,
+                    userId,
+                    loginTimeStamp,
+                    pagesAfterLogin,
+                    hasRegistered,
+                    registeredTimeStamp
                 });
 
                 newAnalytics.save((err) => {

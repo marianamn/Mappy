@@ -17,7 +17,7 @@ describe("Test analytics data module", () => {
             this.arriveTimeStamp = properties.arriveTimeStamp;
             this.cameFrom = properties.cameFrom;
             this.pagesBeforeLogin = properties.pagesBeforeLogin;
-            this.userId = properties.passport.user;
+            this.userId = properties.userId;
             this.loginTimeStamp = properties.loginTimeStamp;
             this.pagesAfterLogin = properties.pagesAfterLogin;
             this.hasRegistered = properties.hasRegistered;
@@ -34,21 +34,27 @@ describe("Test analytics data module", () => {
 
     describe("createAnalytics()", () => {
 
-        let testSessionData = {
-            userAgent: "test user agent",
-            arriveTimeStamp: "test arrive time stamp",
-            cameFrom: "testLastName",
-            pagesBeforeLogin: ["page one", "page two", "page three"],
-            passport: {
-                user: "test user id"
-            },
-            loginTimeStamp: "test login time stamp",
-            pagesAfterLogin: ["page four", "page five", "page six"],
-            hasRegistered: true,
-            registeredTimeStamp: "test registered time stamp"
-        };
+        let userAgent = "test user agent string";
+        let arriveTimeStamp = "test arrive time stamp";
+        let cameFrom = "testLastName";
+        let pagesBeforeLogin = ["page one", "page two", "page three"];
+        let userId = "test user id";
+        let loginTimeStamp = "test login time stamp";
+        let pagesAfterLogin = ["page four", "page five", "page six"];
+        let hasRegistered = true;
+        let registeredTimeStamp = "test registered time stamp";
 
-        let expectedAnalytics = new Analytics(testSessionData);
+        let expectedAnalytics = new Analytics({
+            userAgent,
+            arriveTimeStamp,
+            cameFrom,
+            pagesBeforeLogin,
+            userId,
+            loginTimeStamp,
+            pagesAfterLogin,
+            hasRegistered,
+            registeredTimeStamp
+        });
 
         beforeEach(() => {
             sinon.stub(Analytics.prototype, "save", cb => {
@@ -56,30 +62,42 @@ describe("Test analytics data module", () => {
             });
         });
 
-        describe("createAnalytics()", () => {
-            afterEach(() => {
-                sinon.restore();
-            });
-            it("Expect to get created analytics entry", done => {
-                data.createAnalytics(testSessionData)
-                    .then(resAnalytics => {
-                        expect(resAnalytics).to.be.eql(expectedAnalytics);
-                        done();
-                    })
-                    .catch(err => {
-                        console.log(err);
-                        done();
-                    });
-            });
+        afterEach(() => {
+            sinon.restore();
+        });
+        it("Expect to get created analytics entry", done => {
+            data.createAnalytics(
+                    userAgent,
+                    arriveTimeStamp,
+                    cameFrom,
+                    pagesBeforeLogin,
+                    userId,
+                    loginTimeStamp,
+                    pagesAfterLogin,
+                    hasRegistered,
+                    registeredTimeStamp)
+                .then(resAnalytics => {
+                    expect(resAnalytics).to.be.eql(expectedAnalytics);
+                    done();
+                });
+        });
 
-            // it("Expect returned analytics not to be null", done => {
-            //     data.createAnalytics(testSessionData)
-            //         .then(resAnalytics => {
+        it("Expect returned analytics not to be null", done => {
+            data.createAnalytics(
+                    userAgent,
+                    arriveTimeStamp,
+                    cameFrom,
+                    pagesBeforeLogin,
+                    userId,
+                    loginTimeStamp,
+                    pagesAfterLogin,
+                    hasRegistered,
+                    registeredTimeStamp)
+                .then(resAnalytics => {
 
-            //             expect(resAnalytics).not.to.be.eql(null);
-            //             done();
-            //         });
-            // });
+                    expect(resAnalytics).not.to.be.eql(null);
+                    done();
+                });
         });
     });
 
