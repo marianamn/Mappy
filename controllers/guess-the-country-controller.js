@@ -28,13 +28,6 @@ module.exports = function (params) {
                 });
         },
         evaluateGuessTheCountryAnswer(req, res) {
-            if (isNaN(Number(req.params.selectedCountryEuValue)) ||
-                Number(req.params.selectedCountryEuValue) < 0 ||
-                !req.params.requiredCountryName ||
-                !validator.validateIsStringValid(req.params.requiredCountryName)) {
-                return res.redirect("/game/guess-the-country");
-            }
-
             let isCorrect;
             data.getCountryByEuValue(req.params.selectedCountryEuValue)
                 .then(country => {
@@ -44,7 +37,7 @@ module.exports = function (params) {
 
                     let selectedCountryName = country.name.toLowerCase().replace(/-/g, " ");
                     let requiredCountryName = req.params.requiredCountryName.toLowerCase().replace(/-/g, " ");
-                    
+
                     if (selectedCountryName === requiredCountryName) {
                         isCorrect = true;
                         return data.increaseUserScore(
@@ -66,9 +59,11 @@ module.exports = function (params) {
                     }
                     let user = req.user;
 
+                    let requiredCountryForHref = requiredCountryNameQuestion.toLowerCase().replace(/ /g, "-");
                     return res.render("map/guess-the-country-question", {
                         user,
                         requiredCountryNameQuestion,
+                        requiredCountryForHref,
                         euValues,
                         isCorrect
                     });
