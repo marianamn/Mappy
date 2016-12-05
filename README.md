@@ -17,8 +17,8 @@ Team Leage of the Five
 ###Project desctiption:###
 Mappy is an application which tests geography knowledge via 2 types of games:
 
--  **Guess the Contry Game** - You are given a map of all 50 European countries and a question: Where is ...? You should hoover over the map and click on the place where you think this particular country is situated. If your answere is correct one point will be added to your game scores. You can check your score progress in Rankings.
--  **Test your Knowledge Game** - Choose a particular country from the map and click on it. A question will pop up with four possible answeres that you can choose from. There is only one correct answere. If your answere is correct one point will be added to your game scores. You can check your score progress in Rankings.
+-  **Guess the Contry Game** - You are given a map of all 50 European countries and a question: Where is ...? You should hoover over the map and click on the place where you think this particular country is situated. If your answer is correct one point will be added to your game scores. You can check your score progress in Rankings.
+-  **Test your Knowledge Game** - Choose a particular country from the map and click on it. A question will pop up with four possible answeres that you can choose from. There is only one correct answer. If your answer is correct one point will be added to your game scores. You can check your score progress in Rankings.
 
 
 ###Public (accessible without authentication) dynamic web pages:###
